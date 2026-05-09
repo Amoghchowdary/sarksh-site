@@ -831,6 +831,7 @@ td.name{ color: var(--ink); font-weight: 500; }
 
 
   *, *::before, *::after{ animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}  
 </style>
 </head>
 <body>
@@ -1093,6 +1094,10 @@ td.name{ color: var(--ink); font-weight: 500; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           Add member
         </button>
+        <button class="btn secondary" id="teamLoadDefaultsBtn" title="Reset the editor to the original five department heads">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 4 3 9 8 9"/></svg>
+          Load defaults
+        </button>
         <button class="btn secondary" id="teamReloadBtn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
           Reload
@@ -1123,7 +1128,7 @@ td.name{ color: var(--ink); font-weight: 500; }
 </div>
 
 <script>
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxa0KFSCUSo8uUEjjiTljZw893zBDf5rKiGUYoAp3XJlLV5kuKivTZmPkItBKD31mEx/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4rHGG3nI5xCbwOOPZxIBKpl95pEPgh-duA7t6wKwSA5qJ0JvmIG8159VLvQbEHtet/exec";
 const DEMO_MODE = !APPS_SCRIPT_URL;
 const ADMIN_KEY = 'sarksh_admin_token';
 
@@ -1521,12 +1526,34 @@ function getDemoData(){
 /* ============================================================
    WEBSITE TEAM MANAGER
    ============================================================ */
+
+/* Initials-avatar helper — generates an SVG data URI from a name.
+   Used as a guaranteed-working photo fallback. Works without any
+   network or external host, looks intentional, and renders identically
+   in every browser. SARKSH green background, cream-coloured initials. */
+function _initialsAvatar(name){
+  var parts = String(name || '?').trim().split(/\s+/).filter(function(s){ return s; });
+  var initials;
+  if (parts.length === 0) initials = '?';
+  else if (parts.length === 1) initials = parts[0].slice(0, 2).toUpperCase();
+  else initials = (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  var svg =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600">' +
+      '<rect width="100%" height="100%" fill="#0f4d35"/>' +
+      '<text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" ' +
+            'font-family="Georgia, serif" font-size="220" fill="#f4f1ea">' +
+        initials +
+      '</text>' +
+    '</svg>';
+  return 'data:image/svg+xml;base64,' + btoa(svg);
+}
+
 const FALLBACK_TEAM = [
-  { name: "Avinash Varma",    role: "Technology Department",        photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUApka6Y906HeceQlLzyWLpjNjltzqAk6ZJM0jrhfET-vMbGlMnF1Oxdh9eSndGePi8VZFKo0eVUxBDJ6B-RUoKK5N_JT7YeHpdultPQkS1E_xiA1C1wqyrX-nXIHe1Y1YP9eRWF21Z3UwtsCCm7395vDiSLGCsUTgyxqIB_vx56A6uVBFGAcYc-GHESXX_vu9JSjIE_LndBcmxziQQaZFdT05heTLkheEDQm0g=w1280" },
-  { name: "Vasishta",         role: "Operations Department",        photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUDTz6TKj3AtwghIIaaU6r35rkDxTMP5064hpTCcN__NaQepTsOZLsKUvY54pnbDAWiOxDaR_RXhM2YsAaM5zX4BL-YNCnrDVXZ6v_CROfiaNj79tq5mPXm-KItsSEz2WC-0q2WGFEE-LtXbnlGK3cp_pN9GNHJipnoIDNTDvJjlzN-fV1gksGiCEesthfe9N65f4ZoiaFisepcW2IzIYh9hPxni8h1npZdDJMM=w1280" },
-  { name: "Vinod Kumar",      role: "Data Department",              photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUA0MEpPgZ92SVuJ7aKUr5rHrFA_UAHJ29pCi4hGq8ca16nWLvfXTp552FfxpX_yGG4FPlklNiPgIsoHnGY1n6BBoXPpvK6oeOz5Cqte6sLpPQv8n7Up6oVy4r7OlfMkvGl9biCpwWQb1omIffZmV5bqrghJ8zoJRuGrKoLRgPR7Ijwwknx2lP_W859m-dvKoaD4ObDEzQmxZ4AVE5mRfgMIM2-sH463Hpa9LwI=w1280" },
-  { name: "Gani Reddy Umesh", role: "Human Resources Department",   photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUCibWt0jNmohpTCaxHZMg9bQ9XGKkNvrSPXwcr2MGtswikTBI8oxlCE_IRIvzc5u0JdjO02xaCqriweLAxmP4Ns7wRNYBhU8ePxodiii36Jph1zCL3AAZkOr5zRSR9ikpezSvhKlDSA5a7tGbB2NlKuYnNZbXC4O_pu9EKF5nC5pO0pG68N19Ik8WfkWtiCcbNHgSzX1OLhWNwyTvRaztSrN7RQpVoCQ_HC=w1280" },
-  { name: "Rangu Varun",      role: "Operations Department",        photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUAZg1v4y6xj982KlCymBQ5wSSvxvTbUDXHuNX7_YxuDeeDzmvCRGEE2-HuCURyAJeGTVVx2l1czCZJvUgq-DUgVUEDjPWKAIrww3Z7WHhB1GSiw-ew0zlHh8Ex1Gt69fFUI5S2H0U2ZphdCdjThPbkev8tUzmX6jdrfTQnk4vrUONFotsKu_ZxBQvCOyvbs7AFr23UtyWqh1BhaMca0JX4UWdYBIZmSOE_SQC8=w1280" }
+  { name: "Avinash Varma",    role: "Technology Department",      photo: _initialsAvatar("Avinash Varma") },
+  { name: "Vasishta",         role: "Operations Department",      photo: _initialsAvatar("Vasishta") },
+  { name: "Vinod Kumar",      role: "Data Department",            photo: _initialsAvatar("Vinod Kumar") },
+  { name: "Gani Reddy Umesh", role: "Human Resources Department", photo: _initialsAvatar("Gani Reddy Umesh") },
+  { name: "Rangu Varun",      role: "Operations Department",      photo: _initialsAvatar("Rangu Varun") }
 ];
 
 let teamData = [];           // current edited list
@@ -1593,8 +1620,9 @@ function renderTeamMgr(){
   let html = '';
   teamData.forEach((m, i) => {
     const placeholderClass = m.photo ? '' : 'placeholder-card';
+    const fallbackUri = _initialsAvatar(m.name);
     const photoHtml = m.photo
-      ? `<div class="photo-wrap"><img src="${m.photo}" alt="${escapeAttr(m.name)}" /></div>`
+      ? `<div class="photo-wrap"><img src="${m.photo}" alt="${escapeAttr(m.name)}" data-fallback="${fallbackUri}" onerror="this.onerror=null;this.src=this.dataset.fallback;" /></div>`
       : `<div class="photo-wrap empty">+</div>`;
     html += `
       <div class="team-mgr-card ${placeholderClass}" data-i="${i}" draggable="true">
@@ -1745,14 +1773,15 @@ function compressImage(file, maxDim, quality){
 /* ====== FOUNDER PHOTO ====== */
 let founderPhoto = '';        // current edited
 let founderPhotoServer = '';  // last known server state
-const DEFAULT_FOUNDER_PHOTO = 'https://lh3.googleusercontent.com/sitesv/AA5AbUBCk0KZDtnmVo-XhPSntmTnafixrlJYKsAfpsYvMB459bMjcmLaDh9agMViLLAXq_XQC0q66mDgk-hhw5IJu1cUdjVdb6MBjyoxA2ZlyRJZn7jEXD7xsEZYb_frS7vHiJM0MI20LcQyaC_oSBx2_9tTfZW1DqlyczyYnk8DKtyDcwFWuXaNktcK7GzcSi-pUAWIsMVHt2qVdim4j2QWy-pCpKPLsyDQ4N1m=w1280';
+const DEFAULT_FOUNDER_PHOTO = _initialsAvatar('Amarneni Amogh Chowdary');
 
 function renderFounder(){
   const box = document.getElementById('founderPhotoBox');
   if (!box) return;
   if (founderPhoto){
     box.classList.remove('empty');
-    box.innerHTML = `<img src="${founderPhoto}" alt="Founder photo" />`;
+    const fallback = _initialsAvatar('Amarneni Amogh Chowdary');
+    box.innerHTML = `<img src="${founderPhoto}" alt="Founder photo" data-fallback="${fallback}" onerror="this.onerror=null;this.src=this.dataset.fallback;" />`;
   } else {
     box.classList.add('empty');
     box.innerHTML = `<span>+</span>`;
@@ -1878,6 +1907,18 @@ document.getElementById('teamReloadBtn').addEventListener('click', () => {
 
 // Toolbar Add — same action as the dashed card at the end of the grid
 document.getElementById('teamAddTopBtn').addEventListener('click', addNewMember);
+
+// Toolbar Load defaults — overwrite editor with the 5 default members (with initials avatars)
+document.getElementById('teamLoadDefaultsBtn').addEventListener('click', () => {
+  if (teamData.length && !confirm(
+    'Replace the current ' + teamData.length + ' member(s) in the editor with the 5 default department heads?\n\n' +
+    'This only affects the editor. Nothing goes live until you click Publish to website.'
+  )) return;
+  teamData = JSON.parse(JSON.stringify(FALLBACK_TEAM));
+  renderTeamMgr();
+  teamMarkDirty();
+  teamSetStatus('warn', '⚡ Loaded the 5 defaults — upload real photos for each, then click "Publish to website"');
+});
 
 // Load when panel becomes active for the first time.
 // Attach a direct click listener — the existing global listener still runs (it switches panels).

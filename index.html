@@ -1269,7 +1269,7 @@ footer{
 
   <div class="founder-card reveal">
     <div class="founder-photo">
-      <img id="founderPhoto" src="https://lh3.googleusercontent.com/sitesv/AA5AbUBCk0KZDtnmVo-XhPSntmTnafixrlJYKsAfpsYvMB459bMjcmLaDh9agMViLLAXq_XQC0q66mDgk-hhw5IJu1cUdjVdb6MBjyoxA2ZlyRJZn7jEXD7xsEZYb_frS7vHiJM0MI20LcQyaC_oSBx2_9tTfZW1DqlyczyYnk8DKtyDcwFWuXaNktcK7GzcSi-pUAWIsMVHt2qVdim4j2QWy-pCpKPLsyDQ4N1m=w1280" alt="Amarneni Amogh Chowdary" loading="lazy" />
+      <img id="founderPhoto" src="https://lh3.googleusercontent.com/sitesv/AA5AbUBCk0KZDtnmVo-XhPSntmTnafixrlJYKsAfpsYvMB459bMjcmLaDh9agMViLLAXq_XQC0q66mDgk-hhw5IJu1cUdjVdb6MBjyoxA2ZlyRJZn7jEXD7xsEZYb_frS7vHiJM0MI20LcQyaC_oSBx2_9tTfZW1DqlyczyYnk8DKtyDcwFWuXaNktcK7GzcSi-pUAWIsMVHt2qVdim4j2QWy-pCpKPLsyDQ4N1m=w1280" alt="Amarneni Amogh Chowdary" loading="lazy" data-fallback="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMGY0ZDM1Ii8+PHRleHQgeD0iNTAlIiB5PSI1NSUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMjAiIGZpbGw9IiNmNGYxZWEiPkFDPC90ZXh0Pjwvc3ZnPg==" onerror="this.onerror=null;this.src=this.dataset.fallback;" />
     </div>
     <div>
       <div class="founder-role">Founder &amp; CEO</div>
@@ -1295,15 +1295,35 @@ footer{
      Falls back to the hardcoded list below if the API is unreachable or has no data yet.
      Photos are stored as image URLs OR base64 data URIs — both render the same. */
   (function(){
-    var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyScPNaO5OFeN17P2nA66tIHiI_vgUatBRoJqtEYZJBjlo8XaD8bcAq7B_CfuVOx0Pz/exec";
+    var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4rHGG3nI5xCbwOOPZxIBKpl95pEPgh-duA7t6wKwSA5qJ0JvmIG8159VLvQbEHtet/exec";
 
-    // Fallback team — used if backend has no team saved yet. William Keri removed.
+    /* Initials-avatar helper — guaranteed-working SVG fallback for any photo.
+       Used both in the FALLBACK_TEAM and as an onerror swap if a photo URL fails. */
+    function _initialsAvatar(name){
+      var parts = String(name || '?').trim().split(/\s+/).filter(function(s){ return s; });
+      var initials;
+      if (parts.length === 0) initials = '?';
+      else if (parts.length === 1) initials = parts[0].slice(0, 2).toUpperCase();
+      else initials = (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+      var svg =
+        '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600">' +
+          '<rect width="100%" height="100%" fill="#0f4d35"/>' +
+          '<text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" ' +
+                'font-family="Georgia, serif" font-size="220" fill="#f4f1ea">' +
+            initials +
+          '</text>' +
+        '</svg>';
+      return 'data:image/svg+xml;base64,' + btoa(svg);
+    }
+
+    // Fallback team — initials avatars are guaranteed to render for every visitor,
+    // unlike Google Sites image URLs which only work for Google-authenticated users.
     var FALLBACK_TEAM = [
-      { name: "Avinash Varma",    role: "Technology Department",      photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUApka6Y906HeceQlLzyWLpjNjltzqAk6ZJM0jrhfET-vMbGlMnF1Oxdh9eSndGePi8VZFKo0eVUxBDJ6B-RUoKK5N_JT7YeHpdultPQkS1E_xiA1C1wqyrX-nXIHe1Y1YP9eRWF21Z3UwtsCCm7395vDiSLGCsUTgyxqIB_vx56A6uVBFGAcYc-GHESXX_vu9JSjIE_LndBcmxziQQaZFdT05heTLkheEDQm0g=w1280" },
-      { name: "Vasishta",         role: "Operations Department",      photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUDTz6TKj3AtwghIIaaU6r35rkDxTMP5064hpTCcN__NaQepTsOZLsKUvY54pnbDAWiOxDaR_RXhM2YsAaM5zX4BL-YNCnrDVXZ6v_CROfiaNj79tq5mPXm-KItsSEz2WC-0q2WGFEE-LtXbnlGK3cp_pN9GNHJipnoIDNTDvJjlzN-fV1gksGiCEesthfe9N65f4ZoiaFisepcW2IzIYh9hPxni8h1npZdDJMM=w1280" },
-      { name: "Vinod Kumar",      role: "Data Department",            photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUA0MEpPgZ92SVuJ7aKUr5rHrFA_UAHJ29pCi4hGq8ca16nWLvfXTp552FfxpX_yGG4FPlklNiPgIsoHnGY1n6BBoXPpvK6oeOz5Cqte6sLpPQv8n7Up6oVy4r7OlfMkvGl9biCpwWQb1omIffZmV5bqrghJ8zoJRuGrKoLRgPR7Ijwwknx2lP_W859m-dvKoaD4ObDEzQmxZ4AVE5mRfgMIM2-sH463Hpa9LwI=w1280" },
-      { name: "Gani Reddy Umesh", role: "Human Resources Department", photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUCibWt0jNmohpTCaxHZMg9bQ9XGKkNvrSPXwcr2MGtswikTBI8oxlCE_IRIvzc5u0JdjO02xaCqriweLAxmP4Ns7wRNYBhU8ePxodiii36Jph1zCL3AAZkOr5zRSR9ikpezSvhKlDSA5a7tGbB2NlKuYnNZbXC4O_pu9EKF5nC5pO0pG68N19Ik8WfkWtiCcbNHgSzX1OLhWNwyTvRaztSrN7RQpVoCQ_HC=w1280" },
-      { name: "Rangu Varun",      role: "Operations Department",      photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUAZg1v4y6xj982KlCymBQ5wSSvxvTbUDXHuNX7_YxuDeeDzmvCRGEE2-HuCURyAJeGTVVx2l1czCZJvUgq-DUgVUEDjPWKAIrww3Z7WHhB1GSiw-ew0zlHh8Ex1Gt69fFUI5S2H0U2ZphdCdjThPbkev8tUzmX6jdrfTQnk4vrUONFotsKu_ZxBQvCOyvbs7AFr23UtyWqh1BhaMca0JX4UWdYBIZmSOE_SQC8=w1280" }
+      { name: "Avinash Varma",    role: "Technology Department",      photo: _initialsAvatar("Avinash Varma") },
+      { name: "Vasishta",         role: "Operations Department",      photo: _initialsAvatar("Vasishta") },
+      { name: "Vinod Kumar",      role: "Data Department",            photo: _initialsAvatar("Vinod Kumar") },
+      { name: "Gani Reddy Umesh", role: "Human Resources Department", photo: _initialsAvatar("Gani Reddy Umesh") },
+      { name: "Rangu Varun",      role: "Operations Department",      photo: _initialsAvatar("Rangu Varun") }
     ];
 
     var grid = document.getElementById('teamGrid');
@@ -1321,14 +1341,17 @@ footer{
         var name = escapeHtml(m.name || '');
         var role = escapeHtml(m.role || '');
         var photo = m.photo || '';
+        var fallbackUri = _initialsAvatar(m.name);
         if (!photo){
-          return '<div class="team-card placeholder reveal ' + d + '">' +
-                 '<div class="team-photo placeholder-photo"><span>+</span></div>' +
+          // No photo at all → use initials avatar directly (was placeholder + before)
+          return '<div class="team-card reveal ' + d + '">' +
+                 '<div class="team-photo"><img src="' + fallbackUri + '" alt="' + name + '" loading="lazy" /></div>' +
                  '<div class="team-info"><div class="team-name">' + name + '</div><div class="team-role">' + role + '</div></div>' +
                  '</div>';
         }
+        // Photo present → use it, but auto-fall-back to initials if it fails to load
         return '<div class="team-card reveal ' + d + '">' +
-               '<div class="team-photo"><img src="' + escapeHtml(photo) + '" alt="' + name + '" loading="lazy" /></div>' +
+               '<div class="team-photo"><img src="' + escapeHtml(photo) + '" alt="' + name + '" loading="lazy" data-fallback="' + fallbackUri + '" onerror="this.onerror=null;this.src=this.dataset.fallback;" /></div>' +
                '<div class="team-info"><div class="team-name">' + name + '</div><div class="team-role">' + role + '</div></div>' +
                '</div>';
       }).join('');
@@ -1359,7 +1382,11 @@ footer{
           }
           if (typeof res.founderPhoto === 'string' && res.founderPhoto){
             var fp = document.getElementById('founderPhoto');
-            if (fp) fp.src = res.founderPhoto;
+            if (fp){
+              // Refresh the fallback to match the new src — guaranteed initials avatar if it ever fails
+              fp.dataset.fallback = _initialsAvatar('Amarneni Amogh Chowdary');
+              fp.src = res.founderPhoto;
+            }
           }
         }
       })
@@ -1538,7 +1565,7 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxa0KFSCUSo8uUEjjiTljZw893zBDf5rKiGUYoAp3XJlLV5kuKivTZmPkItBKD31mEx/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4rHGG3nI5xCbwOOPZxIBKpl95pEPgh-duA7t6wKwSA5qJ0JvmIG8159VLvQbEHtet/exec";
 const contactForm = document.getElementById('contactForm');
 const contactSubmit = document.getElementById('contactSubmit');
 const contactStatus = document.getElementById('contactStatus');
