@@ -659,50 +659,67 @@ td.name{ color: var(--ink); font-weight: 500; }
   font-family: var(--serif);
   font-size: 48px;
 }
-.team-mgr-card .photo-overlay{
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.55) 100%);
-  opacity: 0;
-  transition: opacity .2s;
-  display: flex; align-items: flex-end; padding: 10px;
-  gap: 8px;
+.team-mgr-card .body{ padding: 12px 14px 6px; }
+.team-mgr-card .field-label{
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-top: 8px;
+  margin-bottom: 2px;
 }
-.team-mgr-card:hover .photo-overlay{ opacity: 1; }
-.photo-btn{
-  background: rgba(0,0,0,.55);
-  border: 1px solid rgba(255,255,255,.2);
-  color: white;
-  padding: 6px 10px;
+.team-mgr-card .field-label:first-child{ margin-top: 0; }
+.team-mgr-card input.field-input{
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--line-2);
+  color: var(--ink);
+  font-family: var(--body);
+  padding: 8px 10px;
+  border-radius: var(--r-sm);
+  font-size: 14px;
+  transition: border-color .2s, background .2s;
+}
+.team-mgr-card input.field-input:focus{
+  outline: none;
+  border-color: var(--green-soft);
+  background: var(--surface);
+}
+.team-mgr-card input.name-input{ font-family: var(--serif); font-size: 16px; font-weight: 400; }
+.team-mgr-card input.role-input{ font-size: 13px; color: var(--ink-mid); }
+.team-mgr-card .actions{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 0 14px 12px;
+  margin-top: 6px;
+}
+.team-mgr-card .action-btn{
+  background: var(--surface-2);
+  border: 1px solid var(--line-2);
+  color: var(--ink);
+  padding: 7px 8px;
   border-radius: var(--r-sm);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: .12em;
   text-transform: uppercase;
   cursor: pointer;
-  backdrop-filter: blur(6px);
+  transition: background .2s, border-color .2s, color .2s;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
 }
-.photo-btn:hover{ background: rgba(0,0,0,.75); }
-.photo-btn.danger:hover{ background: rgba(194,69,58,.7); border-color: #ef8e84; }
-.team-mgr-card .body{ padding: 12px 14px; }
-.team-mgr-card input.field-input{
-  width: 100%;
-  background: transparent;
-  border: 1px solid transparent;
-  border-bottom: 1px solid var(--line);
-  color: var(--ink);
-  font-family: var(--body);
-  padding: 6px 4px;
-  margin-bottom: 4px;
-  border-radius: 0;
-  font-size: 14px;
-  transition: border-color .2s;
+.team-mgr-card .action-btn:hover{
+  background: var(--surface-3);
+  border-color: var(--green-soft);
 }
-.team-mgr-card input.field-input:focus{
-  outline: none;
-  border-bottom-color: var(--green-soft);
+.team-mgr-card .action-btn.danger{ color: #ef8e84; }
+.team-mgr-card .action-btn.danger:hover{
+  background: rgba(194,69,58,.15);
+  border-color: rgba(194,69,58,.5);
+  color: #ef8e84;
 }
-.team-mgr-card input.name-input{ font-family: var(--serif); font-size: 17px; font-weight: 400; }
-.team-mgr-card input.role-input{ font-family: var(--mono); font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-mid); }
+.team-mgr-card .action-btn svg{ width: 12px; height: 12px; flex-shrink: 0; }
 .team-mgr-card .order-handle{
   position: absolute; top: 8px; left: 8px;
   width: 28px; height: 28px;
@@ -743,6 +760,61 @@ td.name{ color: var(--ink); font-weight: 500; }
   font-family: var(--serif); font-size: 36px; margin-bottom: 6px; line-height: 1;
 }
 
+.founder-mgr{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 22px;
+  align-items: center;
+}
+.founder-mgr .founder-photo-box{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  position: relative;
+}
+.founder-mgr .founder-photo-box img{
+  width: 100%; height: 100%; object-fit: cover;
+}
+.founder-mgr .founder-photo-box.empty{
+  display: grid; place-items: center;
+  color: var(--ink-faint);
+  font-family: var(--serif);
+  font-size: 48px;
+}
+.founder-mgr-eyebrow{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--green-soft);
+  margin-bottom: 4px;
+}
+.founder-mgr-title{
+  font-family: var(--serif);
+  font-size: 22px;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+.founder-mgr-sub{
+  font-family: var(--body);
+  font-size: 13px;
+  color: var(--ink-mid);
+  margin-bottom: 12px;
+}
+.founder-mgr-actions{ display: flex; gap: 8px; flex-wrap: wrap; }
+@media (max-width: 600px){
+  .founder-mgr{ grid-template-columns: 1fr; text-align: center; }
+  .founder-mgr .founder-photo-box{ margin: 0 auto; }
+}
+
 .team-info-banner{
   background: rgba(15,77,53,.08);
   border: 1px solid rgba(15,77,53,.3);
@@ -756,7 +828,8 @@ td.name{ color: var(--ink); font-weight: 500; }
 }
 .team-info-banner strong{ color: var(--green-soft); }
 
-*, *::before, *::after{ animation-duration: .01ms !important; transition-duration: .01ms !important; }
+
+  *, *::before, *::after{ animation-duration: .01ms !important; transition-duration: .01ms !important; }
 </style>
 </head>
 <body>
@@ -988,10 +1061,36 @@ td.name{ color: var(--ink); font-weight: 500; }
         <strong>How this works.</strong> Changes you make here do not go live until you click <strong>Publish to website</strong>. Photos are uploaded directly into the SARKSH database — no external image host needed. Use square photos for best results (recommended: 600 × 600 px, JPEG under 200 KB).
       </div>
 
+      <!-- Founder photo manager -->
+      <div class="founder-mgr" id="founderMgr">
+        <div class="founder-photo-box empty" id="founderPhotoBox"><span>+</span></div>
+        <div>
+          <div class="founder-mgr-eyebrow">Founder photo</div>
+          <div class="founder-mgr-title" id="founderName">Amarneni Amogh Chowdary</div>
+          <div class="founder-mgr-sub" id="founderRole">Founder &amp; CEO · SARKSH GROW</div>
+          <div class="founder-mgr-actions">
+            <button class="btn secondary" id="founderReplaceBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              Replace photo
+            </button>
+            <button class="btn secondary" id="founderRemoveBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <input type="file" id="founderPhotoInput" accept="image/*" style="display:none" />
+
       <div class="team-mgr-toolbar">
         <button class="btn primary" id="teamPublishBtn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
           Publish to website
+        </button>
+        <button class="btn secondary" id="teamAddTopBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add member
         </button>
         <button class="btn secondary" id="teamReloadBtn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
@@ -1023,7 +1122,7 @@ td.name{ color: var(--ink); font-weight: 500; }
 </div>
 
 <script>
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwCflGsn_3-mxxbrhn6MPZBfu_7UgYDwustPrrUaEEJODOFkscZvJLI-xw3_00sby1O/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzNMgchJ3AAcA_LAimaGo0fnn5RQwfDJgEDsoA-eCbyPU2kVgUXH4Ms94uwVAqZOV5J/exec";
 const DEMO_MODE = !APPS_SCRIPT_URL;
 const ADMIN_KEY = 'sarksh_admin_token';
 
@@ -1422,12 +1521,11 @@ function getDemoData(){
    WEBSITE TEAM MANAGER
    ============================================================ */
 const FALLBACK_TEAM = [
-  { name: "Avinash Varma",    role: "Tech",            photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUApka6Y906HeceQlLzyWLpjNjltzqAk6ZJM0jrhfET-vMbGlMnF1Oxdh9eSndGePi8VZFKo0eVUxBDJ6B-RUoKK5N_JT7YeHpdultPQkS1E_xiA1C1wqyrX-nXIHe1Y1YP9eRWF21Z3UwtsCCm7395vDiSLGCsUTgyxqIB_vx56A6uVBFGAcYc-GHESXX_vu9JSjIE_LndBcmxziQQaZFdT05heTLkheEDQm0g=w1280" },
-  { name: "Vasishta",         role: "Operations",      photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUDTz6TKj3AtwghIIaaU6r35rkDxTMP5064hpTCcN__NaQepTsOZLsKUvY54pnbDAWiOxDaR_RXhM2YsAaM5zX4BL-YNCnrDVXZ6v_CROfiaNj79tq5mPXm-KItsSEz2WC-0q2WGFEE-LtXbnlGK3cp_pN9GNHJipnoIDNTDvJjlzN-fV1gksGiCEesthfe9N65f4ZoiaFisepcW2IzIYh9hPxni8h1npZdDJMM=w1280" },
-  { name: "Vinod Kumar",      role: "Data",            photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUA0MEpPgZ92SVuJ7aKUr5rHrFA_UAHJ29pCi4hGq8ca16nWLvfXTp552FfxpX_yGG4FPlklNiPgIsoHnGY1n6BBoXPpvK6oeOz5Cqte6sLpPQv8n7Up6oVy4r7OlfMkvGl9biCpwWQb1omIffZmV5bqrghJ8zoJRuGrKoLRgPR7Ijwwknx2lP_W859m-dvKoaD4ObDEzQmxZ4AVE5mRfgMIM2-sH463Hpa9LwI=w1280" },
-  { name: "Gani Reddy Umesh", role: "Human Resources", photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUCibWt0jNmohpTCaxHZMg9bQ9XGKkNvrSPXwcr2MGtswikTBI8oxlCE_IRIvzc5u0JdjO02xaCqriweLAxmP4Ns7wRNYBhU8ePxodiii36Jph1zCL3AAZkOr5zRSR9ikpezSvhKlDSA5a7tGbB2NlKuYnNZbXC4O_pu9EKF5nC5pO0pG68N19Ik8WfkWtiCcbNHgSzX1OLhWNwyTvRaztSrN7RQpVoCQ_HC=w1280" },
-  { name: "Rangu Varun",      role: "Operations",      photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUAZg1v4y6xj982KlCymBQ5wSSvxvTbUDXHuNX7_YxuDeeDzmvCRGEE2-HuCURyAJeGTVVx2l1czCZJvUgq-DUgVUEDjPWKAIrww3Z7WHhB1GSiw-ew0zlHh8Ex1Gt69fFUI5S2H0U2ZphdCdjThPbkev8tUzmX6jdrfTQnk4vrUONFotsKu_ZxBQvCOyvbs7AFr23UtyWqh1BhaMca0JX4UWdYBIZmSOE_SQC8=w1280" },
-  { name: "Open",             role: "Compliance",      photo: "" }
+  { name: "Avinash Varma",    role: "Technology Department",        photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUApka6Y906HeceQlLzyWLpjNjltzqAk6ZJM0jrhfET-vMbGlMnF1Oxdh9eSndGePi8VZFKo0eVUxBDJ6B-RUoKK5N_JT7YeHpdultPQkS1E_xiA1C1wqyrX-nXIHe1Y1YP9eRWF21Z3UwtsCCm7395vDiSLGCsUTgyxqIB_vx56A6uVBFGAcYc-GHESXX_vu9JSjIE_LndBcmxziQQaZFdT05heTLkheEDQm0g=w1280" },
+  { name: "Vasishta",         role: "Operations Department",        photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUDTz6TKj3AtwghIIaaU6r35rkDxTMP5064hpTCcN__NaQepTsOZLsKUvY54pnbDAWiOxDaR_RXhM2YsAaM5zX4BL-YNCnrDVXZ6v_CROfiaNj79tq5mPXm-KItsSEz2WC-0q2WGFEE-LtXbnlGK3cp_pN9GNHJipnoIDNTDvJjlzN-fV1gksGiCEesthfe9N65f4ZoiaFisepcW2IzIYh9hPxni8h1npZdDJMM=w1280" },
+  { name: "Vinod Kumar",      role: "Data Department",              photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUA0MEpPgZ92SVuJ7aKUr5rHrFA_UAHJ29pCi4hGq8ca16nWLvfXTp552FfxpX_yGG4FPlklNiPgIsoHnGY1n6BBoXPpvK6oeOz5Cqte6sLpPQv8n7Up6oVy4r7OlfMkvGl9biCpwWQb1omIffZmV5bqrghJ8zoJRuGrKoLRgPR7Ijwwknx2lP_W859m-dvKoaD4ObDEzQmxZ4AVE5mRfgMIM2-sH463Hpa9LwI=w1280" },
+  { name: "Gani Reddy Umesh", role: "Human Resources Department",   photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUCibWt0jNmohpTCaxHZMg9bQ9XGKkNvrSPXwcr2MGtswikTBI8oxlCE_IRIvzc5u0JdjO02xaCqriweLAxmP4Ns7wRNYBhU8ePxodiii36Jph1zCL3AAZkOr5zRSR9ikpezSvhKlDSA5a7tGbB2NlKuYnNZbXC4O_pu9EKF5nC5pO0pG68N19Ik8WfkWtiCcbNHgSzX1OLhWNwyTvRaztSrN7RQpVoCQ_HC=w1280" },
+  { name: "Rangu Varun",      role: "Operations Department",        photo: "https://lh3.googleusercontent.com/sitesv/AA5AbUAZg1v4y6xj982KlCymBQ5wSSvxvTbUDXHuNX7_YxuDeeDzmvCRGEE2-HuCURyAJeGTVVx2l1czCZJvUgq-DUgVUEDjPWKAIrww3Z7WHhB1GSiw-ew0zlHh8Ex1Gt69fFUI5S2H0U2ZphdCdjThPbkev8tUzmX6jdrfTQnk4vrUONFotsKu_ZxBQvCOyvbs7AFr23UtyWqh1BhaMca0JX4UWdYBIZmSOE_SQC8=w1280" }
 ];
 
 let teamData = [];           // current edited list
@@ -1478,15 +1576,27 @@ function renderTeamMgr(){
   teamData.forEach((m, i) => {
     const placeholderClass = m.photo ? '' : 'placeholder-card';
     const photoHtml = m.photo
-      ? `<div class="photo-wrap"><img src="${m.photo}" alt="${escapeAttr(m.name)}" /><div class="photo-overlay"><button class="photo-btn" data-act="replace" data-i="${i}">Replace photo</button><button class="photo-btn danger" data-act="remove" data-i="${i}">Remove member</button></div></div>`
-      : `<div class="photo-wrap empty">+<div class="photo-overlay"><button class="photo-btn" data-act="replace" data-i="${i}">Add photo</button><button class="photo-btn danger" data-act="remove" data-i="${i}">Remove member</button></div></div>`;
+      ? `<div class="photo-wrap"><img src="${m.photo}" alt="${escapeAttr(m.name)}" /></div>`
+      : `<div class="photo-wrap empty">+</div>`;
     html += `
       <div class="team-mgr-card ${placeholderClass}" data-i="${i}" draggable="true">
         <div class="order-handle" title="Drag to reorder">${i + 1}</div>
         ${photoHtml}
         <div class="body">
-          <input class="field-input name-input" data-field="name" data-i="${i}" placeholder="Name" value="${escapeAttr(m.name)}" />
-          <input class="field-input role-input" data-field="role" data-i="${i}" placeholder="Role (e.g. Tech, Operations)" value="${escapeAttr(m.role)}" />
+          <div class="field-label">Name</div>
+          <input class="field-input name-input" data-field="name" data-i="${i}" placeholder="Full name" value="${escapeAttr(m.name)}" />
+          <div class="field-label">Role / Department</div>
+          <input class="field-input role-input" data-field="role" data-i="${i}" placeholder="e.g. Technology Department" value="${escapeAttr(m.role)}" />
+        </div>
+        <div class="actions">
+          <button class="action-btn" data-act="replace" data-i="${i}" title="Upload a new photo for this member">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            ${m.photo ? 'Change photo' : 'Upload photo'}
+          </button>
+          <button class="action-btn danger" data-act="remove" data-i="${i}" title="Remove this team member">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            Remove
+          </button>
         </div>
       </div>`;
   });
@@ -1502,6 +1612,21 @@ function renderTeamMgr(){
 
 function escapeAttr(s){ return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
+function addNewMember(){
+  teamData.push({ name: 'New member', role: 'New Department', photo: '' });
+  renderTeamMgr();
+  teamMarkDirty();
+  // Focus the new name input and scroll it into view
+  setTimeout(() => {
+    const inputs = document.querySelectorAll('#teamMgrGrid .name-input');
+    if (inputs.length){
+      const last = inputs[inputs.length - 1];
+      last.focus(); last.select();
+      last.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, 30);
+}
+
 function attachTeamCardEvents(){
   // Field edits
   document.querySelectorAll('#teamMgrGrid .field-input').forEach(input => {
@@ -1512,8 +1637,8 @@ function attachTeamCardEvents(){
       teamMarkDirty();
     });
   });
-  // Photo + remove buttons
-  document.querySelectorAll('#teamMgrGrid .photo-btn').forEach(btn => {
+  // Action buttons (always visible)
+  document.querySelectorAll('#teamMgrGrid .action-btn').forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
       const i = +e.currentTarget.dataset.i;
@@ -1530,20 +1655,9 @@ function attachTeamCardEvents(){
       }
     });
   });
-  // Add button
+  // Add card (dashed at end of grid)
   const addBtn = document.getElementById('teamAddBtn');
-  if (addBtn){
-    addBtn.addEventListener('click', () => {
-      teamData.push({ name: 'New member', role: 'Role', photo: '' });
-      renderTeamMgr();
-      teamMarkDirty();
-      // Focus the new name input
-      setTimeout(() => {
-        const inputs = document.querySelectorAll('#teamMgrGrid .name-input');
-        if (inputs.length){ const last = inputs[inputs.length - 1]; last.focus(); last.select(); }
-      }, 30);
-    });
-  }
+  if (addBtn){ addBtn.addEventListener('click', addNewMember); }
   // Drag-to-reorder
   let dragSrc = null;
   document.querySelectorAll('#teamMgrGrid .team-mgr-card').forEach(card => {
@@ -1610,6 +1724,86 @@ function compressImage(file, maxDim, quality){
   });
 }
 
+/* ====== FOUNDER PHOTO ====== */
+let founderPhoto = '';        // current edited
+let founderPhotoServer = '';  // last known server state
+
+function renderFounder(){
+  const box = document.getElementById('founderPhotoBox');
+  if (!box) return;
+  if (founderPhoto){
+    box.classList.remove('empty');
+    box.innerHTML = `<img src="${founderPhoto}" alt="Founder photo" />`;
+  } else {
+    box.classList.add('empty');
+    box.innerHTML = `<span>+</span>`;
+  }
+}
+
+async function loadFounder(){
+  try {
+    const res = await api('adminGetFounder', {});
+    if (res.ok){
+      founderPhoto = res.photo || '';
+      founderPhotoServer = founderPhoto;
+    } else {
+      // Backend endpoint not yet available — keep blank
+      founderPhoto = '';
+      founderPhotoServer = '';
+    }
+  } catch (e){
+    founderPhoto = '';
+    founderPhotoServer = '';
+  }
+  renderFounder();
+}
+
+document.getElementById('founderReplaceBtn').addEventListener('click', () => {
+  document.getElementById('founderPhotoInput').click();
+});
+
+document.getElementById('founderRemoveBtn').addEventListener('click', async () => {
+  if (!founderPhoto){ teamSetStatus('error', 'No founder photo to remove'); return; }
+  if (!confirm('Remove the founder photo from the website?')) return;
+  const btn = document.getElementById('founderRemoveBtn');
+  btn.disabled = true;
+  const res = await api('adminSaveFounder', { photo: '' });
+  btn.disabled = false;
+  if (res.ok){
+    founderPhoto = '';
+    founderPhotoServer = '';
+    renderFounder();
+    teamSetStatus('success', '✓ Founder photo removed and published');
+  } else {
+    teamSetStatus('error', 'Remove failed: ' + (res.error || 'unknown'));
+  }
+});
+
+document.getElementById('founderPhotoInput').addEventListener('change', async (e) => {
+  const file = e.target.files && e.target.files[0];
+  e.target.value = '';
+  if (!file) return;
+  if (!file.type.startsWith('image/')){ alert('Please pick an image file.'); return; }
+  let dataUri;
+  try {
+    dataUri = await compressImage(file, 600, 0.80);
+  } catch (err){
+    alert('Could not read that image. Try a different file.');
+    return;
+  }
+  // Save & publish in one shot — founder photo is a single value, not a list
+  teamSetStatus('', 'Uploading founder photo…');
+  const res = await api('adminSaveFounder', { photo: dataUri });
+  if (res.ok){
+    founderPhoto = dataUri;
+    founderPhotoServer = dataUri;
+    renderFounder();
+    teamSetStatus('success', '✓ Founder photo published — refresh sarksh.in to see the change');
+  } else {
+    teamSetStatus('error', 'Save failed: ' + (res.error || 'unknown'));
+  }
+});
+
 // Publish
 document.getElementById('teamPublishBtn').addEventListener('click', async () => {
   // Filter out totally-empty rows
@@ -1645,15 +1839,18 @@ document.getElementById('teamReloadBtn').addEventListener('click', () => {
   loadTeam();
 });
 
+// Toolbar Add — same action as the dashed card at the end of the grid
+document.getElementById('teamAddTopBtn').addEventListener('click', addNewMember);
+
 // Load when panel becomes active for the first time.
 // Attach a direct click listener — the existing global listener still runs (it switches panels).
 let teamLoaded = false;
 document.querySelector('.side-item[data-target="websiteTeam"]').addEventListener('click', () => {
-  if (!teamLoaded){ teamLoaded = true; loadTeam(); }
+  if (!teamLoaded){ teamLoaded = true; loadTeam(); loadFounder(); }
 });
 // Also auto-load if the URL hash points at it on page load
 if ((location.hash || '').slice(1) === 'websiteTeam' && !teamLoaded){
-  teamLoaded = true; loadTeam();
+  teamLoaded = true; loadTeam(); loadFounder();
 }
 
 // Boot
