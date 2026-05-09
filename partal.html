@@ -622,6 +622,7 @@ td.name{ color: var(--ink); font-weight: 500; }
 .team-status.show{ display: inline-flex; align-items: center; gap: 6px; }
 .team-status.success{ color: var(--green-soft); border-color: rgba(15,77,53,.4); background: rgba(15,77,53,.12); }
 .team-status.error{ color: #ef8e84; border-color: rgba(194,69,58,.4); background: rgba(194,69,58,.12); }
+.team-status.warn{ color: var(--warn); border-color: rgba(199,154,58,.4); background: rgba(199,154,58,.12); }
 .team-status.dirty{ color: var(--warn); border-color: rgba(199,154,58,.4); background: rgba(199,154,58,.12); }
 
 .team-mgr-grid{
@@ -1122,7 +1123,7 @@ td.name{ color: var(--ink); font-weight: 500; }
 </div>
 
 <script>
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzNMgchJ3AAcA_LAimaGo0fnn5RQwfDJgEDsoA-eCbyPU2kVgUXH4Ms94uwVAqZOV5J/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxa0KFSCUSo8uUEjjiTljZw893zBDf5rKiGUYoAp3XJlLV5kuKivTZmPkItBKD31mEx/exec";
 const DEMO_MODE = !APPS_SCRIPT_URL;
 const ADMIN_KEY = 'sarksh_admin_token';
 
@@ -1551,20 +1552,37 @@ async function loadTeam(){
   teamSetStatus('', 'Loading…');
   try {
     const res = await api('adminGetTeam', {});
-    if (res.ok && Array.isArray(res.team)){
+    if (res.ok && Array.isArray(res.team) && res.team.length){
+      // Backend returned saved team
       teamData = res.team.map(m => ({ name: m.name || '', role: m.role || '', photo: m.photo || '' }));
-      teamServerData = JSON.parse(JSON.stringify(teamData));
-      teamSetStatus('', '');
-    } else {
-      // Backend endpoint not yet added — show fallback so admin can edit and publish
+      if (res.isDefault){
+        // Backend returned defaults because the sheet was empty
+        teamServerData = null;  // mark as unsaved
+        teamSetStatus('warn', '⚡ Showing default team — click "Publish to website" to save these to your account');
+      } else {
+        teamServerData = JSON.parse(JSON.stringify(teamData));
+        teamSetStatus('', '');
+      }
+    } else if (res.ok){
+      // Backend returned ok but empty — older backend without isDefault. Use fallback.
       teamData = JSON.parse(JSON.stringify(FALLBACK_TEAM));
       teamServerData = null;
-      teamSetStatus('error', 'Backend endpoint not found — showing site fallback. Add the backend snippet, then publish.');
+      teamSetStatus('warn', '⚡ Showing default team — click "Publish to website" to save these to your account');
+    } else if (String(res.error || '').toLowerCase().indexOf('unknown') !== -1){
+      // Backend doesn't recognise this action — old deployment
+      teamData = JSON.parse(JSON.stringify(FALLBACK_TEAM));
+      teamServerData = null;
+      teamSetStatus('error', '⚠ Backend not redeployed. Open Apps Script → Deploy → Manage deployments → Edit → New version → Deploy. Showing defaults until that is done.');
+    } else {
+      // Some other backend error — fall back gracefully
+      teamData = JSON.parse(JSON.stringify(FALLBACK_TEAM));
+      teamServerData = null;
+      teamSetStatus('error', 'Could not load team: ' + (res.error || 'unknown') + ' — showing defaults');
     }
   } catch (e){
     teamData = JSON.parse(JSON.stringify(FALLBACK_TEAM));
     teamServerData = null;
-    teamSetStatus('error', 'Network error — showing fallback');
+    teamSetStatus('error', 'Network error — showing defaults');
   }
   renderTeamMgr();
 }
@@ -1727,6 +1745,7 @@ function compressImage(file, maxDim, quality){
 /* ====== FOUNDER PHOTO ====== */
 let founderPhoto = '';        // current edited
 let founderPhotoServer = '';  // last known server state
+const DEFAULT_FOUNDER_PHOTO = 'https://lh3.googleusercontent.com/sitesv/AA5AbUBCk0KZDtnmVo-XhPSntmTnafixrlJYKsAfpsYvMB459bMjcmLaDh9agMViLLAXq_XQC0q66mDgk-hhw5IJu1cUdjVdb6MBjyoxA2ZlyRJZn7jEXD7xsEZYb_frS7vHiJM0MI20LcQyaC_oSBx2_9tTfZW1DqlyczyYnk8DKtyDcwFWuXaNktcK7GzcSi-pUAWIsMVHt2qVdim4j2QWy-pCpKPLsyDQ4N1m=w1280';
 
 function renderFounder(){
   const box = document.getElementById('founderPhotoBox');
@@ -1745,14 +1764,19 @@ async function loadFounder(){
     const res = await api('adminGetFounder', {});
     if (res.ok){
       founderPhoto = res.photo || '';
-      founderPhotoServer = founderPhoto;
+      // If backend returned isDefault=true, it's the default photo, treat as
+      // "not yet saved" so the user knows they can replace it.
+      founderPhotoServer = res.isDefault ? '' : founderPhoto;
+    } else if (String(res.error || '').toLowerCase().indexOf('unknown') !== -1){
+      // Old backend deployment — show default photo
+      founderPhoto = DEFAULT_FOUNDER_PHOTO;
+      founderPhotoServer = '';
     } else {
-      // Backend endpoint not yet available — keep blank
-      founderPhoto = '';
+      founderPhoto = DEFAULT_FOUNDER_PHOTO;
       founderPhotoServer = '';
     }
   } catch (e){
-    founderPhoto = '';
+    founderPhoto = DEFAULT_FOUNDER_PHOTO;
     founderPhotoServer = '';
   }
   renderFounder();
@@ -1793,14 +1817,24 @@ document.getElementById('founderPhotoInput').addEventListener('change', async (e
   }
   // Save & publish in one shot — founder photo is a single value, not a list
   teamSetStatus('', 'Uploading founder photo…');
+  // Optimistically show the new photo while save is in flight
+  const previousPhoto = founderPhoto;
+  founderPhoto = dataUri;
+  renderFounder();
   const res = await api('adminSaveFounder', { photo: dataUri });
   if (res.ok){
-    founderPhoto = dataUri;
     founderPhotoServer = dataUri;
-    renderFounder();
     teamSetStatus('success', '✓ Founder photo published — refresh sarksh.in to see the change');
   } else {
-    teamSetStatus('error', 'Save failed: ' + (res.error || 'unknown'));
+    // Rollback the optimistic update
+    founderPhoto = previousPhoto;
+    renderFounder();
+    if (String(res.error || '').toLowerCase().indexOf('unknown') !== -1){
+      alert('The Apps Script backend has not been redeployed with the new endpoints.\n\nFix: Open script.google.com → your project → Deploy → Manage deployments → click the pencil icon on your active deployment → Version: New version → Deploy.\n\nThe save will work as soon as the new deployment is active.');
+      teamSetStatus('error', '⚠ Backend not redeployed — see the alert for instructions');
+    } else {
+      teamSetStatus('error', 'Save failed: ' + (res.error || 'unknown'));
+    }
   }
 });
 
@@ -1826,6 +1860,9 @@ document.getElementById('teamPublishBtn').addEventListener('click', async () => 
     teamServerData = JSON.parse(JSON.stringify(cleaned));
     renderTeamMgr();
     teamSetStatus('success', '✓ Published — refresh sarksh.in to see the change');
+  } else if (String(res.error || '').toLowerCase().indexOf('unknown') !== -1){
+    alert('The Apps Script backend has not been redeployed with the new endpoints.\n\nFix: Open script.google.com → your project → Deploy → Manage deployments → click the pencil icon on your active deployment → Version: New version → Deploy.\n\nPublish will work as soon as the new deployment is active.');
+    teamSetStatus('error', '⚠ Backend not redeployed — see the alert for instructions');
   } else {
     teamSetStatus('error', 'Save failed: ' + (res.error || 'unknown'));
   }
