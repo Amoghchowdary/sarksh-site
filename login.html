@@ -619,7 +619,7 @@ document.getElementById('otpForm').addEventListener('submit', async (e) => {
     const friendly = (userIdInput.split('-')[0] || pendingLoginEmail.split('@')[0]);
     if (friendly) sessionStorage.setItem('sarksh_user_name', friendly);
   } catch(_){}
-  setTimeout(() => { location.href = 'dashboard.html'; }, 1100);
+  setTimeout(() => { location.href = 'grath.html'; }, 1100);
 });
 
 document.getElementById('resendBtn').addEventListener('click', async () => {
