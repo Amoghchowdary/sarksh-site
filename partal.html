@@ -831,7 +831,7 @@ td.name{ color: var(--ink); font-weight: 500; }
 
 
   *, *::before, *::after{ animation-duration: .01ms !important; transition-duration: .01ms !important; }
-}  
+}
 </style>
 </head>
 <body>
@@ -1128,7 +1128,7 @@ td.name{ color: var(--ink); font-weight: 500; }
 </div>
 
 <script>
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4rHGG3nI5xCbwOOPZxIBKpl95pEPgh-duA7t6wKwSA5qJ0JvmIG8159VLvQbEHtet/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx84hXiXLaV72RQSwRtMlk7wAOvwL8AmfnA7ha4vQ6obQjkGilBODQ5-yJc6MFX3UZb/exec";
 const DEMO_MODE = !APPS_SCRIPT_URL;
 const ADMIN_KEY = 'sarksh_admin_token';
 
@@ -1734,8 +1734,8 @@ document.getElementById('teamPhotoInput').addEventListener('change', async (e) =
   if (!file || teamPhotoTargetIndex < 0) return;
   if (!file.type.startsWith('image/')){ alert('Please pick an image file.'); return; }
   try {
-    // 600px max, JPEG q=0.80 — keeps base64 well under Google Sheets 50K-char cell limit
-    const dataUri = await compressImage(file, 600, 0.80);
+    // Auto-shrinks until the result fits the Google Sheets ~50K-char cell limit
+    const dataUri = await compressImageToFit(file, 48000);
     teamData[teamPhotoTargetIndex].photo = dataUri;
     renderTeamMgr();
     teamMarkDirty();
@@ -1768,6 +1768,22 @@ function compressImage(file, maxDim, quality){
     };
     reader.readAsDataURL(file);
   });
+}
+
+/* Progressive compression — keeps shrinking until the data URI fits the
+   Google Sheets cell limit (~50k chars). This guarantees that no photo
+   upload will ever silently fail at publish-time due to cell-size overflow. */
+async function compressImageToFit(file, maxChars){
+  const limit = maxChars || 48000;
+  const steps = [
+    [600, 0.82], [540, 0.78], [480, 0.75], [420, 0.72], [360, 0.70], [320, 0.68], [280, 0.65]
+  ];
+  for (const [dim, q] of steps){
+    const uri = await compressImage(file, dim, q);
+    if (uri.length <= limit) return uri;
+  }
+  // Absolute last resort
+  return await compressImage(file, 240, 0.60);
 }
 
 /* ====== FOUNDER PHOTO ====== */
@@ -1839,7 +1855,7 @@ document.getElementById('founderPhotoInput').addEventListener('change', async (e
   if (!file.type.startsWith('image/')){ alert('Please pick an image file.'); return; }
   let dataUri;
   try {
-    dataUri = await compressImage(file, 600, 0.80);
+    dataUri = await compressImageToFit(file, 48000);
   } catch (err){
     alert('Could not read that image. Try a different file.');
     return;

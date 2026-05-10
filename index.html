@@ -1295,7 +1295,7 @@ footer{
      Falls back to the hardcoded list below if the API is unreachable or has no data yet.
      Photos are stored as image URLs OR base64 data URIs — both render the same. */
   (function(){
-    var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4rHGG3nI5xCbwOOPZxIBKpl95pEPgh-duA7t6wKwSA5qJ0JvmIG8159VLvQbEHtet/exec";
+    var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx84hXiXLaV72RQSwRtMlk7wAOvwL8AmfnA7ha4vQ6obQjkGilBODQ5-yJc6MFX3UZb/exec";
 
     /* Initials-avatar helper — guaranteed-working SVG fallback for any photo.
        Used both in the FALLBACK_TEAM and as an onerror swap if a photo URL fails. */
@@ -1342,24 +1342,24 @@ footer{
         var role = escapeHtml(m.role || '');
         var photo = m.photo || '';
         var fallbackUri = _initialsAvatar(m.name);
+        // CRITICAL: include `in` class so .reveal.in (opacity: 1) wins over .reveal (opacity: 0)
+        // immediately. Without `in`, the cards would stay invisible because the
+        // IntersectionObserver below only sees elements present at its setup time, and
+        // when this render() replaces innerHTML on API resolve, the new cards aren't observed.
+        var cls = 'team-card reveal in ' + d;
         if (!photo){
-          // No photo at all → use initials avatar directly (was placeholder + before)
-          return '<div class="team-card reveal ' + d + '">' +
+          // No photo at all → use initials avatar directly
+          return '<div class="' + cls + '">' +
                  '<div class="team-photo"><img src="' + fallbackUri + '" alt="' + name + '" loading="lazy" /></div>' +
                  '<div class="team-info"><div class="team-name">' + name + '</div><div class="team-role">' + role + '</div></div>' +
                  '</div>';
         }
         // Photo present → use it, but auto-fall-back to initials if it fails to load
-        return '<div class="team-card reveal ' + d + '">' +
+        return '<div class="' + cls + '">' +
                '<div class="team-photo"><img src="' + escapeHtml(photo) + '" alt="' + name + '" loading="lazy" data-fallback="' + fallbackUri + '" onerror="this.onerror=null;this.src=this.dataset.fallback;" /></div>' +
                '<div class="team-info"><div class="team-name">' + name + '</div><div class="team-role">' + role + '</div></div>' +
                '</div>';
       }).join('');
-      // Re-arm IntersectionObserver reveals if the page already armed them
-      try {
-        var observer = window.__sarkshRevealObserver;
-        if (observer) grid.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
-      } catch(e){}
     }
 
     // First, render fallback IMMEDIATELY so users never see an empty section
@@ -1565,7 +1565,7 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4rHGG3nI5xCbwOOPZxIBKpl95pEPgh-duA7t6wKwSA5qJ0JvmIG8159VLvQbEHtet/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyScPNaO5OFeN17P2nA66tIHiI_vgUatBRoJqtEYZJBjlo8XaD8bcAq7B_CfuVOx0Pz/exec";
 const contactForm = document.getElementById('contactForm');
 const contactSubmit = document.getElementById('contactSubmit');
 const contactStatus = document.getElementById('contactStatus');
