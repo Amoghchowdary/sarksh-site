@@ -1086,9 +1086,200 @@ footer{
   border-top: 1px dashed var(--line);
 }
 .compliance-note strong{ color: var(--ink-mid); font-weight: 600; }
+
+/* ===============================================================
+   INTERACTION LAYER — custom cursor, hover lifts, click ripples,
+   magnetic CTAs, hero glow-follow, smooth link affordances.
+   All effects auto-disable on touch devices and respect
+   prefers-reduced-motion.
+   =============================================================== */
+
+/* --- Custom cursor (desktop only, hover-capable pointer) --- */
+.cursor-dot, .cursor-ring{
+  position: fixed; top: 0; left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 9999;
+  will-change: transform;
+  mix-blend-mode: difference;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.cursor-dot{
+  width: 6px; height: 6px;
+  background: #f4f1ea;
+  transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+  transition: opacity .25s ease, width .25s var(--ease), height .25s var(--ease), background .25s ease;
+}
+.cursor-ring{
+  width: 36px; height: 36px;
+  border: 1px solid rgba(244, 241, 234, .55);
+  transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+  transition: opacity .25s ease, width .35s var(--ease), height .35s var(--ease), border-color .25s ease, background .25s ease;
+}
+.cursors-active .cursor-dot,
+.cursors-active .cursor-ring{ opacity: 1; }
+.cursor-dot.hover{ width: 10px; height: 10px; background: var(--green-soft); }
+.cursor-ring.hover{ width: 56px; height: 56px; border-color: rgba(78, 199, 137, .8); background: rgba(78, 199, 137, .06); }
+.cursor-ring.click{ width: 28px; height: 28px; border-color: rgba(78, 199, 137, 1); }
+@media (hover: none), (pointer: coarse), (max-width: 900px){
+  .cursor-dot, .cursor-ring{ display: none; }
+}
+
+/* --- Click ripple (works on touch + mouse) --- */
+[data-ripple]{ position: relative; overflow: hidden; }
+.sk-ripple{
+  position: absolute;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: rgba(244, 241, 234, .35);
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  animation: sk-ripple .6s ease-out forwards;
+  z-index: 1;
+}
+.nav-cta .sk-ripple, .pc-link .sk-ripple{ background: rgba(244, 241, 234, .45); }
+@keyframes sk-ripple{
+  to{ transform: translate(-50%, -50%) scale(28); opacity: 0; }
+}
+
+/* --- Magnetic CTA wrapper (smooth transform applied via JS) --- */
+[data-magnetic]{ transition: transform .35s cubic-bezier(.22, 1, .36, 1); will-change: transform; }
+
+/* --- Hover lift on cards --- */
+.product-card, .team-card, .why-card, .founder-card{
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease), border-color .35s var(--ease);
+}
+@media (hover: hover){
+  .product-card:hover{ transform: translateY(-6px); box-shadow: 0 28px 60px -20px var(--green-glow), 0 12px 24px -12px rgba(0,0,0,.4); border-color: rgba(78,199,137,.35); }
+  .team-card:hover{ transform: translateY(-4px); box-shadow: 0 22px 50px -18px var(--green-glow); }
+  .why-card:hover{ transform: translateY(-4px); border-color: rgba(78,199,137,.3); }
+  .founder-card:hover{ border-color: rgba(78,199,137,.55); }
+  .team-card:hover .team-photo img{ transform: scale(1.05); }
+  .team-photo img{ transition: transform .8s var(--ease); }
+}
+
+/* --- Hero glow-follow (desktop only) --- */
+.hero{ --mx: 50%; --my: 50%; }
+.hero::after{
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle 360px at var(--mx) var(--my), rgba(78, 199, 137, .07), transparent 55%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.cursors-active .hero::after{ opacity: 1; }
+@media (hover: none), (pointer: coarse){ .hero::after{ display: none; } }
+
+/* --- Animated underline for footer + body links --- */
+.footer-bottom a, .compliance-note a{
+  position: relative;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size .35s var(--ease);
+}
+.footer-bottom a:hover, .compliance-note a:hover{ background-size: 100% 1px; }
+
+/* --- Button press feedback --- */
+.nav-cta, .pc-link, .product-pill, .form-cta, .btn-primary, .secondary-cta{
+  transition: background .2s, transform .15s var(--ease), box-shadow .25s ease;
+}
+.nav-cta:active, .pc-link:active, .form-cta:active, .btn-primary:active, .secondary-cta:active{
+  transform: translateY(0) scale(.97);
+}
+
+/* --- Smoother section reveal motion --- */
+.reveal{ transition: opacity .9s var(--ease), transform .9s var(--ease); }
+
+/* --- Reduced motion: turn EVERYTHING off --- */
+@media (prefers-reduced-motion: reduce){
+  .cursor-dot, .cursor-ring, .hero::after{ display: none !important; }
+  [data-magnetic]{ transition: none !important; transform: none !important; }
+  .product-card, .team-card, .why-card, .founder-card, .team-photo img{ transition: none !important; transform: none !important; }
+  .sk-ripple{ animation: none; }
+}
+
+/* ===============================================================
+   MOBILE LAYOUT FIXES — eliminate overlap and tight collisions
+   reported on small screens.
+   =============================================================== */
+
+/* Hero on narrow screens: smaller orb, controlled spacing */
+@media (max-width: 720px){
+  .hero{ padding-top: clamp(36px, 6vh, 60px); padding-bottom: clamp(36px, 6vh, 60px); gap: 36px; }
+  .hero-visual{ height: 280px; order: 2; }
+  .hero-orb{ max-width: 280px; }
+  .hero-content{ order: 1; }
+  .hero-eyebrow{ font-size: 10px; }
+}
+
+/* Sticky nav: ensure mobile menu overlay aligns under actual nav height */
+@media (max-width: 1000px){
+  .nav{ padding-top: 14px; padding-bottom: 14px; }
+  .nav-links{ top: 64px; max-height: calc(100vh - 64px); overflow-y: auto; }
+}
+
+/* Founder card: photo cap so it doesn't dominate on narrow screens */
+@media (max-width: 800px){
+  .founder-photo{ max-width: 260px; margin: 0 auto; }
+  .founder-card{ text-align: left; }
+  .founder-card .founder-name{ font-size: clamp(28px, 6vw, 38px); }
+}
+
+/* Section padding scales down properly on mobile */
+@media (max-width: 600px){
+  :root{ --section-pad: clamp(48px, 8vh, 72px); }
+  section{ padding-left: clamp(18px, 5vw, 22px); padding-right: clamp(18px, 5vw, 22px); }
+}
+
+/* Product card: tighter spacing, less overlap risk on small screens */
+@media (max-width: 600px){
+  .product-card{ padding: 28px 22px; }
+  .pc-numeral{ font-size: 28px; }
+}
+
+/* Team grid: smaller photo aspect on phones to avoid huge stacking */
+@media (max-width: 480px){
+  .team-grid{ gap: 16px; }
+  .team-card{ display: grid; grid-template-columns: 96px 1fr; align-items: center; padding: 12px; gap: 14px; }
+  .team-card .team-photo{ aspect-ratio: 1; width: 96px; height: 96px; border-radius: 10px; overflow: hidden; }
+  .team-card .team-info{ padding: 0; }
+  .team-card .team-name{ font-size: 17px; }
+  .team-card .team-role{ font-size: 10.5px; }
+}
+
+/* Footer: prevent column collision below 560px */
+@media (max-width: 560px){
+  .footer-top{ gap: 32px; }
+  .footer-col{ min-width: 0; }
+  .footer-col h4{ margin-bottom: 12px; }
+}
+
+/* Contact / location: ensure map iframe never overflows */
+.contact-map iframe, .location-map iframe, .map-wrap iframe{
+  max-width: 100%;
+  border: 0;
+}
+
+/* Universal: prevent any element from pushing the page wider than viewport */
+html, body{ overflow-x: hidden; }
+img, svg, video, iframe{ max-width: 100%; height: auto; }
+
+/* Mobile only: ensure absolute-positioned decoratives stay inside their section */
+@media (max-width: 720px){
+  .hero-orb-rings.r3{ inset: -18%; }
+  .hero-orb-rings.r2{ inset: -10%; }
+}
 </style>
 </head>
 <body>
+<!-- Custom cursor elements (auto-hide on touch devices via CSS) -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
 
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
@@ -1113,14 +1304,14 @@ footer{
     <a href="#contact">Contact</a>
     <a href="login.html">Customer Support</a>
   </div>
-  <a href="login.html" class="nav-cta">Login</a>
+  <a href="login.html" class="nav-cta" data-magnetic data-magnetic-strength="0.3">Login</a>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
   <div>
-    <div class="hero-eyebrow"><span class="dot"></span> Made for Indian families · Since 2022</div>
+    <div class="hero-eyebrow"><span class="dot"></span> Made for Indian families · Since 2025</div>
     <h1 class="headline">When finance is done right,<br><em>families breathe easier.</em></h1>
     <p class="lede">SARKSH GROW is a Hyderabad-based finance company, built for the middle-class families of India. We help working professionals, retirees, homemakers, and first-time investors take their first careful step into the stock market — with certified advisors who guide you, simple platforms you can use, and a team that treats your money the way it would treat its own. <strong>The Change.</strong></p>
     <div class="cta-row">
@@ -1130,15 +1321,15 @@ footer{
     <div class="kpi-strip">
       <div>
         <div class="kpi-num">3</div>
-        <div class="kpi-label">PRODUCT TO GROW WITH US</div>
+        <div class="kpi-label">products to grow with you</div>
       </div>
       <div>
         <div class="kpi-num">6</div>
-        <div class="kpi-label">PEOPLE IN OUR TEAM</div>
+        <div class="kpi-label">people on your team</div>
       </div>
       <div>
-        <div class="kpi-num">1 MISSION</div>
-        <div class="kpi-label">GROW TOGETHER</div>
+        <div class="kpi-num">1</div>
+        <div class="kpi-label">mission · your family's wellbeing</div>
       </div>
     </div>
   </div>
@@ -1158,7 +1349,7 @@ footer{
   <div class="section-head reveal">
     <div class="section-num">01 · About</div>
     <div>
-      <h2 class="section-title">A Financal Company. <em>Made for India.</em></h2>
+      <h2 class="section-title">A finance company. <em>Made for India.</em></h2>
     </div>
   </div>
   <div class="about-grid">
@@ -1197,7 +1388,7 @@ footer{
         <li>Begin from ₹500</li>
         <li>Zero commission, own broker license (in process)</li>
       </ul>
-      <a href="login.html" class="pc-link">Join the waitlist</a>
+      <a href="login.html" class="pc-link" data-magnetic data-magnetic-strength="0.15">Join the waitlist</a>
     </article>
 
     <article class="product-card v-pms reveal d1">
@@ -1212,7 +1403,7 @@ footer{
         <li>Position-level reporting, every quarter</li>
         <li>AUM-based fee structure</li>
       </ul>
-      <a href="login.html" class="pc-link">Talk to an advisor</a>
+      <a href="login.html" class="pc-link" data-magnetic data-magnetic-strength="0.15">Talk to an advisor</a>
     </article>
 
     <article class="product-card v-expert reveal d2">
@@ -1225,7 +1416,7 @@ footer{
         <div class="pc-rung"><b>TIER 02</b><span>Growth · 42 days · ₹1L</span></div>
         <div class="pc-rung"><b>TIER 03</b><span>Premium · 42 days · ₹2L</span></div>
       </div>
-      <a href="login.html" class="pc-link">Pick a tier</a>
+      <a href="login.html" class="pc-link" data-magnetic data-magnetic-strength="0.15">Pick a tier</a>
     </article>
   </div>
 </section>
@@ -1605,6 +1796,123 @@ contactForm.addEventListener('submit', async (e) => {
     contactSubmit.textContent = 'Send Message';
   }
 });
+</script>
+<!-- ============================================================
+     INTERACTION LAYER — custom cursor, magnetic CTAs, click ripple,
+     hero glow-follow. Skips itself on touch devices and respects
+     prefers-reduced-motion.
+     ============================================================ -->
+<script>
+(function(){
+  // Capability gates
+  var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var isNarrow = window.innerWidth < 900;
+  if (isTouch || prefersReducedMotion || isNarrow){
+    // Still wire up click ripple — it's tasteful on touch too
+    wireRipples();
+    return;
+  }
+
+  // ---------- Custom cursor (smooth follow with RAF) ----------
+  var dot = document.querySelector('.cursor-dot');
+  var ring = document.querySelector('.cursor-ring');
+  if (!dot || !ring) return;
+
+  var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  var rx = mx, ry = my;
+  var dx = mx, dy = my;
+
+  function onMove(e){
+    mx = e.clientX; my = e.clientY;
+    document.body.classList.add('cursors-active');
+  }
+  document.addEventListener('mousemove', onMove, { passive: true });
+  document.addEventListener('mouseleave', function(){
+    document.body.classList.remove('cursors-active');
+  });
+
+  document.addEventListener('mousedown', function(){
+    ring.classList.add('click');
+  });
+  document.addEventListener('mouseup', function(){
+    ring.classList.remove('click');
+  });
+
+  function tick(){
+    // Dot follows tightly
+    dx += (mx - dx) * 0.6;
+    dy += (my - dy) * 0.6;
+    dot.style.transform = 'translate3d(' + dx + 'px,' + dy + 'px,0) translate(-50%,-50%)';
+    // Ring trails smoothly
+    rx += (mx - rx) * 0.16;
+    ry += (my - ry) * 0.16;
+    ring.style.transform = 'translate3d(' + rx + 'px,' + ry + 'px,0) translate(-50%,-50%)';
+    requestAnimationFrame(tick);
+  }
+  tick();
+
+  // Grow cursor over interactive elements
+  var INTERACTIVE = 'a, button, input, select, textarea, .product-card, .team-card, .why-card, .nav-cta, [data-cursor], label[for]';
+  document.addEventListener('mouseover', function(e){
+    if (e.target.closest && e.target.closest(INTERACTIVE)){
+      dot.classList.add('hover'); ring.classList.add('hover');
+    }
+  });
+  document.addEventListener('mouseout', function(e){
+    if (e.target.closest && e.target.closest(INTERACTIVE)){
+      dot.classList.remove('hover'); ring.classList.remove('hover');
+    }
+  });
+
+  // ---------- Hero glow-follow ----------
+  var hero = document.querySelector('.hero');
+  if (hero){
+    hero.addEventListener('mousemove', function(e){
+      var rect = hero.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width) * 100;
+      var y = ((e.clientY - rect.top) / rect.height) * 100;
+      hero.style.setProperty('--mx', x + '%');
+      hero.style.setProperty('--my', y + '%');
+    }, { passive: true });
+  }
+
+  // ---------- Magnetic CTAs ----------
+  var magnets = document.querySelectorAll('[data-magnetic]');
+  magnets.forEach(function(el){
+    var strength = parseFloat(el.dataset.magneticStrength || '0.25');
+    el.addEventListener('mousemove', function(e){
+      var rect = el.getBoundingClientRect();
+      var x = (e.clientX - rect.left - rect.width / 2) * strength;
+      var y = (e.clientY - rect.top - rect.height / 2) * strength;
+      el.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    });
+    el.addEventListener('mouseleave', function(){
+      el.style.transform = '';
+    });
+  });
+
+  wireRipples();
+
+  // ---------- Click ripples ----------
+  function wireRipples(){
+    var RIPPLE_TARGETS = 'a.nav-cta, a.pc-link, button.form-cta, button[type="submit"], .secondary-cta, [data-ripple]';
+    document.querySelectorAll(RIPPLE_TARGETS).forEach(function(el){
+      if (el.hasAttribute('data-ripple-wired')) return;
+      el.setAttribute('data-ripple-wired', '1');
+      el.setAttribute('data-ripple', '');
+      el.addEventListener('click', function(e){
+        var rect = el.getBoundingClientRect();
+        var ripple = document.createElement('span');
+        ripple.className = 'sk-ripple';
+        ripple.style.left = (e.clientX - rect.left) + 'px';
+        ripple.style.top = (e.clientY - rect.top) + 'px';
+        el.appendChild(ripple);
+        setTimeout(function(){ ripple.remove(); }, 650);
+      });
+    });
+  }
+})();
 </script>
 </body>
 </html>
