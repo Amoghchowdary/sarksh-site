@@ -1405,7 +1405,8 @@ ticketForm.addEventListener('submit', async (e) => {
   if (!description || description.length < 10) return setTicketStatus('error', 'Description should be at least 10 characters.');
   ticketSubmit.disabled = true; ticketSubmit.textContent = 'Submitting…';
   const res = await api('createTicket', {
-    subject, category, priority, description,
+    subject, category, priority,
+    body: description,   // backend expects `body`, not `description`
     userEmail: session.email, userId: session.userId, userName: session.name
   });
   ticketSubmit.disabled = false; ticketSubmit.textContent = 'Submit Ticket';
