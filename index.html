@@ -2,9 +2,17 @@
 <html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8" />
+<!-- Google Analytics 4 — Measurement ID G-7YPG40KX6L -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YPG40KX6L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7YPG40KX6L', { anonymize_ip: true });
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SARKSH GROW — The Change.</title>
-<meta name="description" content="SARKSH GROW. A Hyderabad finance company building the next generation of investment infrastructure for India. Three SKUs: trading platform, portfolio management, and Expertise Sale." />
+<meta name="description" content="SARKSH GROW. A Hyderabad finance company building investment infrastructure for India. Three SKUs: trading platform, portfolio management, and India's first Expert Accounts — short-term plans for the retail investor." />
 <meta name="theme-color" content="#0f4d35" />
 <meta name="author" content="SARKSH GROUP OF COMPANIES PVT LTD (OPC)" />
 
@@ -1360,7 +1368,7 @@ img, svg, video, iframe{ max-width: 100%; height: auto; }
     </div>
     <div class="about-body reveal d1">
       <p>SARKSH GROW is a Hyderabad-based finance company, built for the middle-class families of India. The kind of family where one person works late, one person manages the home, and the savings account is the fortress everyone protects.</p>
-      <p>We build three things for that family. <strong>SARKSH Trade</strong> for the working professional placing their first share order. <strong>SARKSH PMS</strong> for the family that has saved patiently and now wants a certified team to grow it. <strong>Expertise Sale</strong> for the curious investor who wants to learn the reasoning behind every decision before they act on their own.</p>
+      <p>We build three things for that family. <strong>SARKSH Trade</strong> for the working professional placing their first share order. <strong>SARKSH PMS</strong> for the family that has saved patiently and now wants a certified team to grow it. <strong>Expertise Sale</strong> for the saver who wants a short, defined window — an Expert Account that runs auto-executed for 28 working trading days and returns the capital at the close of the final trading day.</p>
       <p>The applicable regulatory approvals are in process. The products on this site become available subject to those approvals. We will not promise what we cannot deliver, and we will not deliver what we have not built.</p>
     </div>
   </div>
@@ -1410,11 +1418,11 @@ img, svg, video, iframe{ max-width: 100%; height: auto; }
       <div class="pc-tag">Expert Accounts</div>
       <div class="pc-numeral">03</div>
       <h3 class="pc-title">Expertise Sale</h3>
-      <p class="pc-desc">Structured 42-day learning programmes. Watch a managed portfolio in real time, see every entry and exit as it happens, and learn the reasoning behind each decision before acting on your own.</p>
+      <p class="pc-desc">India's first Expert Account — a short-term investment plan running 28 working trading days, with a fixed daily return, auto-executed by a SEBI-certified team. The first short-term plan format of its kind for the Indian retail investor.</p>
       <div class="pc-rungs">
-        <div class="pc-rung"><b>TIER 01</b><span>Starter · 42 days · ₹50K</span></div>
-        <div class="pc-rung"><b>TIER 02</b><span>Growth · 42 days · ₹1L</span></div>
-        <div class="pc-rung"><b>TIER 03</b><span>Premium · 42 days · ₹2L</span></div>
+        <div class="pc-rung"><b>TIER 01</b><span>Starter · 28 trading days · ₹50K</span></div>
+        <div class="pc-rung"><b>TIER 02</b><span>Growth · 28 trading days · ₹1L</span></div>
+        <div class="pc-rung"><b>TIER 03</b><span>Premium · 28 trading days · ₹2L</span></div>
       </div>
       <a href="login.html" class="pc-link" data-magnetic data-magnetic-strength="0.15">Pick a tier</a>
     </article>
@@ -1486,7 +1494,7 @@ img, svg, video, iframe{ max-width: 100%; height: auto; }
      Falls back to the hardcoded list below if the API is unreachable or has no data yet.
      Photos are stored as image URLs OR base64 data URIs — both render the same. */
   (function(){
-    var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyTLMB9qWRhb47plZllzt1sxlc-9dN7aOsobQkzY5eqLnuVTGVE4ud_GIsutIWeQEyi/exec";
+    var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyScPNaO5OFeN17P2nA66tIHiI_vgUatBRoJqtEYZJBjlo8XaD8bcAq7B_CfuVOx0Pz/exec";
 
     /* Initials-avatar helper — guaranteed-working SVG fallback for any photo.
        Used both in the FALLBACK_TEAM and as an onerror swap if a photo URL fails. */
@@ -1660,7 +1668,7 @@ img, svg, video, iframe{ max-width: 100%; height: auto; }
             <option value="">Choose one</option>
             <option value="trade">SARKSH Trade — start investing</option>
             <option value="pms">SARKSH PMS — managed portfolio</option>
-            <option value="expert">Expertise Sale — guided programme</option>
+            <option value="expert">Expertise Sale — Expert Accounts (28-trading-day plans)</option>
             <option value="visit">Visit our office</option>
             <option value="other">Other</option>
           </select>
@@ -1756,7 +1764,7 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyTLMB9qWRhb47plZllzt1sxlc-9dN7aOsobQkzY5eqLnuVTGVE4ud_GIsutIWeQEyi/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyScPNaO5OFeN17P2nA66tIHiI_vgUatBRoJqtEYZJBjlo8XaD8bcAq7B_CfuVOx0Pz/exec";
 const contactForm = document.getElementById('contactForm');
 const contactSubmit = document.getElementById('contactSubmit');
 const contactStatus = document.getElementById('contactStatus');
