@@ -1,0 +1,30 @@
+[
+  {
+    "file": "grath.html",
+    "has_favicon_ico": true,
+    "has_48_png": true,
+    "has_manifest": true,
+    "has_data_uri_icon_link": false
+  },
+  {
+    "file": "index.html",
+    "has_favicon_ico": true,
+    "has_48_png": true,
+    "has_manifest": true,
+    "has_data_uri_icon_link": false
+  },
+  {
+    "file": "login.html",
+    "has_favicon_ico": true,
+    "has_48_png": true,
+    "has_manifest": true,
+    "has_data_uri_icon_link": false
+  },
+  {
+    "file": "partal.html",
+    "has_favicon_ico": true,
+    "has_48_png": true,
+    "has_manifest": true,
+    "has_data_uri_icon_link": false
+  }
+]
