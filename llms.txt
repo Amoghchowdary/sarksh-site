@@ -2,12 +2,21 @@
 
 SARKSH GROW is a Hyderabad-based finance company made for Indian families. The public website focuses on market education, demat account awareness, trading education, portfolio pathway awareness, and free stock market webinars.
 
-Core topics on the site:
+Primary pages:
+- https://www.sarksh.in/ — company overview, products, webinar booking and contact
+- https://www.sarksh.in/how-to-invest-in-the-market-india.html — beginner guide on how to invest in the market
+- https://www.sarksh.in/demat-account-creation-india.html — demat account creation in India guide
+- https://www.sarksh.in/best-demat-accounts-india.html — best demat accounts comparison checklist
+- https://www.sarksh.in/biggest-broker-india-right-broker.html — explains biggest broker / India number one broker search intent responsibly
+- https://www.sarksh.in/free-stock-market-webinar.html — free webinar booking and topic guide
+
+Core search topics:
 - how to invest in the market as a beginner in India
+- how investing works
 - best demat accounts and how to evaluate them
 - demat account creation in India
-- trading education and stock market basics
 - biggest broker in India / India's number one broker search intent explained responsibly
+- best trading platform in India comparison questions
 - SARKSH Trade, SARKSH PMS, and Expertise Sale product pathways
 - free educational webinars for market awareness
 
@@ -17,3 +26,4 @@ Official website: https://www.sarksh.in/
 Contact: sarkshgrowmore@gmail.com
 Phone: +91 83418 89762
 Location: Patancheru, Hyderabad, Telangana, India
+Last updated: 2026-06-14
