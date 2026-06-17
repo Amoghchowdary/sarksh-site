@@ -1,13 +1,18 @@
 # SARKSH GROW
 
-SARKSH GROW is a Hyderabad-based finance and technology company focused on market education, customer support, demat awareness, trading-readiness education, portfolio pathway awareness and free webinars for Indian families.
+SARKSH GROW is a Hyderabad-based fintech company focused on people who are new to the Indian market: Indian families, first-time demat users, beginner traders, retail investors and working professionals.
 
-Primary public pages:
-- Home: https://www.sarksh.in/
-- About Us: https://www.sarksh.in/about-us.html
-- Free webinar: https://www.sarksh.in/free-stock-market-webinar.html
-- How to invest in the market in India: https://www.sarksh.in/how-to-invest-in-the-market-india.html
-- Demat account creation in India: https://www.sarksh.in/demat-account-creation-india.html
-- Best demat accounts comparison guide: https://www.sarksh.in/best-demat-accounts-india.html
+Current public activity:
+- Free market awareness webinars.
+- Education on investing basics, demat accounts, trading readiness, portfolio awareness and risk.
 
-Boundary: Public content is general education and awareness only. It is not personalised investment advice or a recommendation to buy or sell securities.
+Product pathways:
+- SARKSH Trade: planned simple trading-access pathway for CNC, MIS, margin-aware trading and long-term investment journeys; regulated trading operations are approval-dependent.
+- SARKSH PMS: portfolio management awareness and readiness for higher-ticket portfolio conversations; any service availability is subject to SEBI requirements and registration.
+- SARKSH Expertise Sale: flagship data-led stock expertise and advisory intelligence project under patent and regulatory preparation; internal mechanisms are not publicly disclosed.
+
+Founder:
+- Amarneni Amogh Chowdary, Founder & CEO.
+
+Public compliance:
+SARKSH GROW does not guarantee returns or market outcomes. Current website content is education and awareness only, not personalised advice or a securities recommendation.

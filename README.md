@@ -1,12 +1,13 @@
-# SARKSH GROW Website v9
+# SARKSH GROW Website v11
 
-Corrected financial website build. Visible SEO/technical language has been removed from public copy.
+Business-correct financial website build.
 
-## Preserved
-- Apps Script URL: https://script.google.com/macros/s/AKfycbwgN-10CS3Me0EUNWsANT4ivQEL-nDhRRS1LxOD1al_bWT-MoKgjv4K0BKxGTIWjvi-/exec
-- GA4 ID: G-7YPG40KX6L
-- Internal pages: login.html, partal.html, grath.html
-- Favicon/logo assets
+This version reflects the founder-approved positioning:
+- SARKSH GROW is a FinTech company focused on people new to the Indian market.
+- Current public activity: free awareness and education.
+- Planned product pathways: SARKSH Trade, SARKSH PMS, SARKSH Expertise Sale.
+- No guaranteed returns or market outcomes.
+- Regulated services will move forward only after applicable approvals and readiness.
+- Team profiles/photos are loaded from Partal/backend when available, with reliable initials fallback.
 
-## Deploy
-Upload the contents of `sarksh-site-main` to the GitHub Pages repository root.
+Deploy the contents inside `sarksh-site-main` to the GitHub Pages repo root.
