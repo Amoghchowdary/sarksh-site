@@ -1,0 +1,1 @@
+SARKSH GROW v14: one-page preferred design, white background, logo-green/black writing, business-correct product copy. Upload the contents of this folder to GitHub repo root. Main navigation is one-page anchor based. Apps Script URL and GA4 ID are preserved.
