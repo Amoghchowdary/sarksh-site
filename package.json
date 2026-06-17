@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "npx http-server . -p 8080 -c-1",
+    "check": "node --check assets/js/sarksh.js"
+  },
+  "devDependencies": {
+    "http-server": "latest"
+  }
+}
