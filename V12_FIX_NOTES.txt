@@ -1,0 +1,7 @@
+SARKSH GROW v12 public design correction
+
+- Removed public/internal wording such as “Updated through Partal”.
+- Fixed team photo fallback so missing photos show clean initials cards, not green broken image blocks.
+- Preserved Apps Script backend URL and GA4 ID.
+- Public website remains finance-first: FinTech positioning, products, team, webinar and risk disclosure.
+- Upload contents inside sarksh-site-main to GitHub repository root.

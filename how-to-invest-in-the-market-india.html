@@ -58,84 +58,182 @@
 .compliance-banner{background:#fffdf6;border:1px solid #eddca9;border-radius:24px;padding:20px;margin-top:20px;color:#473a15}.compliance-banner strong{color:#6c4a09}.compliance-banner a{color:#064f34;font-weight:900}
 @media(max-width:900px){.vision-strip{grid-template-columns:1fr}.status-row{gap:6px}.product-points li{font-size:13.5px}}
 
+
+/* v12 public-facing team and product polish */
+.team-section{background:radial-gradient(circle at 10% 0%,rgba(0,89,57,.09),transparent 26%),linear-gradient(180deg,#f8fbf7 0%,#fff 100%);border-block:1px solid var(--line)}
+.premium-founder{position:relative;overflow:hidden;background:linear-gradient(135deg,#ffffff 0%,#f5fbf7 55%,#fffaf0 100%);border:1px solid rgba(0,89,57,.18)}
+.premium-founder:after{content:"";position:absolute;right:-70px;bottom:-70px;width:210px;height:210px;border-radius:50%;background:rgba(0,89,57,.07)}
+.founder-photo.founder-mark,.team-avatar{display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#005939 0%,#073724 100%);color:#f4f1ea;font-family:Georgia,"Times New Roman",serif;font-weight:900;letter-spacing:.04em;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.founder-photo.founder-mark span{font-size:64px;line-height:1}.founder-photo.founder-mark small{font-family:Inter,ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:11px;margin-top:-50px;color:#d9eadf}
+.team-grid.refined-team-grid{grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch}
+.team-card.core-team-card{border:1px solid rgba(0,89,57,.14);background:linear-gradient(180deg,#fff 0%,#fbfdfb 100%);border-radius:26px;overflow:hidden;box-shadow:var(--shadow2)}
+.team-card.core-team-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.team-avatar{min-height:158px;font-size:32px;line-height:1;color:#f4f1ea}.team-photo img{width:100%;height:100%;object-fit:cover;display:block}.team-photo img[src=""],.founder-photo img[src=""]{display:none!important}.team-status,.team-refresh-note{display:none!important}.team-card.placeholder{border-style:solid;background:linear-gradient(180deg,#fff,#fbfdfb)}
+.team-section .section-copy{max-width:900px}.team-name{min-height:54px}.team-role{line-height:1.42}.product-card{border-color:rgba(0,89,57,.15)}.product-card.featured{background:linear-gradient(180deg,#fff 0%,#fbfdfb 100%)}.product-badge{white-space:nowrap}.confidential-note{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid rgba(0,89,57,.16);border-radius:20px;padding:16px 18px;color:#405047}.confidential-note strong{color:var(--green)}
+@media(max-width:1000px){.team-grid.refined-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.team-avatar{min-height:120px}.team-name{min-height:auto}}
+@media(max-width:620px){.team-grid.refined-team-grid{grid-template-columns:1fr}.team-card.core-team-card{display:grid;grid-template-columns:92px 1fr;align-items:center}.team-avatar{min-height:92px;height:92px;font-size:22px}.founder-photo.founder-mark span{font-size:48px}.founder-photo.founder-mark small{margin-top:-34px}}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "FinancialService"], "@id": "https://www.sarksh.in/#organization", "name": "SARKSH GROW", "legalName": "SARKSH GROUP OF COMPANIES PVT LTD (OPC)", "url": "https://www.sarksh.in/", "logo": "https://www.sarksh.in/sarksh-logo.webp", "image": "https://www.sarksh.in/sarksh-favicon.png", "description": "SARKSH GROW is a Hyderabad-based finance and technology company focused on market education, product pathways, customer support and risk-aware financial participation for Indian families.", "telephone": "+91 83418 89762", "email": "sarkshgrowmore@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "Plot 76, Road 9, Sumashaila Township, Isnapur", "addressLocality": "Patancheru, Hyderabad", "addressRegion": "Telangana", "postalCode": "502307", "addressCountry": "IN"}, "areaServed": "IN", "slogan": "The Change", "foundingDate": "2025", "knowsAbout": ["stock market basics India", "how to invest in the market", "demat account creation in India", "demat account comparison", "trading education", "portfolio management awareness", "risk-aware financial education"]}, {"@type": "WebSite", "@id": "https://www.sarksh.in/#website", "url": "https://www.sarksh.in/", "name": "SARKSH GROW", "publisher": {"@id": "https://www.sarksh.in/#organization"}, "inLanguage": "en-IN"}, {"@type": "WebPage", "@id": "https://www.sarksh.in/how-to-invest-in-the-market-india.html#webpage", "url": "https://www.sarksh.in/how-to-invest-in-the-market-india.html", "name": "How to Invest in the Market in India", "description": "A beginner-friendly guide for Indian families who want to understand market participation, demat accounts, risk and time horizon.", "isPartOf": {"@id": "https://www.sarksh.in/#website"}, "about": {"@id": "https://www.sarksh.in/#organization"}, "dateModified": "2026-06-17", "inLanguage": "en-IN"}]}</script>
-<script>
-
-(function(){
+<script>(function(){
   "use strict";
   const CONFIG={gaMeasurementId:"G-7YPG40KX6L",appsScriptUrl:"https://script.google.com/macros/s/AKfycbwgN-10CS3Me0EUNWsANT4ivQEL-nDhRRS1LxOD1al_bWT-MoKgjv4K0BKxGTIWjvi-/exec",clarityProjectId:""};
   window.SARKSH_CONFIG=CONFIG;
-  function loadGA(){if(!CONFIG.gaMeasurementId||window.__sarkshGaLoaded)return;window.__sarkshGaLoaded=true;window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};const s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(CONFIG.gaMeasurementId);s.onload=function(){window.gtag("js",new Date());window.gtag("config",CONFIG.gaMeasurementId,{anonymize_ip:true})};document.head.appendChild(s)}
+  function loadGA(){
+    if(!CONFIG.gaMeasurementId||window.__sarkshGaLoaded)return;
+    window.__sarkshGaLoaded=true;
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
+    const s=document.createElement("script");
+    s.async=true;
+    s.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(CONFIG.gaMeasurementId);
+    s.onload=function(){window.gtag("js",new Date());window.gtag("config",CONFIG.gaMeasurementId,{anonymize_ip:true})};
+    document.head.appendChild(s);
+  }
   (window.requestIdleCallback||function(cb){return setTimeout(cb,1200)})(loadGA);
-  if(CONFIG.clarityProjectId){window.addEventListener("load",function(){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CONFIG.clarityProjectId);},{once:true})}
+  if(CONFIG.clarityProjectId){
+    window.addEventListener("load",function(){
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CONFIG.clarityProjectId);
+    },{once:true});
+  }
   const toggle=document.querySelector("[data-nav-toggle]"),links=document.querySelector("[data-nav-links]");
-  if(toggle&&links){toggle.addEventListener("click",()=>{const open=links.classList.toggle("open");toggle.setAttribute("aria-expanded",open?"true":"false")});links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");toggle.setAttribute("aria-expanded","false")}))}
+  if(toggle&&links){
+    toggle.addEventListener("click",()=>{const open=links.classList.toggle("open");toggle.setAttribute("aria-expanded",open?"true":"false")});
+    links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");toggle.setAttribute("aria-expanded","false")}));
+  }
   function status(el,type,msg){if(!el)return;el.className="form-status show "+type;el.textContent=msg}
   function validPhone(v){return /^\+?[0-9\s-]{8,16}$/.test(v)}
   function validEmail(v){return /^\S+@\S+\.\S+$/.test(v)}
   async function postLead(payload){const body=new URLSearchParams({action:"contact",payload:JSON.stringify(payload)});await fetch(CONFIG.appsScriptUrl,{method:"POST",mode:"no-cors",body});return true}
   document.querySelectorAll("form[data-lead-form]").forEach(form=>{
-    const st=form.querySelector("[data-form-status]");const submit=form.querySelector("button[type='submit']");const defaultText=submit?submit.textContent:"Submit";
-    form.addEventListener("submit",async e=>{e.preventDefault();const data=new FormData(form);const name=String(data.get("name")||"").trim();const phone=String(data.get("phone")||"").trim();const email=String(data.get("email")||"").trim();if(name.length<2)return status(st,"error","Please enter your name.");if(!validPhone(phone))return status(st,"error","Please enter a valid phone number.");if(!validEmail(email))return status(st,"error","Please enter a valid email address.");const type=form.getAttribute("data-lead-form")||"contact_lead";const payload=Object.fromEntries(data.entries());payload.source="sarksh.in";payload.type=type;payload.page=location.pathname||"/";payload.createdAt=new Date().toISOString();if(type==="webinar_booking"){payload.interest="free-webinar";payload.message=["WEBINAR BOOKING",payload.topic?"Topic: "+payload.topic:"",payload.preferredTime?"Preferred time: "+payload.preferredTime:"",payload.city?"City: "+payload.city:"",payload.question?"Question: "+payload.question:""].filter(Boolean).join(" | ")}try{if(submit){submit.disabled=true;submit.textContent="Sending…"}await postLead(payload);status(st,"success","Thank you. Your request has been recorded. Our team will contact you shortly.");if(window.clarity)window.clarity("event",type+"_submitted");form.reset();}catch(err){status(st,"error","Submission failed. Please call +91 83418 89762 or email sarkshgrowmore@gmail.com.")}finally{if(submit){submit.disabled=false;submit.textContent=defaultText}}})
+    const st=form.querySelector("[data-form-status]");
+    const submit=form.querySelector("button[type='submit']");
+    const defaultText=submit?submit.textContent:"Submit";
+    form.addEventListener("submit",async e=>{
+      e.preventDefault();
+      const data=new FormData(form);
+      const name=String(data.get("name")||"").trim();
+      const phone=String(data.get("phone")||"").trim();
+      const email=String(data.get("email")||"").trim();
+      if(name.length<2)return status(st,"error","Please enter your name.");
+      if(!validPhone(phone))return status(st,"error","Please enter a valid phone number.");
+      if(!validEmail(email))return status(st,"error","Please enter a valid email address.");
+      const type=form.getAttribute("data-lead-form")||"contact_lead";
+      const payload=Object.fromEntries(data.entries());
+      payload.source="sarksh.in";
+      payload.type=type;
+      payload.page=location.pathname||"/";
+      payload.createdAt=new Date().toISOString();
+      if(type==="webinar_booking"){
+        payload.interest="free-webinar";
+        payload.message=["WEBINAR BOOKING",payload.topic?"Topic: "+payload.topic:"",payload.preferredTime?"Preferred time: "+payload.preferredTime:"",payload.city?"City: "+payload.city:"",payload.question?"Question: "+payload.question:""] .filter(Boolean).join(" | ");
+      }
+      try{
+        if(submit){submit.disabled=true;submit.textContent="Sending…"}
+        await postLead(payload);
+        status(st,"success","Thank you. Your request has been recorded. Our team will contact you shortly.");
+        if(window.clarity)window.clarity("event",type+"_submitted");
+        form.reset();
+      }catch(err){
+        status(st,"error","Submission failed. Please call +91 83418 89762 or email sarkshgrowmore@gmail.com.");
+      }finally{
+        if(submit){submit.disabled=false;submit.textContent=defaultText}
+      }
+    });
   });
-
-  function initialsAvatar(name){
-    const parts=String(name||"?").trim().split(/\s+/).filter(Boolean);
-    const initials=parts.length===0?"?":parts.length===1?parts[0].slice(0,2).toUpperCase():(parts[0][0]+parts[parts.length-1][0]).toUpperCase();
-    const svg='<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"><rect width="100%" height="100%" fill="#0f4d35"/><text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-size="220" fill="#f4f1ea">'+initials.replace(/[<&>]/g,"")+'</text></svg>';
-    return 'data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(svg)));
-  }
   const FALLBACK_TEAM=[
-    {name:"Amarneni Amogh Chowdary",role:"Founder & CEO",photo:""},
-    {name:"Technology Department",role:"Trading Platform, UI/UX & Systems",photo:"",placeholder:true},
-    {name:"Data Department",role:"Market Data, Research Support & Analytics",photo:"",placeholder:true},
-    {name:"Operations Department",role:"Customer Flow, Documentation & Support",photo:"",placeholder:true},
-    {name:"Human Resources Department",role:"Team Coordination & Internal Process",photo:"",placeholder:true}
+    {name:"Amarneni Amogh Chowdary",role:"Founder & CEO",photo:"",initials:"AAC"},
+    {name:"Technology Team",role:"Trading Platform, UI/UX & Systems",photo:"",initials:"TECH"},
+    {name:"Data Team",role:"Market Data, Research Support & Analytics",photo:"",initials:"DATA"},
+    {name:"Operations Team",role:"Customer Flow, Documentation & Support",photo:"",initials:"OPS"},
+    {name:"Human Resources Team",role:"Team Coordination & Internal Process",photo:"",initials:"HR"}
   ];
-  function escapeHtml(s){return String(s||"").replace(/[&<>\"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]))}
+  function escapeHtml(s){
+    return String(s||"").replace(/[&<>"']/g,function(c){
+      if(c==="&")return"&amp;";
+      if(c==="<")return"&lt;";
+      if(c===">")return"&gt;";
+      if(c==='"')return"&quot;";
+      return"&#39;";
+    });
+  }
+  function initialsText(name){
+    const parts=String(name||"?").trim().split(/\s+/).filter(Boolean);
+    return parts.length===0?"?":parts.length===1?parts[0].slice(0,4).toUpperCase():(parts[0][0]+parts[parts.length-1][0]).toUpperCase();
+  }
   function normalizePhotoUrl(url){
-    let u=String(url||"").trim(); if(!u) return "";
-    if(u.startsWith("data:image/")) return u;
+    let u=String(url||"").trim();
+    if(!u)return"";
+    if(u.startsWith("data:image/"))return u;
     const m1=u.match(/drive\.google\.com\/file\/d\/([^\/]+)/);
     const m2=u.match(/[?&]id=([^&]+)/);
     const id=m1?m1[1]:(m2?m2[1]:"");
-    if(id && /drive\.google\.com/.test(u)) return "https://drive.google.com/uc?export=view&id="+encodeURIComponent(id);
+    if(id&&/drive\.google\.com/.test(u))return"https://drive.google.com/uc?export=view&id="+encodeURIComponent(id);
     return u;
   }
+  function photoMarkup(member){
+    const name=escapeHtml(member.name||"");
+    const photo=normalizePhotoUrl(member.photo||"");
+    const initials=escapeHtml(member.initials||initialsText(member.name));
+    if(photo){
+      return '<div class="team-photo"><img src="'+escapeHtml(photo)+'" alt="'+name+'" loading="lazy" decoding="async" data-initials="'+initials+'" onerror="var p=this.closest(\'.team-photo\');p.classList.add(\'team-avatar\');p.textContent=this.getAttribute(\'data-initials\')||\'SG\';this.remove();"></div>';
+    }
+    return '<div class="team-photo team-avatar">'+initials+'</div>';
+  }
   function renderTeam(team){
-    const grid=document.querySelector("[data-sarksh-team-grid]"); if(!grid) return;
+    const grid=document.querySelector("[data-sarksh-team-grid]");
+    if(!grid)return;
     const list=Array.isArray(team)&&team.length?team:FALLBACK_TEAM;
-    grid.innerHTML=list.map(m=>{const name=escapeHtml(m.name||""); const role=escapeHtml(m.role||""); const photo=normalizePhotoUrl(m.photo||""); const fallback=initialsAvatar(m.name||""); const src=photo||fallback; const ph=m.placeholder?" placeholder":""; return '<article class="team-card'+ph+'"><div class="team-photo"><img src="'+escapeHtml(src)+'" alt="'+name+'" loading="lazy" decoding="async" data-fallback="'+fallback+'" onerror="this.onerror=null;this.src=this.dataset.fallback;"></div><div class="team-info"><div class="team-name">'+name+'</div><div class="team-role">'+role+'</div>'+(m.placeholder?'<div class="team-status">Updated through Partal</div>':'')+'</div></article>'}).join("");
+    grid.innerHTML=list.map(m=>{
+      const name=escapeHtml(m.name||"");
+      const role=escapeHtml(m.role||"");
+      return '<article class="team-card core-team-card">'+photoMarkup(m)+'<div class="team-info"><div class="team-name">'+name+'</div><div class="team-role">'+role+'</div></div></article>';
+    }).join("");
   }
   function renderFounder(photo){
-    const img=document.querySelector("[data-founder-photo]"); if(!img) return;
-    const fallback=initialsAvatar("Amarneni Amogh Chowdary"); img.dataset.fallback=fallback; const normalized=normalizePhotoUrl(photo); if(normalized) img.src=normalized; else if(!img.getAttribute("src")) img.src=fallback;
+    const wrap=document.querySelector("[data-founder-photo-wrap]");
+    if(!wrap)return;
+    const normalized=normalizePhotoUrl(photo);
+    if(normalized){
+      wrap.className="founder-photo";
+      wrap.innerHTML='<img alt="Amarneni Amogh Chowdary, Founder and CEO of SARKSH GROW" src="'+escapeHtml(normalized)+'" loading="lazy" decoding="async" onerror="this.parentNode.className=\'founder-photo founder-mark\';this.parentNode.innerHTML=\'<span>AAC</span><small>Founder</small>\';">';
+    }else{
+      wrap.className="founder-photo founder-mark";
+      wrap.innerHTML="<span>AAC</span><small>Founder</small>";
+    }
   }
-  function applyTeamResponse(res){if(res&&res.ok){if(Array.isArray(res.team)&&res.team.length)renderTeam(res.team); if(typeof res.founderPhoto==="string")renderFounder(res.founderPhoto)}}
+  function applyTeamResponse(res){
+    if(res&&res.ok){
+      if(Array.isArray(res.team)&&res.team.length)renderTeam(res.team);
+      if(typeof res.founderPhoto==="string")renderFounder(res.founderPhoto);
+    }
+  }
   function loadTeamViaPost(){
     const body=new URLSearchParams({action:"getTeam",payload:"{}"});
     return fetch(CONFIG.appsScriptUrl,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body}).then(r=>r.json()).then(applyTeamResponse).catch(()=>{});
   }
   function loadTeamViaJsonp(){
     return new Promise(resolve=>{
-      const cb="__sarkshTeam"+Date.now()+Math.floor(Math.random()*1000); let done=false;
-      const finish=(res)=>{if(done)return; done=true; try{delete window[cb]}catch(e){window[cb]=undefined} if(script&&script.parentNode)script.parentNode.removeChild(script); if(res)applyTeamResponse(res); resolve(!!res)};
-      window[cb]=function(res){finish(res)};
+      const cb="__sarkshTeam"+Date.now()+Math.floor(Math.random()*1000);
+      let done=false;
       const script=document.createElement("script");
+      const finish=(res)=>{if(done)return;done=true;try{delete window[cb]}catch(e){window[cb]=undefined}if(script&&script.parentNode)script.parentNode.removeChild(script);if(res)applyTeamResponse(res);resolve(!!res)};
+      window[cb]=function(res){finish(res)};
       script.src=CONFIG.appsScriptUrl+"?action=getTeam&callback="+encodeURIComponent(cb)+"&v="+Date.now();
-      script.async=true; script.onerror=function(){finish(null)}; document.head.appendChild(script);
+      script.async=true;
+      script.onerror=function(){finish(null)};
+      document.head.appendChild(script);
       setTimeout(()=>finish(null),2200);
     });
   }
   function initTeam(){
-    if(!document.querySelector("[data-sarksh-team-grid]")) return;
-    renderTeam(FALLBACK_TEAM); renderFounder("");
-    (window.requestIdleCallback||function(cb){return setTimeout(cb,600)})(async()=>{const ok=await loadTeamViaJsonp(); if(!ok)loadTeamViaPost();});
+    if(!document.querySelector("[data-sarksh-team-grid]"))return;
+    renderTeam(FALLBACK_TEAM);
+    renderFounder("");
+    (window.requestIdleCallback||function(cb){return setTimeout(cb,600)})(async()=>{const ok=await loadTeamViaJsonp();if(!ok)loadTeamViaPost()});
   }
   initTeam();
 })();
-
 </script>
 </head><body><a class="skip-link" href="#main">Skip to main content</a>
 <div class="topbar"><div class="inner"><span>SARKSH GROW is currently offering free market awareness and education. Regulated product services will begin only after required approvals.</span><a href="/free-stock-market-webinar.html">Book your free seat</a></div></div>

@@ -8,6 +8,6 @@ This version reflects the founder-approved positioning:
 - Planned product pathways: SARKSH Trade, SARKSH PMS, SARKSH Expertise Sale.
 - No guaranteed returns or market outcomes.
 - Regulated services will move forward only after applicable approvals and readiness.
-- Team profiles/photos are loaded from Partal/backend when available, with reliable initials fallback.
+- Team profiles/photos are loaded from the backend when available, with reliable public initials fallback.
 
 Deploy the contents inside `sarksh-site-main` to the GitHub Pages repo root.
