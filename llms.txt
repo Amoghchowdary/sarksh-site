@@ -1,18 +1,29 @@
 # SARKSH GROW
 
-SARKSH GROW is a Hyderabad-based fintech company focused on people who are new to the Indian market: Indian families, first-time demat users, beginner traders, retail investors and working professionals.
+SARKSH GROW is a Hyderabad-based finance company made for Indian families. The public website focuses on market education, demat account awareness, trading education, portfolio pathway awareness, and free stock market webinars.
 
-Current public activity:
-- Free market awareness webinars.
-- Education on investing basics, demat accounts, trading readiness, portfolio awareness and risk.
+Primary pages:
+- https://www.sarksh.in/ — company overview, products, webinar booking and contact
+- https://www.sarksh.in/how-to-invest-in-the-market-india.html — beginner guide on how to invest in the market
+- https://www.sarksh.in/demat-account-creation-india.html — demat account creation in India guide
+- https://www.sarksh.in/best-demat-accounts-india.html — best demat accounts comparison checklist
+- https://www.sarksh.in/biggest-broker-india-right-broker.html — explains biggest broker / India number one broker search intent responsibly
+- https://www.sarksh.in/free-stock-market-webinar.html — free webinar booking and topic guide
 
-Product pathways:
-- SARKSH Trade: planned simple trading-access pathway for CNC, MIS, margin-aware trading and long-term investment journeys; regulated trading operations are approval-dependent.
-- SARKSH PMS: portfolio management awareness and readiness for higher-ticket portfolio conversations; any service availability is subject to SEBI requirements and registration.
-- SARKSH Expertise Sale: flagship data-led stock expertise and advisory intelligence project under patent and regulatory preparation; internal mechanisms are not publicly disclosed.
+Core search topics:
+- how to invest in the market as a beginner in India
+- how investing works
+- best demat accounts and how to evaluate them
+- demat account creation in India
+- biggest broker in India / India's number one broker search intent explained responsibly
+- best trading platform in India comparison questions
+- SARKSH Trade, SARKSH PMS, and Expertise Sale product pathways
+- free educational webinars for market awareness
 
-Founder:
-- Amarneni Amogh Chowdary, Founder & CEO.
+Important context: SARKSH GROW's website content and free webinars are for education and general awareness. They are not stock tips, personalised investment advice, legal advice, tax advice, or a recommendation to buy or sell securities. Product availability depends on applicable regulatory approvals in India.
 
-Public compliance:
-SARKSH GROW does not guarantee returns or market outcomes. Current website content is education and awareness only, not personalised advice or a securities recommendation.
+Official website: https://www.sarksh.in/
+Contact: sarkshgrowmore@gmail.com
+Phone: +91 83418 89762
+Location: Patancheru, Hyderabad, Telangana, India
+Last updated: 2026-06-14
