@@ -19,7 +19,13 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/sarksh-logo.webp" as="image" type="image/webp">
-<link rel="stylesheet" href="/assets/css/sarksh.css">
+<!-- SARKSH critical stylesheet inlined so the website renders even if GitHub Pages misses the assets folder. -->
+<style>
+:root{
+  --green:#005939;--green-2:#0a6b47;--green-3:#e7f4ee;--ink:#101815;--muted:#5e6b66;--line:#dce8e1;--paper:#fbfcf9;--white:#fff;--gold:#b88a2c;--soft:#f3f7f4;--danger:#7a1f1f;--shadow:0 18px 55px rgba(0,44,28,.10);--radius:28px;--radius-sm:18px;--max:1180px;--font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--serif:Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:var(--font);color:var(--ink);background:linear-gradient(180deg,#fff 0%,#f9fbf7 100%);line-height:1.58;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}.skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#fff;padding:10px 14px;border-radius:999px;z-index:9999;box-shadow:var(--shadow)}.topbar{background:var(--green);color:#ecfff5;font-size:13px;letter-spacing:.01em}.topbar-inner{max-width:var(--max);margin:auto;padding:9px 20px;display:flex;justify-content:space-between;gap:12px;align-items:center}.topbar a{text-decoration:underline;text-underline-offset:3px}.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid rgba(0,89,57,.10)}.nav{max-width:var(--max);margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.01em}.brand img{width:42px;height:42px;border-radius:50%;box-shadow:0 8px 25px rgba(0,89,57,.18)}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.nav-links{display:flex;gap:4px;align-items:center}.nav-links a{font-size:14px;font-weight:760;color:#25312d;padding:10px 12px;border-radius:999px}.nav-links a:hover,.nav-links a.active{background:var(--green-3);color:var(--green)}.nav-cta{background:var(--green)!important;color:#fff!important;box-shadow:0 10px 24px rgba(0,89,57,.18)}.nav-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:14px;background:#fff;align-items:center;justify-content:center}.nav-toggle span,.nav-toggle:before,.nav-toggle:after{content:"";display:block;width:20px;height:2px;background:var(--green);margin:3px 0;border-radius:2px}.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 18% 10%,rgba(0,89,57,.15),transparent 28%),radial-gradient(circle at 90% 10%,rgba(184,138,44,.12),transparent 28%),linear-gradient(180deg,#ffffff 0%,#f2f8f4 100%)}.hero-inner{max-width:var(--max);margin:auto;padding:82px 20px 54px;display:grid;grid-template-columns:minmax(0,1.04fr) minmax(320px,.72fr);gap:44px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(0,89,57,.08);color:var(--green);border:1px solid rgba(0,89,57,.14);border-radius:999px;padding:8px 13px;font-size:13px;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 6px rgba(0,89,57,.10)}h1,h2,h3,p{margin-top:0}.hero h1{font-family:var(--serif);font-weight:650;font-size:clamp(44px,7vw,86px);line-height:.96;letter-spacing:-.06em;margin:20px 0 22px;color:#0b1b15}.hero h1 span{color:var(--green)}.lead{font-size:clamp(18px,2vw,22px);color:#33413b;max-width:780px}.cta-row{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 18px;font-weight:850;border:1px solid transparent;transition:.2s ease;cursor:pointer}.btn-primary{background:var(--green);color:#fff;box-shadow:0 18px 34px rgba(0,89,57,.22)}.btn-primary:hover{transform:translateY(-2px);background:#064d34}.btn-secondary{background:#fff;color:var(--green);border-color:rgba(0,89,57,.18)}.btn-secondary:hover{border-color:var(--green);transform:translateY(-2px)}.hero-card{background:rgba(255,255,255,.82);border:1px solid rgba(0,89,57,.12);border-radius:34px;box-shadow:var(--shadow);padding:26px;position:relative}.hero-card:before{content:"";position:absolute;inset:12px;border-radius:26px;border:1px dashed rgba(0,89,57,.15);pointer-events:none}.scorecard{display:grid;gap:14px;position:relative}.score-item{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px}.score-item strong{font-size:27px;color:var(--green);display:block;line-height:1}.score-item span{color:var(--muted);font-size:14px}.market-strip{border-block:1px solid rgba(0,89,57,.10);background:#fff;overflow:hidden}.strip-track{display:flex;width:max-content;animation:scroll 28s linear infinite}.strip-item{display:flex;gap:10px;align-items:center;white-space:nowrap;padding:13px 22px;border-right:1px solid var(--line);font-size:14px;color:#31423b}.strip-item b{color:var(--green)}@keyframes scroll{to{transform:translateX(-50%)}}.section{max-width:var(--max);margin:auto;padding:86px 20px}.section.tight{padding-top:56px}.section-head{display:grid;grid-template-columns:220px minmax(0,1fr);gap:30px;align-items:start;margin-bottom:34px}.kicker{color:var(--green);font-weight:900;font-size:13px;letter-spacing:.14em;text-transform:uppercase}.section-title{font-family:var(--serif);font-size:clamp(34px,5vw,58px);line-height:1;letter-spacing:-.04em;margin-bottom:14px}.section-title em{font-style:normal;color:var(--green)}.section-copy{color:var(--muted);font-size:17px;max-width:850px}.grid{display:grid;gap:20px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 12px 38px rgba(0,44,28,.05)}.card:hover{box-shadow:var(--shadow)}.card h3{font-size:22px;margin-bottom:10px}.card p{color:var(--muted);margin-bottom:0}.card .tag{display:inline-flex;margin-bottom:16px;border:1px solid rgba(0,89,57,.15);background:var(--green-3);color:var(--green);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.product-card{display:flex;flex-direction:column;min-height:100%}.product-card ul{padding-left:18px;margin:14px 0 22px;color:#485650}.product-card li{margin:8px 0}.product-card .btn{margin-top:auto}.journey{counter-reset:step}.step{position:relative;padding-left:64px}.step:before{counter-increment:step;content:"0" counter(step);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:16px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}.quote-panel{background:linear-gradient(135deg,var(--green),#073d2b);color:#fff;border-radius:36px;padding:34px;box-shadow:0 26px 70px rgba(0,89,57,.23)}.quote-panel p{font-size:22px;line-height:1.42;color:#f1fff7}.quote-panel small{color:#c9eadb;font-weight:800}.learning-card{position:relative;overflow:hidden}.learning-card:after{content:"→";position:absolute;right:24px;top:24px;color:var(--green);font-weight:900}.learning-card h3{padding-right:26px}.pill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:#40504a;font-size:14px;font-weight:700}.notice{background:#fff7e6;border:1px solid #f0d38d;color:#523b09;border-radius:var(--radius-sm);padding:18px 20px}.risk{background:#fff;border:1px solid #ecd9d9;color:#4b2525;border-radius:var(--radius-sm);padding:18px 20px}.form-wrap{background:#fff;border:1px solid var(--line);border-radius:36px;box-shadow:var(--shadow);padding:28px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-weight:850;font-size:13px;color:#26332e}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:16px;padding:13px 14px;background:#fbfdfb;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(0,89,57,.10)}.form-status{display:none;margin-top:14px;padding:12px 14px;border-radius:14px;font-weight:750}.form-status.show{display:block}.form-status.success{background:#e7f6ed;color:#064b2f}.form-status.error{background:#fdeaea;color:#7a1f1f}.faq{border-top:1px solid var(--line)}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{cursor:pointer;font-weight:900;font-size:18px}.faq p{color:var(--muted);margin:10px 0 0}.page-hero{background:linear-gradient(180deg,#fff,#f3f8f4);border-bottom:1px solid var(--line)}.page-hero-inner{max-width:var(--max);margin:auto;padding:66px 20px}.page-hero h1{font-family:var(--serif);font-size:clamp(40px,6vw,70px);line-height:1;letter-spacing:-.05em;margin:18px 0}.breadcrumb{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:13px;font-weight:750}.article{max-width:880px;margin:auto;padding:64px 20px}.article h2{font-family:var(--serif);font-size:36px;line-height:1.05;letter-spacing:-.03em;margin:34px 0 12px}.article h3{font-size:23px;margin:26px 0 8px}.article p,.article li{color:#42514b;font-size:18px}.article ul,.article ol{padding-left:24px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:20px;background:#fff}.table{width:100%;border-collapse:collapse;min-width:720px}.table th,.table td{padding:14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.table th{background:#f2f8f4;color:var(--green);font-size:13px;text-transform:uppercase;letter-spacing:.08em}.footer{background:#071510;color:#e8f7ef;margin-top:60px}.footer-inner{max-width:var(--max);margin:auto;padding:52px 20px 26px}.footer-grid{display:grid;grid-template-columns:1.2fr repeat(3,.7fr);gap:28px}.footer a{display:block;color:#d7eee3;margin:8px 0}.footer p{color:#bad4c8}.footer h4{color:#fff;margin:0 0 14px}.footer-brand{display:flex;gap:12px;align-items:center;font-weight:900;font-size:20px}.footer-brand img{width:46px;height:46px;border-radius:50%}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#a9c7ba;font-size:13px}.legal-note{font-size:13px;color:#a9c7ba!important}.reveal{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}.reveal.in{opacity:1;transform:none}.sticky-cta{position:fixed;right:18px;bottom:18px;z-index:80;display:none}.sticky-cta .btn{box-shadow:0 16px 38px rgba(0,89,57,.28)}@media (max-width:980px){.hero-inner,.section-head,.grid-2,.grid-3,.grid-4,.footer-grid{grid-template-columns:1fr}.hero-inner{padding-top:58px}.section{padding:64px 20px}.section-head{gap:12px}.form-grid{grid-template-columns:1fr}.sticky-cta{display:block}}@media (max-width:760px){.topbar-inner{display:block}.nav-toggle{display:flex;flex-direction:column}.nav-links{position:absolute;left:14px;right:14px;top:76px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:12px;box-shadow:var(--shadow);display:none;flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:13px 14px}.hero h1{font-size:44px}.lead{font-size:17px}.score-item strong{font-size:22px}.footer-bottom{display:block}.cta-row .btn{width:100%}.page-hero-inner{padding:46px 20px}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.strip-track{animation:none}.reveal{opacity:1;transform:none;transition:none}.btn:hover{transform:none}}
+
+</style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SARKSH GROW">
 <meta property="og:title" content="Free Stock Market Webinar | SARKSH GROW">
@@ -32,7 +38,131 @@
 <meta name="twitter:description" content="Book a free SARKSH GROW webinar on stock market basics, demat account creation in India, broker comparison and product pathway awareness.">
 <meta name="twitter:image" content="https://www.sarksh.in/sarksh-favicon.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "FinancialService"], "@id": "https://www.sarksh.in/#organization", "name": "SARKSH GROW", "legalName": "SARKSH GROUP OF COMPANIES PVT LTD (OPC)", "url": "https://www.sarksh.in/", "logo": "https://www.sarksh.in/sarksh-logo.webp", "image": "https://www.sarksh.in/sarksh-favicon.png", "description": "SARKSH GROW is a Hyderabad-based finance and technology company focused on market education, demat awareness, product pathways and risk-aware financial participation for Indian families.", "telephone": "+91 83418 89762", "email": "sarkshgrowmore@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "Plot 76, Road 9, Sumashaila Township, Isnapur", "addressLocality": "Patancheru, Hyderabad", "addressRegion": "Telangana", "postalCode": "502307", "addressCountry": "IN"}, "areaServed": "IN", "slogan": "The Change", "foundingDate": "2025", "knowsAbout": ["stock market basics India", "how to invest in the market", "demat account creation in India", "best demat accounts evaluation", "trading education", "portfolio management awareness", "risk-first investing education"]}, {"@type": "WebSite", "@id": "https://www.sarksh.in/#website", "url": "https://www.sarksh.in/", "name": "SARKSH GROW", "publisher": {"@id": "https://www.sarksh.in/#organization"}, "inLanguage": "en-IN"}, {"@type": "Event", "name": "SARKSH GROW Free Stock Market Webinar", "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "organizer": {"@id": "https://www.sarksh.in/#organization"}, "description": "A free educational webinar for Indian families on market basics, demat awareness, broker comparison and SARKSH product pathways.", "url": "https://www.sarksh.in/free-stock-market-webinar.html", "isAccessibleForFree": true, "inLanguage": "en-IN"}]}</script>
-<script defer src="/assets/js/sarksh.js"></script>
+<!-- SARKSH frontend engine inlined so forms, analytics and mobile navigation work without asset-path failures. -->
+<script>
+(function(){
+  "use strict";
+  const CONFIG = {
+    gaMeasurementId: "G-7YPG40KX6L",
+    appsScriptUrl: "https://script.google.com/macros/s/AKfycbwgN-10CS3Me0EUNWsANT4ivQEL-nDhRRS1LxOD1al_bWT-MoKgjv4K0BKxGTIWjvi-/exec",
+    clarityProjectId: "" // Add Microsoft Clarity project ID here only after you create it.
+  };
+  window.SARKSH_CONFIG = CONFIG;
+
+  function loadGoogleAnalytics() {
+    if (!CONFIG.gaMeasurementId || window.__sarkshGaLoaded) return;
+    window.__sarkshGaLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(CONFIG.gaMeasurementId);
+    script.onload = function() {
+      window.gtag("js", new Date());
+      window.gtag("config", CONFIG.gaMeasurementId, { anonymize_ip: true });
+    };
+    document.head.appendChild(script);
+  }
+
+  const startAnalytics = window.requestIdleCallback || function(cb){ return setTimeout(cb, 1600); };
+  startAnalytics(loadGoogleAnalytics);
+
+  if (CONFIG.clarityProjectId) {
+    window.addEventListener("load", function(){
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CONFIG.clarityProjectId);
+    }, {once:true});
+  }
+
+  const navToggle = document.querySelector("[data-nav-toggle]");
+  const navLinks = document.querySelector("[data-nav-links]");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }));
+  }
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -35px 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  } else {
+    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
+  }
+
+  async function postLead(payload) {
+    const body = new URLSearchParams({ action: "contact", payload: JSON.stringify(payload) });
+    try {
+      await fetch(CONFIG.appsScriptUrl, { method: "POST", mode: "no-cors", body });
+      return true;
+    } catch (err) {
+      console.error("Lead post failed", err);
+      throw err;
+    }
+  }
+
+  function setStatus(el, type, msg) {
+    if (!el) return;
+    el.className = "form-status show " + type;
+    el.textContent = msg;
+  }
+  function validPhone(phone) { return /^\+?[0-9\s-]{8,16}$/.test(phone); }
+  function validEmail(email) { return /^\S+@\S+\.\S+$/.test(email); }
+
+  document.querySelectorAll("form[data-lead-form]").forEach((form) => {
+    const status = form.querySelector("[data-form-status]");
+    const submit = form.querySelector("button[type='submit']");
+    const defaultText = submit ? submit.textContent : "Submit";
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const name = String(data.get("name") || "").trim();
+      const phone = String(data.get("phone") || "").trim();
+      const email = String(data.get("email") || "").trim();
+      if (name.length < 2) return setStatus(status, "error", "Please enter your name.");
+      if (!validPhone(phone)) return setStatus(status, "error", "Please enter a valid phone number.");
+      if (!validEmail(email)) return setStatus(status, "error", "Please enter a valid email address.");
+      const type = form.getAttribute("data-lead-form") || "contact_lead";
+      const payload = Object.fromEntries(data.entries());
+      payload.source = "sarksh.in";
+      payload.type = type;
+      payload.page = location.pathname || "/";
+      payload.createdAt = new Date().toISOString();
+      if (type === "webinar_booking") {
+        payload.interest = "free-webinar";
+        payload.message = [
+          "WEBINAR BOOKING",
+          payload.topic ? "Topic: " + payload.topic : "",
+          payload.preferredTime ? "Preferred time: " + payload.preferredTime : "",
+          payload.question ? "Question: " + payload.question : ""
+        ].filter(Boolean).join(" | ");
+      }
+      try {
+        if (submit) { submit.disabled = true; submit.textContent = "Sending…"; }
+        await postLead(payload);
+        setStatus(status, "success", "Thank you. Your request has been recorded. Our team will contact you shortly.");
+        if (window.clarity) window.clarity("event", type + "_submitted");
+        form.reset();
+      } catch (err) {
+        setStatus(status, "error", "Submission failed. Please email sarkshgrowmore@gmail.com or call +91 83418 89762.");
+      } finally {
+        if (submit) { submit.disabled = false; submit.textContent = defaultText; }
+      }
+    });
+  });
+})();
+
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
