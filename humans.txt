@@ -1,7 +1,14 @@
-SARKSH GROW
-Website: https://www.sarksh.in/
-Company: SARKSH GROUP OF COMPANIES PVT LTD (OPC)
-Location: Patancheru, Hyderabad, Telangana, India
+/* TEAM */
+Company: SARKSH GROW
+Legal name: SARKSH GROUP OF COMPANIES PVT LTD (OPC)
+Founder: Amarneni Amogh Chowdary
+Location: Hyderabad, Telangana, India
+Site: https://www.sarksh.in/
 Contact: sarkshgrowmore@gmail.com
-Purpose: Finance education, demat awareness, product-pathway clarity and free market webinars for Indian families.
-Last updated: 2026-06-14
+
+/* SITE */
+Language: English (India)
+Purpose: FinTech education, demat awareness, market learning and responsible product-pathway communication.
+Last update: 2026-06-20
+
+Future direction: finance-first institution building toward convenient Indian broking and wealth-tech access, subject to approvals and compliance readiness.

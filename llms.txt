@@ -1,9 +1,31 @@
 # SARKSH GROW
 
-SARKSH GROW is a Hyderabad-based FinTech company and financial institution in build phase. The public website focuses on free market awareness, demat account education, trading learning, risk clarity and product pathways for Indian families and people new to the market.
+SARKSH GROW is a Hyderabad-based FinTech company in build phase. The public website focuses on market education, demat account awareness, trading-readiness learning, risk clarity and product pathways for first-time investors, retail investors, beginner traders and working professionals in India.
 
-Current public activity: free education and awareness. Regulated services, broking, advisory and PMS-related offerings will move forward only after applicable approvals and compliance readiness.
+## Current public activity
 
-Products described: SARKSH Trade, SARKSH PMS and SARKSH Expertise Sale. SARKSH Expertise Sale is a major planned project under patenting and regulatory work.
+Current public activity is education and awareness. Regulated services, broking, advisory pathways and PMS-related offerings will move forward only after applicable approvals, registrations and compliance readiness.
 
-Risk note: SARKSH GROW does not guarantee returns or market outcomes.
+## Public product pathways
+
+- SARKSH Trade: planned trading-access pathway focused on cleaner UI/UX, CNC, MIS, margin-aware trading and long-term investing readiness.
+- SARKSH PMS: portfolio-management awareness and suitability pathway for eligible portfolio-level conversations, subject to regulatory readiness.
+- SARKSH Expertise Sale: flagship data-led expertise project under patenting and regulatory preparation.
+
+## Education pages
+
+- /learning-center.html — central learning hub.
+- /how-to-invest-in-the-market-india.html — beginner investing guide.
+- /demat-account-creation-india.html — demat account creation guide.
+- /best-demat-accounts-india.html — demat-account comparison guide.
+- /biggest-broker-india-right-broker.html — broker-size versus suitability guide.
+- /stock-market-risk-management-beginners.html — risk-management guide.
+- /trading-vs-investing-india.html — trading versus investing guide.
+- /stock-market-mistakes-beginners-india.html — beginner mistakes guide.
+
+## Risk note
+
+SARKSH GROW does not guarantee returns, profits, performance or market outcomes. Website content and webinars are educational and general in nature, not personalised investment advice, stock tips, legal advice, tax advice or a recommendation to buy or sell securities.
+
+
+Future broker vision: SARKSH GROW aims to compete in the broker and wealth-tech search category through convenience, simpler UI/UX, customer support discipline, demat and trading clarity, transparent risk education and compliance-first execution. It does not claim to be India's biggest broker today.

@@ -1,14 +1,26 @@
+SARKSH GROW Website V16 file manifest
+
 404.html
 CNAME
+DEPLOYMENT_NOTE_V14.txt
+DEPLOYMENT_NOTE_V15.txt
 FILE_MANIFEST.txt
 GITHUB_DEPLOYMENT_README.txt
 README.md
+SARKSH_10X_REDESIGN_NOTES.md
+SARKSH_CONTENT_WEBINAR_UPDATE_NOTES.md
+SARKSH_FAVICON_FIX_NOTES.md
+SARKSH_SEO_AND_BOOKING_NOTES.md
+SARKSH_SEO_MARKETING_UPDATE_V4_NOTES.md
+SARKSH_SEO_PERFORMANCE_V16_NOTES.md
+SARKSH_SEO_PERFORMANCE_V5_NOTES.md
+V12_FIX_NOTES.txt
 about-us.html
 android-chrome-192x192.png
 android-chrome-512x512.png
 apple-touch-icon.png
-assets/css/sarksh.css
-assets/js/sarksh.js
+assets/css/sarksh-seo-performance.css
+assets/js/sarksh-performance.js
 best-demat-accounts-india.html
 biggest-broker-india-right-broker.html
 demat-account-creation-india.html
@@ -22,8 +34,10 @@ grath.html
 how-to-invest-in-the-market-india.html
 humans.txt
 index.html
+learning-center.html
 llms.txt
 login.html
+package.json
 partal.html
 privacy.html
 risk-disclosure.html
@@ -34,5 +48,11 @@ sarksh-logo-256.webp
 sarksh-logo.webp
 sarksh-pms.html
 sarksh-trade.html
+scripts/seo-audit.js
 site.webmanifest
 sitemap.xml
+stock-market-mistakes-beginners-india.html
+stock-market-risk-management-beginners.html
+trading-vs-investing-india.html
+
+future-stock-broker-india.html — SEO landing page for SARKSH GROW future broking and convenience-led market-access vision.

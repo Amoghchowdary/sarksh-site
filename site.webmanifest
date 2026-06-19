@@ -1,7 +1,7 @@
 {
   "name": "SARKSH GROW",
   "short_name": "SARKSH",
-  "description": "SARKSH GROW \u2014 The Change.",
+  "description": "SARKSH GROW — Hyderabad FinTech for stock market learning, demat awareness, trading readiness and responsible market education.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -12,13 +12,21 @@
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
+  ],
+  "id": "/",
+  "lang": "en-IN",
+  "orientation": "portrait-primary",
+  "categories": [
+    "finance",
+    "education",
+    "business"
   ]
 }
