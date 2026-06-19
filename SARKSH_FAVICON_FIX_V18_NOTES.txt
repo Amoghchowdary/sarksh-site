@@ -1,0 +1,21 @@
+SARKSH GROW FAVICON FIX V18
+
+What was fixed:
+- Rebuilt the favicon pack from the SARKSH brand icon.
+- Added favicon-16x16.png and favicon-32x32.png for browser tab compatibility.
+- Rebuilt favicon.ico with 16x16, 32x32, 48x48 and 96x96 icon sizes.
+- Put Google-friendly 48x48 and 96x96 PNG favicon links first in every HTML head.
+- Used stable public URLs for favicon links: https://www.sarksh.in/favicon-48x48.png etc.
+- Updated site.webmanifest with clean finance-first SARKSH GROW identity and icon entries.
+- Kept robots.txt crawl-open and sitemap-linked.
+- Added scripts/seo-audit.js and fixed npm run check.
+- Apps Script backend URL was checked and kept intact in index.html, login.html, grath.html and partal.html.
+
+After GitHub deployment:
+1. Open https://www.sarksh.in/favicon-48x48.png in an incognito tab.
+2. Open https://www.sarksh.in/favicon.ico in an incognito tab.
+3. In Google Search Console, inspect https://www.sarksh.in/ and request indexing.
+4. Also resubmit https://www.sarksh.in/sitemap.xml.
+
+Important:
+Google Search favicon display can lag behind deployment because Google may cache the old favicon until the homepage and icon file are crawled again.

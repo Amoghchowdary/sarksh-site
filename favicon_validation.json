@@ -1,30 +1,89 @@
 [
   {
-    "file": "grath.html",
-    "has_favicon_ico": true,
-    "has_48_png": true,
-    "has_manifest": true,
-    "has_data_uri_icon_link": false
+    "file": "favicon.ico",
+    "exists": true,
+    "bytes": 16388,
+    "format": "ICO",
+    "size": "96x96",
+    "mode": "RGBA",
+    "frames": 1
   },
   {
-    "file": "index.html",
-    "has_favicon_ico": true,
-    "has_48_png": true,
-    "has_manifest": true,
-    "has_data_uri_icon_link": false
+    "file": "favicon-16x16.png",
+    "exists": true,
+    "bytes": 832,
+    "format": "PNG",
+    "size": "16x16",
+    "mode": "RGBA",
+    "frames": 1
   },
   {
-    "file": "login.html",
-    "has_favicon_ico": true,
-    "has_48_png": true,
-    "has_manifest": true,
-    "has_data_uri_icon_link": false
+    "file": "favicon-32x32.png",
+    "exists": true,
+    "bytes": 2016,
+    "format": "PNG",
+    "size": "32x32",
+    "mode": "RGBA",
+    "frames": 1
   },
   {
-    "file": "partal.html",
-    "has_favicon_ico": true,
-    "has_48_png": true,
-    "has_manifest": true,
-    "has_data_uri_icon_link": false
+    "file": "favicon-48x48.png",
+    "exists": true,
+    "bytes": 3653,
+    "format": "PNG",
+    "size": "48x48",
+    "mode": "RGBA",
+    "frames": 1
+  },
+  {
+    "file": "favicon-96x96.png",
+    "exists": true,
+    "bytes": 9823,
+    "format": "PNG",
+    "size": "96x96",
+    "mode": "RGBA",
+    "frames": 1
+  },
+  {
+    "file": "apple-touch-icon.png",
+    "exists": true,
+    "bytes": 21870,
+    "format": "PNG",
+    "size": "180x180",
+    "mode": "RGBA",
+    "frames": 1
+  },
+  {
+    "file": "android-chrome-192x192.png",
+    "exists": true,
+    "bytes": 23966,
+    "format": "PNG",
+    "size": "192x192",
+    "mode": "RGBA",
+    "frames": 1
+  },
+  {
+    "file": "android-chrome-512x512.png",
+    "exists": true,
+    "bytes": 88547,
+    "format": "PNG",
+    "size": "512x512",
+    "mode": "RGBA",
+    "frames": 1
+  },
+  {
+    "file": "site.webmanifest",
+    "exists": true,
+    "bytes": 1088
+  },
+  {
+    "file": "robots.txt",
+    "exists": true,
+    "bytes": 67
+  },
+  {
+    "file": "sitemap.xml",
+    "exists": true,
+    "bytes": 3188
   }
 ]

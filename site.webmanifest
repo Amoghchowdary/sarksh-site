@@ -1,26 +1,12 @@
 {
   "name": "SARKSH GROW",
   "short_name": "SARKSH",
-  "description": "SARKSH GROW — Hyderabad FinTech for stock market learning, demat awareness, trading readiness and responsible market education.",
+  "description": "SARKSH GROW is a finance-first Indian FinTech institution focused on responsible stock-market learning, demat awareness, trading readiness and future broker-led financial technology products subject to regulatory approvals.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#005939",
+  "background_color": "#ffffff",
   "theme_color": "#005939",
-  "icons": [
-    {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
   "id": "/",
   "lang": "en-IN",
   "orientation": "portrait-primary",
@@ -28,5 +14,31 @@
     "finance",
     "education",
     "business"
+  ],
+  "icons": [
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
   ]
 }
