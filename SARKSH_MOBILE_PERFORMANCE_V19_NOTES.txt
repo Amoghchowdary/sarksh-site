@@ -1,0 +1,24 @@
+SARKSH GROW V19 Mobile Performance Patch
+
+Purpose:
+- Preserve the existing design and positioning.
+- Improve mobile PageSpeed/LCP by reducing first-paint competition.
+
+Changes:
+- Delayed Google Analytics and Microsoft Clarity until after page load/idle.
+- Removed broken/missing external performance asset references from HTML head.
+- Added actual assets/css and assets/js folders to avoid stale 404s if referenced later.
+- Added mobile-only CSS to disable expensive first-paint animations, fixed radial background, heavy backdrop blur and ticker rendering.
+- Reduced mobile hero rendering cost while keeping the same visual layout.
+- Added content-visibility for below-fold sections on mobile.
+- Delayed Apps Script team-photo fetch until after load/idle.
+- Kept Apps Script backend URL intact.
+- Kept favicon package intact and Google-friendly.
+
+Expected result:
+- Desktop should remain excellent.
+- Mobile should improve from the current 85 score, mainly by reducing Largest Contentful Paint and main-thread work.
+
+Deployment:
+- Upload the contents inside sarksh-site-main to the GitHub repository root.
+- Re-run PageSpeed in an incognito window after GitHub Pages cache refresh.

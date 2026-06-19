@@ -3,39 +3,34 @@
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<!-- Google Analytics 4 — Measurement ID G-7YPG40KX6L -->
+<!-- Analytics is delayed so mobile LCP is not competing with third-party JavaScript. -->
 <script>(function(){
-  var id = 'G-7YPG40KX6L';
-  function loadGA(){
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function(){ dataLayer.push(arguments); };
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
-    document.head.appendChild(s);
-    gtag('js', new Date());
-    gtag('config', id, { anonymize_ip: true });
-  }
-  if ('requestIdleCallback' in window) requestIdleCallback(loadGA, { timeout: 2500 });
-  else window.addEventListener('load', function(){ setTimeout(loadGA, 1200); });
+  var gaId='G-7YPG40KX6L', clarityId='x8b3t26bdj';
+  function idle(fn, timeout){ if('requestIdleCallback' in window) requestIdleCallback(fn,{timeout:timeout||6000}); else setTimeout(fn, timeout||3500); }
+  function loadGA(){ if(window.__sarkshGA) return; window.__sarkshGA=true; window.dataLayer=window.dataLayer||[]; window.gtag=function(){dataLayer.push(arguments);}; var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+gaId; document.head.appendChild(s); gtag('js', new Date()); gtag('config', gaId, {anonymize_ip:true, transport_type:'beacon'}); }
+  function loadClarity(){ if(window.__sarkshClarity) return; window.__sarkshClarity=true; (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script',clarityId); }
+  function schedule(){ idle(loadGA, 6500); idle(loadClarity, 8500); }
+  if(document.readyState==='complete') schedule(); else window.addEventListener('load', schedule, {once:true});
 })();</script><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="SARKSH GROW is a Hyderabad-based FinTech and finance-first institution in build phase, working toward a convenient Indian broking and wealth-tech platform with market education, demat awareness, planned trading access, PMS awareness, data-led stock expertise and risk-first customer support." name="description"/>
 <title>SARKSH GROW | Finance-First FinTech, Future Broking Vision &amp; Market Learning</title>
-<!-- SARKSH favicon package: stable, crawlable Google Search favicon URLs -->
-<link rel="icon" type="image/png" sizes="48x48" href="https://www.sarksh.in/favicon-48x48.png">
-<link rel="icon" type="image/png" sizes="96x96" href="https://www.sarksh.in/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.sarksh.in/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.sarksh.in/favicon-16x16.png">
-<link rel="shortcut icon" href="https://www.sarksh.in/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" sizes="180x180" href="https://www.sarksh.in/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#005939"><meta content="index, follow, max-image-preview:large" name="robots">
+<meta content="#005939" name="theme-color"/>
+<meta content="SARKSH GROW is a Hyderabad-based FinTech and finance-first institution in build phase, working toward a convenient Indian broking and wealth-tech platform with market education, demat awareness, planned trading access, PMS awareness, data-led stock expertise and risk-first customer support." name="description">
+<meta content="index, follow, max-image-preview:large" name="robots">
 <meta content="index, follow, max-image-preview:large" name="googlebot"/>
 <meta content="SARKSH GROW, fintech company Hyderabad, financial institution India, finance first institution, future stock broker India, planned stock broking platform India, most convenient broker India, convenient trading platform India, stock broker Hyderabad, stock market learning India, market awareness webinar, how to invest in the market, demat account creation in India, best demat accounts, trading platform for beginners, CNC trading, MIS trading, portfolio management services India, PMS awareness, data led stock expertise, Indian retail investors finance learning" name="keywords"/>
 <meta content="IN-TG" name="geo.region"/>
 <meta content="Patancheru, Hyderabad, Telangana" name="geo.placename"/>
 <meta content="English" name="language"/>
+<meta content="#005939" name="theme-color"/>
+<!-- SARKSH favicon package: public, crawlable, stable URLs for Google Search -->
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
 <meta content="#005939" name="msapplication-TileColor"/>
+<link rel="preload" as="image" href="/sarksh-logo-128.webp" type="image/webp" fetchpriority="high"/>
 <link href="https://www.sarksh.in/" rel="canonical"/>
 <link href="https://www.sarksh.in/llms.txt" rel="alternate" title="SARKSH GROW AI-readable summary" type="text/plain"/>
 <meta content="SARKSH GROUP OF COMPANIES PVT LTD (OPC)" name="author"/>
@@ -167,13 +162,7 @@
     }
   ]
 }</script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x8b3t26bdj");
-</script><style>
+<style>
 :root{
   --green: #005939;
   --green-2: #0b6b4a;
@@ -789,6 +778,7 @@ section{ position: relative; z-index: 2; padding: var(--section-pad) var(--pad-x
   line-height: 1.65;
 }
 
+
 /* ========== WEBINAR ========== */
 .webinar-section{
   border-top: 1px solid var(--line);
@@ -876,6 +866,7 @@ section{ position: relative; z-index: 2; padding: var(--section-pad) var(--pad-x
   line-height: 1.65;
 }
 @media (max-width: 850px){ .faq-list{ grid-template-columns: 1fr; } }
+
 
 /* ========== TEAM ========== */
 .founder-card{
@@ -1436,6 +1427,7 @@ img, svg, video, iframe{ max-width: 100%; height: auto; }
   .hero-orb-rings.r2{ inset: -10%; }
 }
 
+
 /* SEO learning hub cards */
 .learning-links{ display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; margin-top:26px; }
 .learning-link{ display:block; padding:18px; border:1px solid var(--line); border-radius:var(--r-md); background:rgba(255,255,255,.035); color:var(--ink); text-decoration:none; min-height:150px; }
@@ -1445,6 +1437,7 @@ img, svg, video, iframe{ max-width: 100%; height: auto; }
 .learning-link:hover{ border-color:rgba(78,199,137,.42); transform:translateY(-3px); transition:transform .25s var(--ease), border-color .25s ease; }
 @media (max-width:1100px){ .learning-links{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width:640px){ .learning-links{ grid-template-columns:1fr; } }
+
 
 /* ===== SARKSH V14 LIGHT PREMIUM OVERRIDES ===== */
 html[data-theme="light"] body,
@@ -1528,6 +1521,8 @@ label{ color:#005939 !important; }
   .nav-links{ background:#ffffff !important; border:1px solid rgba(0,89,57,.13) !important; box-shadow:0 20px 70px rgba(0,89,57,.12) !important; }
 }
 
+
+
 /* ===== V15 precision polish: preserve one-page design, strengthen finish ===== */
 :root{ --green:#005939; --green-2:#08724b; --green-soft:#0b6b49; --ink:#0d1712; --ink-mid:rgba(13,23,18,.76); --muted:rgba(13,23,18,.60); --paper:#ffffff; }
 html{ scroll-padding-top:96px; }
@@ -1573,6 +1568,56 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 .compliance-note{ background:#f7fcf9 !important; color:rgba(13,23,18,.72) !important; border:1px solid rgba(0,89,57,.14) !important; }
 .sticky-book{ position:fixed; right:22px; bottom:22px; z-index:40; background:#005939; color:#fff; border-radius:999px; padding:13px 18px; text-decoration:none; font-weight:700; box-shadow:0 20px 50px rgba(0,89,57,.25); }
 @media(max-width:640px){ .sticky-book{ left:16px; right:16px; text-align:center; bottom:14px; } }
+
+
+/* ===== V19 mobile performance patch: same design, lighter first paint ===== */
+@media (max-width: 720px){
+  html{ scroll-behavior:auto; scroll-padding-top:72px; }
+  body{ text-rendering:auto; overflow-x:hidden; }
+  body::before{ display:none !important; }
+  .ticker{ display:none !important; }
+  .nav{ padding:10px 16px !important; min-height:58px; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; box-shadow:0 8px 24px rgba(0,89,57,.07) !important; }
+  .brand{ gap:10px; font-size:18px; }
+  .brand-mark{ width:32px !important; height:32px !important; box-shadow:0 0 0 1px rgba(0,89,57,.25) !important; }
+  .brand-text small{ font-size:8px !important; letter-spacing:.16em !important; }
+  .nav-toggle{ width:38px !important; height:38px !important; }
+  .nav-links{ top:58px !important; max-height:calc(100dvh - 58px) !important; overflow:auto; overscroll-behavior:contain; transition:transform .22s ease !important; }
+  .hero{ min-height:auto !important; padding:32px 18px 42px !important; gap:24px !important; grid-template-columns:1fr !important; }
+  .hero-eyebrow{ max-width:100%; white-space:normal; line-height:1.45; font-size:9.5px !important; letter-spacing:.14em !important; padding:7px 10px !important; margin-bottom:20px !important; }
+  .headline{ font-size:clamp(38px, 11.5vw, 52px) !important; line-height:.98 !important; letter-spacing:-.035em !important; margin-bottom:18px !important; }
+  .lede{ font-size:16px !important; line-height:1.55 !important; max-width:none !important; margin-bottom:24px !important; }
+  .cta-row{ gap:10px !important; margin-bottom:24px !important; }
+  .btn{ width:100%; justify-content:center; padding:13px 18px !important; font-size:14.5px !important; }
+  .kpi-strip{ grid-template-columns:1fr !important; padding:16px !important; gap:14px !important; border-radius:18px !important; }
+  .kpi-num{ font-size:32px !important; margin-bottom:4px !important; }
+  .kpi-label{ font-size:10px !important; line-height:1.4 !important; }
+  .hero-visual{ height:210px !important; order:2; margin-top:4px; }
+  .hero-orb{ max-width:210px !important; width:70% !important; }
+  .hero-orb-bg{ box-shadow:inset 0 0 42px rgba(0,0,0,.28), 0 16px 36px rgba(0,89,57,.16) !important; animation:none !important; }
+  .hero-orb-rings{ animation:none !important; }
+  .hero-orb-rings.r3{ display:none !important; }
+  .reveal{ opacity:1 !important; transform:none !important; transition:none !important; }
+  section{ content-visibility:auto; contain-intrinsic-size:900px; padding-top:48px !important; padding-bottom:48px !important; }
+  .section-head{ gap:16px !important; margin-bottom:28px !important; }
+  .section-title{ font-size:clamp(31px, 9vw, 44px) !important; line-height:1.02 !important; }
+  .section-blurb{ font-size:16px !important; line-height:1.55 !important; }
+  .products-grid, .about-grid, .why-grid, .webinar-layout, .faq-list, .location-grid, .footer-top{ grid-template-columns:1fr !important; }
+  .product-card, .about-card, .webinar-card, .guide-card, .why-cell, .faq-item, .founder-card, .team-card, .location-info, .contact-form{ box-shadow:0 12px 34px rgba(0,89,57,.065) !important; }
+  .product-card, .webinar-card, .faq-item, .why-cell, .guide-card, .contact-form{ padding:22px !important; }
+  .pc-numeral{ font-size:56px !important; }
+  .progress-row, .trust-band{ grid-template-columns:1fr !important; }
+  .sticky-book{ left:14px !important; right:14px !important; bottom:12px !important; text-align:center !important; padding:12px 16px !important; box-shadow:0 14px 34px rgba(0,89,57,.20) !important; }
+  footer{ content-visibility:auto; contain-intrinsic-size:650px; padding-bottom:82px !important; }
+}
+@media (max-width: 420px){
+  .headline{ font-size:clamp(36px, 10.8vw, 46px) !important; }
+  .lede{ font-size:15.5px !important; }
+  .hero{ padding-left:16px !important; padding-right:16px !important; }
+}
+@media (prefers-reduced-motion: reduce), (max-width:720px){
+  *, *::before, *::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+}
+
 </style>
 <meta content="telephone=yes" name="format-detection"/>
 <meta content="strict-origin-when-cross-origin" name="referrer"/>
@@ -1583,15 +1628,13 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 <meta content="SARKSH GROW logo" name="twitter:image:alt"/>
 <link href="//www.googletagmanager.com" rel="dns-prefetch"/>
 <link href="//www.clarity.ms" rel="dns-prefetch"/>
-<link href="/assets/css/sarksh-seo-performance.css?v=20260620" rel="stylesheet"/>
-<script defer="" src="/assets/js/sarksh-performance.js?v=20260620"></script>
-</meta></meta></head>
+</head>
 <body>
 <!-- EDUCATIONAL STRIP -->
 <div aria-hidden="true" class="ticker"><div class="ticker-track" id="tickerTrack"></div></div>
 <nav class="nav" id="nav">
 <a aria-label="SARKSH GROW" class="brand" href="#top">
-<span class="brand-mark"><img alt="SARKSH GROW logo" decoding="async" height="256" loading="eager" src="/sarksh-logo.webp" width="256"/></span>
+<span class="brand-mark"><img alt="SARKSH GROW logo" decoding="async" height="256" loading="eager" src="/sarksh-logo.webp" srcset="/sarksh-logo-128.webp 128w, /sarksh-logo.webp 256w" sizes="(max-width: 720px) 128px, 256px" width="256"/></span>
 <span class="brand-text"><span class="top"><b>SARKSH</b> GROW</span><small>The Change · Since 2025</small></span>
 </a>
 <div class="nav-links" id="navLinks"><a href="#about">About Us</a><a href="#products">Products</a><a href="#webinar">Webinar</a><a href="#learning">Learning</a><a href="#why">Why Us</a><a href="#team">Team</a><a href="#location">Location</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
@@ -1611,7 +1654,7 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 <div><div class="kpi-num">0</div><div class="kpi-label">guaranteed-return promises</div></div>
 </div>
 </div>
-<div aria-hidden="true" class="hero-visual reveal in d2"><div class="hero-orb"><div class="hero-orb-rings r3"></div><div class="hero-orb-rings r2"></div><div class="hero-orb-rings"></div><div class="hero-orb-bg"></div><img alt="SARKSH GROW bull logo" class="hero-orb-bull" decoding="async" fetchpriority="high" height="256" src="/sarksh-logo.webp" width="256"/></div></div>
+<div aria-hidden="true" class="hero-visual reveal in d2"><div class="hero-orb"><div class="hero-orb-rings r3"></div><div class="hero-orb-rings r2"></div><div class="hero-orb-rings"></div><div class="hero-orb-bg"></div><img alt="SARKSH GROW bull logo" class="hero-orb-bull" decoding="async" fetchpriority="low" loading="lazy" height="256" src="/sarksh-logo.webp" srcset="/sarksh-logo-128.webp 128w, /sarksh-logo.webp 256w" sizes="(max-width: 720px) 128px, 256px" width="256"/></div></div>
 </header>
 <section class="about-section" id="about">
 <div class="section-head reveal"><div class="section-num">01 · About Us</div><div><h2 class="section-title">A financial institution being built for market access.</h2><p class="section-blurb">The customer should understand the market language before hearing a product pitch. That discipline is how SARKSH GROW moves from education today to convenient broking tomorrow.</p></div></div>
@@ -1681,21 +1724,22 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 </section>
 </main>
 <footer>
-<div class="footer-top"><div><div class="footer-brand-row"><span class="footer-brand-mark"><img alt="SARKSH GROW logo" decoding="async" height="256" loading="eager" src="/sarksh-logo.webp" width="256"/></span><div><div class="footer-brand">SARKSH GROW</div><div class="footer-tag">The Change · Since 2025</div></div></div><p class="footer-desc">Finance-first FinTech from Hyderabad: market education, demat awareness, planned broking access, trading learning, portfolio pathways, and responsible finance conversations for Indian retail investors.</p></div><div class="footer-col"><h4>Sitemap</h4><a href="#about">About Us</a><a href="#products">Products</a><a href="#webinar">Free Webinar</a><a href="#learning">Learning</a><a href="#team">Team</a><a href="#location">Location</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div class="footer-col"><h4>Reach Us</h4><a href="tel:+918341889762">+91 83418 89762</a><a href="mailto:sarkshgrowmore@gmail.com">sarkshgrowmore@gmail.com</a><a href="login.html">Login</a><a href="login.html?mode=register">Register</a></div><div class="footer-col"><h4>Office</h4><p>Plot 76, Road 9</p><p>Sumashaila Township, Isnapur</p><p>Patancheru, Hyderabad</p><p>Telangana 502307</p></div></div><div class="footer-bottom"><div class="footer-legal">© 2026 SARKSH GROUP OF COMPANIES PVT LTD (OPC)</div><div class="footer-legal">Hyderabad · India</div></div><div class="compliance-note"><strong>Investment risk disclosure.</strong> Investments in shares, securities, securities-market products and managed-account programmes are subject to market risk. Past performance does not guarantee future returns. SARKSH GROW is currently in build phase. Products mentioned on this website will become available only subject to applicable regulatory approvals, licenses and compliance readiness in India. Free webinars and website content are for education and general awareness only; they do not constitute personalised investment advice, stock tips, legal advice, tax advice or a recommendation to buy or sell any security.</div>
+<div class="footer-top"><div><div class="footer-brand-row"><span class="footer-brand-mark"><img alt="SARKSH GROW logo" decoding="async" height="256" loading="eager" src="/sarksh-logo.webp" srcset="/sarksh-logo-128.webp 128w, /sarksh-logo.webp 256w" sizes="(max-width: 720px) 128px, 256px" width="256"/></span><div><div class="footer-brand">SARKSH GROW</div><div class="footer-tag">The Change · Since 2025</div></div></div><p class="footer-desc">Finance-first FinTech from Hyderabad: market education, demat awareness, planned broking access, trading learning, portfolio pathways, and responsible finance conversations for Indian retail investors.</p></div><div class="footer-col"><h4>Sitemap</h4><a href="#about">About Us</a><a href="#products">Products</a><a href="#webinar">Free Webinar</a><a href="#learning">Learning</a><a href="#team">Team</a><a href="#location">Location</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div class="footer-col"><h4>Reach Us</h4><a href="tel:+918341889762">+91 83418 89762</a><a href="mailto:sarkshgrowmore@gmail.com">sarkshgrowmore@gmail.com</a><a href="login.html">Login</a><a href="login.html?mode=register">Register</a></div><div class="footer-col"><h4>Office</h4><p>Plot 76, Road 9</p><p>Sumashaila Township, Isnapur</p><p>Patancheru, Hyderabad</p><p>Telangana 502307</p></div></div><div class="footer-bottom"><div class="footer-legal">© 2026 SARKSH GROUP OF COMPANIES PVT LTD (OPC)</div><div class="footer-legal">Hyderabad · India</div></div><div class="compliance-note"><strong>Investment risk disclosure.</strong> Investments in shares, securities, securities-market products and managed-account programmes are subject to market risk. Past performance does not guarantee future returns. SARKSH GROW is currently in build phase. Products mentioned on this website will become available only subject to applicable regulatory approvals, licenses and compliance readiness in India. Free webinars and website content are for education and general awareness only; they do not constitute personalised investment advice, stock tips, legal advice, tax advice or a recommendation to buy or sell any security.</div>
 </footer>
 <a class="sticky-book" href="#webinar">Book Webinar</a>
 <script>
 (function(){
   var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwgN-10CS3Me0EUNWsANT4ivQEL-nDhRRS1LxOD1al_bWT-MoKgjv4K0BKxGTIWjvi-/exec";
   var ticker = document.getElementById('tickerTrack');
-  if (ticker) {
+  if (ticker && !window.matchMedia('(max-width: 720px)').matches) {
     var items = ['Finance-first institution', 'Future broking vision', 'No guaranteed returns', 'SARKSH Trade pathway', 'PMS awareness', 'Expertise Sale under patenting', 'Made for Indian retail investors', 'Data-led market learning'];
     ticker.innerHTML = items.concat(items).map(function(t){ return '<span class="ticker-item">' + t + '</span>'; }).join('');
   }
   var navToggle = document.getElementById('navToggle'), navLinks = document.getElementById('navLinks');
   if (navToggle && navLinks) navToggle.addEventListener('click', function(){ navLinks.classList.toggle('open'); navToggle.classList.toggle('open'); });
   document.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click', function(){ if(navLinks) navLinks.classList.remove('open'); if(navToggle) navToggle.classList.remove('open'); }); });
-  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.08}) : null;
+  var isMobileFast = window.matchMedia('(max-width: 720px)').matches;
+  var io = (!isMobileFast && 'IntersectionObserver' in window) ? new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.08, rootMargin:'120px 0px'}) : null;
   document.querySelectorAll('.reveal').forEach(function(el){ if(io) io.observe(el); else el.classList.add('in'); });
   function setStatus(el, kind, msg){ if(!el) return; el.className = 'form-status show ' + kind; el.textContent = msg; }
   function postLead(payload){
@@ -1732,7 +1776,8 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
       if(res.founderPhoto){ var fp=document.getElementById('founderPhoto'); if(fp) fp.src=res.founderPhoto; }
     }).catch(function(){});
   }
-  if('requestIdleCallback' in window) requestIdleCallback(loadTeamPhotos, {timeout:4500}); else setTimeout(loadTeamPhotos, 2200);
+  function scheduleTeamPhotos(){ if('requestIdleCallback' in window) requestIdleCallback(loadTeamPhotos, {timeout:9000}); else setTimeout(loadTeamPhotos, 6500); }
+  if(document.readyState==='complete') scheduleTeamPhotos(); else window.addEventListener('load', scheduleTeamPhotos, {once:true});
 })();
 </script>
 </body>
