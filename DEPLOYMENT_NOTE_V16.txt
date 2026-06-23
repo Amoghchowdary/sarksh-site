@@ -1,0 +1,14 @@
+SARKSH GROW Website v16
+
+Change: Restored visible client access to the GRATH portal while keeping the approved one-page design constant.
+
+Visible links added:
+- Top navigation: Client Login -> /grath/
+- Hero CTA: Client Login -> /grath/
+- New compact Client Portal section -> /grath/
+- Footer: Client Login / GRATH -> /grath/
+
+Technical note:
+- grath.html is preserved.
+- Clean alias added at grath/index.html so public navigation can use https://www.sarksh.in/grath/
+- Apps Script URL and GA4 ID are unchanged.

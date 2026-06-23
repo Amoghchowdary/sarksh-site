@@ -1,33 +1,13 @@
 {
   "name": "SARKSH GROW",
   "short_name": "SARKSH",
-  "description": "SARKSH GROW is a finance-first Indian FinTech institution focused on responsible stock-market learning, demat awareness, trading readiness and future broker-led financial technology products subject to regulatory approvals.",
+  "description": "SARKSH GROW \u2014 The Change.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#005939",
   "theme_color": "#005939",
-  "id": "/",
-  "lang": "en-IN",
-  "orientation": "portrait-primary",
-  "categories": [
-    "finance",
-    "education",
-    "business"
-  ],
   "icons": [
-    {
-      "src": "/favicon-48x48.png",
-      "sizes": "48x48",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/favicon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "any"
-    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",

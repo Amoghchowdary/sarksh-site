@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="SARKSH GROW admin portal for internal website and lead management. This page is not intended for search indexing.">
 <title>Partal · SARKSH GROW Admin</title>
-<link rel="canonical" href="https://www.sarksh.in/partal.html">
 <meta name="theme-color" content="#005939" />
 <!-- SARKSH favicon package: public, crawlable, stable URLs for Google Search -->
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -18,7 +16,7 @@
 <meta name="robots" content="noindex, nofollow" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?customer=Instrument+Serif:ital@0;1&customer=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&customer=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
 <style>
 :root{
@@ -840,69 +838,7 @@ td.name{ color: var(--ink); font-weight: 500; }
 
   *, *::before, *::after{ animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
-
-
-/* ===== V19 mobile performance patch: same design, lighter first paint ===== */
-@media (max-width: 720px){
-  html{ scroll-behavior:auto; scroll-padding-top:72px; }
-  body{ text-rendering:auto; overflow-x:hidden; }
-  body::before{ display:none !important; }
-  .ticker{ display:none !important; }
-  .nav{ padding:10px 16px !important; min-height:58px; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; box-shadow:0 8px 24px rgba(0,89,57,.07) !important; }
-  .brand{ gap:10px; font-size:18px; }
-  .brand-mark{ width:32px !important; height:32px !important; box-shadow:0 0 0 1px rgba(0,89,57,.25) !important; }
-  .brand-text small{ font-size:8px !important; letter-spacing:.16em !important; }
-  .nav-toggle{ width:38px !important; height:38px !important; }
-  .nav-links{ top:58px !important; max-height:calc(100dvh - 58px) !important; overflow:auto; overscroll-behavior:contain; transition:transform .22s ease !important; }
-  .hero{ min-height:auto !important; padding:32px 18px 42px !important; gap:24px !important; grid-template-columns:1fr !important; }
-  .hero-eyebrow{ max-width:100%; white-space:normal; line-height:1.45; font-size:9.5px !important; letter-spacing:.14em !important; padding:7px 10px !important; margin-bottom:20px !important; }
-  .headline{ font-size:clamp(38px, 11.5vw, 52px) !important; line-height:.98 !important; letter-spacing:-.035em !important; margin-bottom:18px !important; }
-  .lede{ font-size:16px !important; line-height:1.55 !important; max-width:none !important; margin-bottom:24px !important; }
-  .cta-row{ gap:10px !important; margin-bottom:24px !important; }
-  .btn{ width:100%; justify-content:center; padding:13px 18px !important; font-size:14.5px !important; }
-  .kpi-strip{ grid-template-columns:1fr !important; padding:16px !important; gap:14px !important; border-radius:18px !important; }
-  .kpi-num{ font-size:32px !important; margin-bottom:4px !important; }
-  .kpi-label{ font-size:10px !important; line-height:1.4 !important; }
-  .hero-visual{ height:210px !important; order:2; margin-top:4px; }
-  .hero-orb{ max-width:210px !important; width:70% !important; }
-  .hero-orb-bg{ box-shadow:inset 0 0 42px rgba(0,0,0,.28), 0 16px 36px rgba(0,89,57,.16) !important; animation:none !important; }
-  .hero-orb-rings{ animation:none !important; }
-  .hero-orb-rings.r3{ display:none !important; }
-  .reveal{ opacity:1 !important; transform:none !important; transition:none !important; }
-  section{ content-visibility:auto; contain-intrinsic-size:900px; padding-top:48px !important; padding-bottom:48px !important; }
-  .section-head{ gap:16px !important; margin-bottom:28px !important; }
-  .section-title{ font-size:clamp(31px, 9vw, 44px) !important; line-height:1.02 !important; }
-  .section-blurb{ font-size:16px !important; line-height:1.55 !important; }
-  .products-grid, .about-grid, .why-grid, .webinar-layout, .faq-list, .location-grid, .footer-top{ grid-template-columns:1fr !important; }
-  .product-card, .about-card, .webinar-card, .guide-card, .why-cell, .faq-item, .founder-card, .team-card, .location-info, .contact-form{ box-shadow:0 12px 34px rgba(0,89,57,.065) !important; }
-  .product-card, .webinar-card, .faq-item, .why-cell, .guide-card, .contact-form{ padding:22px !important; }
-  .pc-numeral{ font-size:56px !important; }
-  .progress-row, .trust-band{ grid-template-columns:1fr !important; }
-  .sticky-book{ left:14px !important; right:14px !important; bottom:12px !important; text-align:center !important; padding:12px 16px !important; box-shadow:0 14px 34px rgba(0,89,57,.20) !important; }
-  footer{ content-visibility:auto; contain-intrinsic-size:650px; padding-bottom:82px !important; }
-}
-@media (max-width: 420px){
-  .headline{ font-size:clamp(36px, 10.8vw, 46px) !important; }
-  .lede{ font-size:15.5px !important; }
-  .hero{ padding-left:16px !important; padding-right:16px !important; }
-}
-@media (prefers-reduced-motion: reduce), (max-width:720px){
-  *, *::before, *::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
-}
-
 </style>
-
-<meta name="format-detection" content="telephone=yes">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<meta property="og:site_name" content="SARKSH GROW">
-<meta property="og:locale" content="en_IN">
-<meta property="og:image:width" content="500">
-<meta property="og:image:height" content="500">
-<meta name="twitter:image:alt" content="SARKSH GROW logo">
-
-<link rel="dns-prefetch" href="//www.googletagmanager.com">
-<link rel="dns-prefetch" href="//www.clarity.ms">
-<link rel="stylesheet" href="/assets/css/sarksh-seo-performance.css?v=20260620">
 </head>
 <body>
 

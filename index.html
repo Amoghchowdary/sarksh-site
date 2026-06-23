@@ -3,22 +3,27 @@
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<!-- Analytics is delayed so mobile LCP is not competing with third-party JavaScript. -->
+<!-- Google Analytics 4 — Measurement ID G-7YPG40KX6L -->
 <script>(function(){
-  var gaId='G-7YPG40KX6L', clarityId='x8b3t26bdj';
-  function idle(fn, timeout){ if('requestIdleCallback' in window) requestIdleCallback(fn,{timeout:timeout||6000}); else setTimeout(fn, timeout||3500); }
-  function loadGA(){ if(window.__sarkshGA) return; window.__sarkshGA=true; window.dataLayer=window.dataLayer||[]; window.gtag=function(){dataLayer.push(arguments);}; var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+gaId; document.head.appendChild(s); gtag('js', new Date()); gtag('config', gaId, {anonymize_ip:true, transport_type:'beacon'}); }
-  function loadClarity(){ if(window.__sarkshClarity) return; window.__sarkshClarity=true; (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script',clarityId); }
-  function schedule(){ idle(loadGA, 6500); idle(loadClarity, 8500); }
-  if(document.readyState==='complete') schedule(); else window.addEventListener('load', schedule, {once:true});
+  var id = 'G-7YPG40KX6L';
+  function loadGA(){
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', id, { anonymize_ip: true });
+  }
+  if ('requestIdleCallback' in window) requestIdleCallback(loadGA, { timeout: 2500 });
+  else window.addEventListener('load', function(){ setTimeout(loadGA, 1200); });
 })();</script><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="SARKSH GROW is a Hyderabad-based FinTech and finance-first institution in build phase, working toward a convenient Indian broking and wealth-tech platform with market education, demat awareness, planned trading access, PMS awareness, data-led stock expertise and risk-first customer support." name="description"/>
-<title>SARKSH GROW | Finance-First FinTech, Future Broking Vision &amp; Market Learning</title>
-<meta content="#005939" name="theme-color"/>
-<meta content="SARKSH GROW is a Hyderabad-based FinTech and finance-first institution in build phase, working toward a convenient Indian broking and wealth-tech platform with market education, demat awareness, planned trading access, PMS awareness, data-led stock expertise and risk-first customer support." name="description">
-<meta content="index, follow, max-image-preview:large" name="robots">
+<title>SARKSH GROW | FinTech for Indian Market Learners</title>
+<meta content="SARKSH GROW is a Hyderabad-based FinTech company and financial institution in build phase, helping Indian families and first-time market participants understand trading, investing, demat accounts, product pathways, risk and data-led market learning." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
 <meta content="index, follow, max-image-preview:large" name="googlebot"/>
-<meta content="SARKSH GROW, fintech company Hyderabad, financial institution India, finance first institution, future stock broker India, planned stock broking platform India, most convenient broker India, convenient trading platform India, stock broker Hyderabad, stock market learning India, market awareness webinar, how to invest in the market, demat account creation in India, best demat accounts, trading platform for beginners, CNC trading, MIS trading, portfolio management services India, PMS awareness, data led stock expertise, Indian retail investors finance learning" name="keywords"/>
+<meta content="SARKSH GROW, fintech company Hyderabad, financial institution India, stock market learning India, market awareness webinar, how to invest in the market, demat account creation in India, best demat accounts, trading platform for beginners, CNC trading, MIS trading, portfolio management services India, PMS awareness, data led stock expertise, Indian families finance learning" name="keywords"/>
 <meta content="IN-TG" name="geo.region"/>
 <meta content="Patancheru, Hyderabad, Telangana" name="geo.placename"/>
 <meta content="English" name="language"/>
@@ -30,22 +35,22 @@
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="/site.webmanifest" rel="manifest"/>
 <meta content="#005939" name="msapplication-TileColor"/>
-<link rel="preload" as="image" href="/sarksh-logo-128.webp" type="image/webp" fetchpriority="high"/>
 <link href="https://www.sarksh.in/" rel="canonical"/>
 <link href="https://www.sarksh.in/llms.txt" rel="alternate" title="SARKSH GROW AI-readable summary" type="text/plain"/>
 <meta content="SARKSH GROUP OF COMPANIES PVT LTD (OPC)" name="author"/>
 <meta content="website" property="og:type"/>
-<meta content="SARKSH GROW — Finance-First FinTech with a Future Broking Vision" property="og:title"/>
-<meta content="Hyderabad FinTech building toward convenient Indian broking and wealth-tech pathways: market education, demat awareness, trading readiness, PMS awareness and data-led financial products." property="og:description"/>
+<meta content="SARKSH GROW — FinTech for Indian Market Learners" property="og:title"/>
+<meta content="Education-first FinTech from Hyderabad for Indian families entering the market: free webinars, demat awareness, trading learning, SARKSH Trade, PMS and Expertise Sale direction." property="og:description"/>
 <meta content="https://www.sarksh.in/" property="og:url"/>
 <meta content="en_IN" property="og:locale"/>
 <meta content="SARKSH GROW" property="og:site_name"/>
 <meta content="https://www.sarksh.in/sarksh-favicon.png" property="og:image"/>
 <meta content="SARKSH GROW brand logo" property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="SARKSH GROW | Finance-First FinTech &amp; Future Broker Vision" name="twitter:title"/>
-<meta content="A finance-first Indian FinTech building market learning today and convenient broking and wealth-tech pathways for tomorrow." name="twitter:description"/>
+<meta content="SARKSH GROW | FinTech for Indian Market Learners" name="twitter:title"/>
+<meta content="Learn market basics, demat account awareness, trading pathways and risk before choosing a financial product." name="twitter:description"/>
 <meta content="https://www.sarksh.in/sarksh-favicon.png" name="twitter:image"/>
+
 <script>
 (function(){
   try { document.documentElement.setAttribute('data-theme', localStorage.getItem('sarksh_theme') || 'auto'); } catch(_){}
@@ -65,7 +70,7 @@
       "url": "https://www.sarksh.in/",
       "logo": "https://www.sarksh.in/sarksh-favicon.png",
       "image": "https://www.sarksh.in/sarksh-favicon.png",
-      "description": "SARKSH GROW is a Hyderabad-based FinTech company and finance and technology company in build phase, focused on market education, demat account awareness, trading learning, PMS awareness and data-led stock expertise pathways for first-time investors, retail investors and people new to the market.",
+      "description": "SARKSH GROW is a Hyderabad-based FinTech company and financial institution in build phase, focused on market education, demat account awareness, trading learning, PMS awareness and data-led stock expertise pathways for Indian families and people new to the market.",
       "founder": {
         "@type": "Person",
         "name": "Amarneni Amogh Chowdary",
@@ -91,7 +96,7 @@
         "portfolio management services awareness",
         "stock market risk",
         "data-led stock expertise",
-        "financial education for Indian retail investors"
+        "financial education for Indian families"
       ],
       "sameAs": []
     },
@@ -128,7 +133,7 @@
       },
       "areaServed": "IN",
       "serviceType": "Financial education webinar",
-      "description": "Free awareness session for first-time investors, retail investors, beginner traders and working professionals covering market basics, demat accounts, order types, risk, product pathways and questions to ask before onboarding."
+      "description": "Free awareness session for Indian families and first-time market participants covering market basics, demat accounts, order types, risk, product pathways and questions to ask before onboarding."
     },
     {
       "@type": "FAQPage",
@@ -139,7 +144,7 @@
           "name": "What does SARKSH GROW do?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SARKSH GROW is a FinTech company and finance and technology company in build phase, focused on helping people new to the Indian market understand trading, investing, demat accounts, risk and product pathways through education-first financial technology."
+            "text": "SARKSH GROW is a FinTech company and financial institution in build phase, focused on helping people new to the Indian market understand trading, investing, demat accounts, risk and product pathways through education-first financial technology."
           }
         },
         {
@@ -161,8 +166,7 @@
       ]
     }
   ]
-}</script>
-<style>
+}</script><style>
 :root{
   --green: #005939;
   --green-2: #0b6b4a;
@@ -324,7 +328,7 @@ img{ max-width: 100%; display: block; }
   text-transform: uppercase;
 }
 .nav-links{
-  display: flex; gap: 28px;
+  display: flex; gap: 22px;
   font-family: var(--body);
   font-size: 14.5px;
   color: var(--ink-mid);
@@ -1554,7 +1558,6 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 .team-photo img{ width:100%; height:100%; object-fit:cover; }
 .team-photo.avatar-only img{ object-fit:contain; padding:16%; }
 .team-role{ color:#005939 !important; }
-.team-summary{ margin:10px 0 0; color:rgba(13,23,18,.66); line-height:1.5; font-size:14px; }
 .team-note-public{ margin-top:22px; padding:18px 20px; border:1px solid rgba(0,89,57,.14); border-radius:18px; background:#fbfefc; color:rgba(13,23,18,.70); line-height:1.55; }
 .progress-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px; }
 .progress-card{ border:1px solid rgba(0,89,57,.13); border-radius:18px; padding:18px; background:#fbfefc; }
@@ -1566,105 +1569,64 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 @media(max-width:900px){ .trust-band{ grid-template-columns:repeat(2,1fr); } }
 @media(max-width:480px){ .trust-band{ grid-template-columns:1fr; } }
 .compliance-note{ background:#f7fcf9 !important; color:rgba(13,23,18,.72) !important; border:1px solid rgba(0,89,57,.14) !important; }
+
+.portal-access-section{ padding: 14px var(--pad-x) 28px; }
+.portal-card{
+  display:flex; align-items:center; justify-content:space-between; gap:22px;
+  padding: clamp(22px, 3vw, 34px);
+  border:1px solid rgba(0,89,57,.16);
+  border-radius:24px;
+  background: linear-gradient(135deg,#ffffff 0%,#f4fbf7 100%);
+  box-shadow:0 22px 70px rgba(0,89,57,.09);
+}
+.portal-copy{ max-width:760px; }
+.portal-kicker{ font-family:var(--mono); text-transform:uppercase; letter-spacing:.16em; font-size:11px; color:#005939; margin-bottom:10px; }
+.portal-title{ font-family:var(--serif); font-size:clamp(30px,4vw,54px); line-height:.98; color:#0d1712; margin:0 0 12px; }
+.portal-text{ font-family:var(--body); font-size:var(--fs-body-sm); line-height:1.65; color:rgba(13,23,18,.68); margin:0; }
+.portal-actions{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:flex-end; min-width:260px; }
+.portal-actions .btn{ white-space:nowrap; }
+@media(max-width:820px){ .portal-card{ flex-direction:column; align-items:flex-start; } .portal-actions{ justify-content:flex-start; min-width:0; width:100%; } }
+
 .sticky-book{ position:fixed; right:22px; bottom:22px; z-index:40; background:#005939; color:#fff; border-radius:999px; padding:13px 18px; text-decoration:none; font-weight:700; box-shadow:0 20px 50px rgba(0,89,57,.25); }
 @media(max-width:640px){ .sticky-book{ left:16px; right:16px; text-align:center; bottom:14px; } }
-
-
-/* ===== V19 mobile performance patch: same design, lighter first paint ===== */
-@media (max-width: 720px){
-  html{ scroll-behavior:auto; scroll-padding-top:72px; }
-  body{ text-rendering:auto; overflow-x:hidden; }
-  body::before{ display:none !important; }
-  .ticker{ display:none !important; }
-  .nav{ padding:10px 16px !important; min-height:58px; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; box-shadow:0 8px 24px rgba(0,89,57,.07) !important; }
-  .brand{ gap:10px; font-size:18px; }
-  .brand-mark{ width:32px !important; height:32px !important; box-shadow:0 0 0 1px rgba(0,89,57,.25) !important; }
-  .brand-text small{ font-size:8px !important; letter-spacing:.16em !important; }
-  .nav-toggle{ width:38px !important; height:38px !important; }
-  .nav-links{ top:58px !important; max-height:calc(100dvh - 58px) !important; overflow:auto; overscroll-behavior:contain; transition:transform .22s ease !important; }
-  .hero{ min-height:auto !important; padding:32px 18px 42px !important; gap:24px !important; grid-template-columns:1fr !important; }
-  .hero-eyebrow{ max-width:100%; white-space:normal; line-height:1.45; font-size:9.5px !important; letter-spacing:.14em !important; padding:7px 10px !important; margin-bottom:20px !important; }
-  .headline{ font-size:clamp(38px, 11.5vw, 52px) !important; line-height:.98 !important; letter-spacing:-.035em !important; margin-bottom:18px !important; }
-  .lede{ font-size:16px !important; line-height:1.55 !important; max-width:none !important; margin-bottom:24px !important; }
-  .cta-row{ gap:10px !important; margin-bottom:24px !important; }
-  .btn{ width:100%; justify-content:center; padding:13px 18px !important; font-size:14.5px !important; }
-  .kpi-strip{ grid-template-columns:1fr !important; padding:16px !important; gap:14px !important; border-radius:18px !important; }
-  .kpi-num{ font-size:32px !important; margin-bottom:4px !important; }
-  .kpi-label{ font-size:10px !important; line-height:1.4 !important; }
-  .hero-visual{ height:210px !important; order:2; margin-top:4px; }
-  .hero-orb{ max-width:210px !important; width:70% !important; }
-  .hero-orb-bg{ box-shadow:inset 0 0 42px rgba(0,0,0,.28), 0 16px 36px rgba(0,89,57,.16) !important; animation:none !important; }
-  .hero-orb-rings{ animation:none !important; }
-  .hero-orb-rings.r3{ display:none !important; }
-  .reveal{ opacity:1 !important; transform:none !important; transition:none !important; }
-  section{ content-visibility:auto; contain-intrinsic-size:900px; padding-top:48px !important; padding-bottom:48px !important; }
-  .section-head{ gap:16px !important; margin-bottom:28px !important; }
-  .section-title{ font-size:clamp(31px, 9vw, 44px) !important; line-height:1.02 !important; }
-  .section-blurb{ font-size:16px !important; line-height:1.55 !important; }
-  .products-grid, .about-grid, .why-grid, .webinar-layout, .faq-list, .location-grid, .footer-top{ grid-template-columns:1fr !important; }
-  .product-card, .about-card, .webinar-card, .guide-card, .why-cell, .faq-item, .founder-card, .team-card, .location-info, .contact-form{ box-shadow:0 12px 34px rgba(0,89,57,.065) !important; }
-  .product-card, .webinar-card, .faq-item, .why-cell, .guide-card, .contact-form{ padding:22px !important; }
-  .pc-numeral{ font-size:56px !important; }
-  .progress-row, .trust-band{ grid-template-columns:1fr !important; }
-  .sticky-book{ left:14px !important; right:14px !important; bottom:12px !important; text-align:center !important; padding:12px 16px !important; box-shadow:0 14px 34px rgba(0,89,57,.20) !important; }
-  footer{ content-visibility:auto; contain-intrinsic-size:650px; padding-bottom:82px !important; }
-}
-@media (max-width: 420px){
-  .headline{ font-size:clamp(36px, 10.8vw, 46px) !important; }
-  .lede{ font-size:15.5px !important; }
-  .hero{ padding-left:16px !important; padding-right:16px !important; }
-}
-@media (prefers-reduced-motion: reduce), (max-width:720px){
-  *, *::before, *::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
-}
-
 </style>
-<meta content="telephone=yes" name="format-detection"/>
-<meta content="strict-origin-when-cross-origin" name="referrer"/>
-<meta content="SARKSH GROW" property="og:site_name"/>
-<meta content="en_IN" property="og:locale"/>
-<meta content="500" property="og:image:width"/>
-<meta content="500" property="og:image:height"/>
-<meta content="SARKSH GROW logo" name="twitter:image:alt"/>
-<link href="//www.googletagmanager.com" rel="dns-prefetch"/>
-<link href="//www.clarity.ms" rel="dns-prefetch"/>
 </head>
 <body>
 <!-- EDUCATIONAL STRIP -->
 <div aria-hidden="true" class="ticker"><div class="ticker-track" id="tickerTrack"></div></div>
 <nav class="nav" id="nav">
 <a aria-label="SARKSH GROW" class="brand" href="#top">
-<span class="brand-mark"><img alt="SARKSH GROW logo" decoding="async" height="256" loading="eager" src="/sarksh-logo.webp" srcset="/sarksh-logo-128.webp 128w, /sarksh-logo.webp 256w" sizes="(max-width: 720px) 128px, 256px" width="256"/></span>
+<span class="brand-mark"><img alt="SARKSH GROW logo" decoding="async" height="256" loading="eager" src="/sarksh-logo.webp" width="256"/></span>
 <span class="brand-text"><span class="top"><b>SARKSH</b> GROW</span><small>The Change · Since 2025</small></span>
 </a>
-<div class="nav-links" id="navLinks"><a href="#about">About Us</a><a href="#products">Products</a><a href="#webinar">Webinar</a><a href="#learning">Learning</a><a href="#why">Why Us</a><a href="#team">Team</a><a href="#location">Location</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+<div class="nav-links" id="navLinks"><a href="#about">About Us</a><a href="#products">Products</a><a href="#webinar">Webinar</a><a href="#learning">Learning</a><a href="#why">Why Us</a><a href="#team">Team</a><a href="#location">Location</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="/grath/">Client Login</a></div>
 <a class="nav-cta" href="#webinar">Book Webinar</a>
 <button aria-label="Open menu" class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
 </nav>
 <main id="top">
 <header class="hero">
 <div class="reveal in">
-<div class="hero-eyebrow"><span class="dot"></span> SARKSH GROW · Finance-First FinTech with a Broking Vision</div>
-<h1 class="headline">Learn the market. Build toward convenient broking.</h1>
-<p class="lede">SARKSH GROW is a FinTech company and finance-first institution in build phase, built for people who are new to the Indian market. Today we educate Indian retail investors on demat accounts, trading pathways, market risk and product suitability. The long-term direction is bigger: to build one of India’s most convenient broking and wealth-tech platforms, with simpler screens, clearer support and disciplined compliance. Education first. Regulated service only after approvals. <strong>The Change.</strong></p>
-<div class="cta-row"><a class="btn btn-primary" href="#webinar">Book Free Webinar</a><a class="btn btn-ghost" href="#products">Explore Products</a></div>
+<div class="hero-eyebrow"><span class="dot"></span> SARKSH GROW · FinTech for Indian Market Learners</div>
+<h1 class="headline">Learn the market. Choose with clarity.</h1>
+<p class="lede">SARKSH GROW is a FinTech company and financial institution in build phase, built for people who are new to the Indian market. We help Indian families understand demat accounts, trading pathways, market risk, product suitability, and data-led decision-making before they take the next step. Education first. Onboarding later. <strong>The Change.</strong></p>
+<div class="cta-row"><a class="btn btn-primary" href="#webinar">Book Free Webinar</a><a class="btn btn-ghost" href="#products">Explore Products</a><a class="btn btn-ghost" href="/grath/">Client Login</a></div>
 <div class="kpi-strip">
-<div><div class="kpi-num">FIN</div><div class="kpi-label">finance-first institution in build phase</div></div>
+<div><div class="kpi-num">FIN</div><div class="kpi-label">FinTech company in build phase</div></div>
 <div><div class="kpi-num">3</div><div class="kpi-label">clear product pathways</div></div>
 <div><div class="kpi-num">0</div><div class="kpi-label">guaranteed-return promises</div></div>
 </div>
 </div>
-<div aria-hidden="true" class="hero-visual reveal in d2"><div class="hero-orb"><div class="hero-orb-rings r3"></div><div class="hero-orb-rings r2"></div><div class="hero-orb-rings"></div><div class="hero-orb-bg"></div><img alt="SARKSH GROW bull logo" class="hero-orb-bull" decoding="async" fetchpriority="low" loading="lazy" height="256" src="/sarksh-logo.webp" srcset="/sarksh-logo-128.webp 128w, /sarksh-logo.webp 256w" sizes="(max-width: 720px) 128px, 256px" width="256"/></div></div>
+<div aria-hidden="true" class="hero-visual reveal in d2"><div class="hero-orb"><div class="hero-orb-rings r3"></div><div class="hero-orb-rings r2"></div><div class="hero-orb-rings"></div><div class="hero-orb-bg"></div><img alt="SARKSH GROW bull logo" class="hero-orb-bull" decoding="async" fetchpriority="high" height="256" src="/sarksh-logo.webp" width="256"/></div></div>
 </header>
 <section class="about-section" id="about">
-<div class="section-head reveal"><div class="section-num">01 · About Us</div><div><h2 class="section-title">A financial institution being built for market access.</h2><p class="section-blurb">The customer should understand the market language before hearing a product pitch. That discipline is how SARKSH GROW moves from education today to convenient broking tomorrow.</p></div></div>
+<div class="section-head reveal"><div class="section-num">01 · About Us</div><div><h2 class="section-title">A finance company built for people entering the market.</h2><p class="section-blurb">The customer should understand the market language before hearing a product pitch. That is the operating culture of SARKSH GROW.</p></div></div>
 <div class="about-grid">
-<div class="reveal"><div class="about-stat">2025</div><div class="about-stat-label">The Change begins with finance-first market access</div><p style="font-family:var(--body);color:var(--ink-mid);font-size:var(--fs-body-sm);line-height:1.6;max-width:420px;">SARKSH GROW is positioned in the same broad category as modern Indian broking and financial-technology platforms, with a long-term ambition to become one of India’s most convenient broker-led finance platforms. The operating direction is simple: cleaner journeys, clearer product explanation, disciplined support, and careful customer communication.</p></div>
-<div class="about-body reveal d1"><p>Today, SARKSH GROW provides free market awareness and education. The company is preparing product pathways in trading, broking access, portfolio management, and expertise-led advisory intelligence. The public ambition is to compete in the same search category as India’s leading brokers through convenience, clarity and trust — but regulated services will move forward only after applicable approvals, licensing readiness and compliance controls.</p><p>Our public work is simple: help a visitor understand what a demat account is, how CNC and MIS differ, why charges and settlement matter, what risk means, how a product should be evaluated, and why no market outcome can be promised.</p><p>For Indian retail investors, finance cannot be written like a gambling screen. It must be readable at home, discussable at the table, and clear enough for a beginner to ask better questions.</p><div class="trust-band"><span class="trust-chip">Education first</span><span class="trust-chip">Risk aware</span><span class="trust-chip">Data led</span><span class="trust-chip">Family friendly</span><span class="trust-chip">Broker ambition</span></div></div>
+<div class="reveal"><div class="about-stat">2025</div><div class="about-stat-label">The Change begins with education-first finance</div><p style="font-family:var(--body);color:var(--ink-mid);font-size:var(--fs-body-sm);line-height:1.6;max-width:420px;">SARKSH GROW is positioned in the same broad category as modern Indian broking and financial-technology platforms, but with its own operating direction: simpler learning, clearer product explanation, and careful customer communication.</p></div>
+<div class="about-body reveal d1"><p>Today, SARKSH GROW provides free market awareness and education. The company is preparing product pathways in trading, portfolio management, and expertise-led advisory intelligence. Regulated services will move forward only after applicable approvals, licensing readiness, and compliance controls.</p><p>Our public work is simple: help a visitor understand what a demat account is, how CNC and MIS differ, why charges and settlement matter, what risk means, how a product should be evaluated, and why no market outcome can be promised.</p><p>For Indian families, finance cannot be written like a gambling screen. It must be readable at home, discussable at the table, and clear enough for a beginner to ask better questions.</p><div class="trust-band"><span class="trust-chip">Education first</span><span class="trust-chip">Risk aware</span><span class="trust-chip">Data led</span><span class="trust-chip">Family friendly</span></div></div>
 </div>
 </section>
 <section id="products">
-<div class="section-head reveal"><div class="section-num">02 · Products</div><div><h2 class="section-title">Product pathways with <em>clear boundaries.</em></h2><p class="section-blurb">SARKSH GROW is building three product directions around future broking access, portfolio pathways and data-led market expertise. The current public stage is awareness and education; product availability will depend on licensing, approvals, compliance and operational readiness.</p></div></div>
+<div class="section-head reveal"><div class="section-num">02 · Products</div><div><h2 class="section-title">Product pathways with <em>clear boundaries.</em></h2><p class="section-blurb">SARKSH GROW is building three product directions. The current public stage is awareness and education; product availability will depend on licensing, approvals, compliance and operational readiness.</p></div></div>
 <div class="products-grid">
 <article class="product-card v-trade reveal"><div class="pc-tag">Trading platform pathway</div><div class="pc-numeral">01</div><h3 class="pc-title">SARKSH Trade</h3><p class="pc-desc">SARKSH Trade is planned as a simpler trading and investing experience for customers who want to participate with clarity instead of clutter. The intended focus is CNC delivery, MIS intraday, margin-aware trade flow, and long-term investment visibility through a cleaner UI/UX.</p><ul class="pc-list"><li>CNC and MIS trading experience, subject to regulatory readiness</li><li>Cleaner screens for orders, holdings, positions, charges and risk prompts</li><li>Designed for beginners, working professionals and careful participants</li><li>Built around understanding, not noise-driven speculation</li></ul><div class="progress-row"><div class="progress-card"><strong>Focus</strong><span>Simple UI/UX</span></div><div class="progress-card"><strong>Use</strong><span>Trading + investing</span></div><div class="progress-card"><strong>Status</strong><span>License-readiness phase</span></div></div><a class="pc-link" href="#webinar">Learn through webinar</a></article>
 <article class="product-card v-pms reveal d1"><div class="pc-tag">Portfolio management pathway</div><div class="pc-numeral">02</div><p class="pc-pullquote">Portfolio decisions must be documented, suitable, reviewed and visible.</p><h3 class="pc-title">SARKSH PMS</h3><p class="pc-desc">SARKSH PMS is the planned portfolio-management direction for eligible clients who require a structured portfolio conversation instead of scattered decision-making. The public explanation remains high-level until approvals and compliance readiness are complete.</p><ul class="pc-list"><li>Intended for eligible PMS-level conversations, generally aligned with ₹50 lakh+ portfolio suitability</li><li>Planned process clarity around mandate, reporting, review and risk</li><li>Subject to SEBI registration, licensing and applicable compliance requirements</li><li>No guaranteed returns; market risk and suitability must be understood</li></ul><div class="progress-row"><div class="progress-card"><strong>Focus</strong><span>Portfolio process</span></div><div class="progress-card"><strong>Client</strong><span>Eligible investors</span></div><div class="progress-card"><strong>Status</strong><span>Approval-dependent</span></div></div><a class="pc-link" href="#contact">Request PMS clarity</a></article>
@@ -1672,14 +1634,13 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 </div>
 </section>
 <section class="webinar-section" id="webinar">
-<div class="section-head reveal"><div class="section-num">03 · Free Webinar</div><div><h2 class="section-title">The first step is not onboarding. <em>It is understanding.</em></h2><p class="section-blurb">The free market awareness webinar is built for first-time demat users, beginner traders, students, retail investors and working professionals who want clarity before product discussion.</p></div></div>
+<div class="section-head reveal"><div class="section-num">03 · Free Webinar</div><div><h2 class="section-title">The first step is not onboarding. <em>It is understanding.</em></h2><p class="section-blurb">The free market awareness webinar is built for Indian families, first-time demat users, beginner traders, students and working professionals who want clarity before product discussion.</p></div></div>
 <div class="webinar-layout reveal"><div class="webinar-grid"><div class="webinar-card"><div class="webinar-num">01</div><h3>Market basics</h3><p>Shares, exchanges, demat accounts, trading accounts, settlement, charges and risk in plain language.</p></div><div class="webinar-card"><div class="webinar-num">02</div><h3>Product understanding</h3><p>What SARKSH Trade, SARKSH PMS and Expertise Sale are intended to solve, with clear current-stage boundaries.</p></div><div class="webinar-card"><div class="webinar-num">03</div><h3>Risk clarity</h3><p>Why no product can promise market outcomes, and what a customer should ask before entering the market.</p></div></div>
 <form autocomplete="on" class="contact-form webinar-form" id="webinarForm" novalidate=""><div class="form-row"><div class="form-field"><label for="wName">Name</label><input id="wName" name="name" placeholder="Full name" required="" type="text"/></div><div class="form-field"><label for="wPhone">Phone</label><input id="wPhone" name="phone" placeholder="+91 98XXX XXXXX" required="" type="tel"/></div></div><div class="form-row"><div class="form-field"><label for="wEmail">Email</label><input id="wEmail" name="email" placeholder="you@example.com" required="" type="email"/></div><div class="form-field"><label for="wCity">City</label><input id="wCity" name="city" placeholder="Hyderabad / your city" type="text"/></div></div><div class="form-row"><div class="form-field"><label for="wTopic">Topic</label><select id="wTopic" name="topic" required=""><option value="">Choose topic</option><option>How to invest in the market</option><option>Demat account creation in India</option><option>SARKSH Trade product understanding</option><option>SARKSH PMS awareness</option><option>SARKSH Expertise Sale direction</option><option>Market risk and beginner mistakes</option></select></div><div class="form-field"><label for="wTime">Preferred time</label><select id="wTime" name="preferredTime" required=""><option value="">Choose time</option><option>Morning session</option><option>Afternoon session</option><option>Evening session</option><option>Weekend session</option></select></div></div><div class="form-field" style="margin-top:6px;"><label for="wMessage">Question</label><textarea id="wMessage" name="message" placeholder="Tell us what you want to understand." rows="3"></textarea></div><button class="form-submit" id="webinarSubmit" type="submit">Book Free Webinar</button><div class="form-status" id="webinarStatus"></div><p class="webinar-note">A team member will confirm the session timing by phone or email. The webinar is educational and does not provide personalised investment advice, stock tips, tax advice, legal advice or guaranteed-return claims.</p></form></div>
 </section>
 <section class="faq-section learning-section" id="learning">
-<div class="section-head reveal"><div class="section-num">04 · Learning</div><div><h2 class="section-title">A visitor should leave with more knowledge than they came with.</h2><p class="section-blurb">These learning topics are placed on the website because the public must understand finance before choosing a platform, broker, product or advisor. This also helps Google understand that SARKSH GROW is not only an education page, but a finance-first institution building toward market-access products.</p></div></div>
+<div class="section-head reveal"><div class="section-num">04 · Learning</div><div><h2 class="section-title">A visitor should leave with more knowledge than they came with.</h2><p class="section-blurb">These learning topics are placed on the website because the public must understand finance before choosing a platform, broker, product or advisor.</p></div></div>
 <div class="faq-list reveal"><article class="faq-item"><h3>How investing works</h3><p>Investing begins with ownership, time horizon, risk capacity and discipline. A beginner should first understand how money enters the market, where securities are held, and how exits are handled.</p></article><article class="faq-item"><h3>Demat and trading accounts</h3><p>A demat account holds securities. A trading account places orders. A bank account moves funds. Confusing these three is one of the first mistakes beginners make.</p></article><article class="faq-item"><h3>Broker comparison</h3><p>The biggest broker or the loudest broker is not automatically the right broker. The better question is: which platform gives clarity, stability, charges transparency and support for your use case?</p></article><article class="faq-item"><h3>Data-led market decisions</h3><p>SARKSH GROW believes market action should come from research, structure and risk interpretation — not rumours, noise or emotional urgency.</p></article></div>
-<div class="cta-row reveal"><a class="btn btn-primary" href="/learning-center.html">Open Learning Center</a><a class="btn btn-ghost" href="/future-stock-broker-india.html">Read Broking Vision</a><a class="btn btn-ghost" href="/stock-market-risk-management-beginners.html">Read Risk Guide</a></div>
 </section>
 <section id="why">
 <div class="section-head reveal"><div class="section-num">05 · Why Us</div><div><h2 class="section-title">Premium does not mean complicated. <em>It means clear.</em></h2><p class="section-blurb">A financial website must not shout. It must earn trust through clarity, discipline and public boundaries.</p></div></div>
@@ -1687,7 +1648,7 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 </section>
 <section id="team">
 <div class="section-head reveal"><div class="section-num">06 · Team</div><div><h2 class="section-title">Founder-led. <em>Department-backed.</em></h2><p class="section-blurb">The team section is public for a reason: finance needs visible accountability. SARKSH GROW is led by its founder and supported by technology, data, operations, human resources and customer communication functions.</p></div></div>
-<div class="founder-card reveal"><div class="founder-photo"><img alt="Amarneni Amogh Chowdary" data-fallback="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIHJ4PSI1MiIgZmlsbD0iI2ZmZmZmZiIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjMwMCIgcj0iMjIwIiBmaWxsPSIjMDA1OTM5IiBvcGFjaXR5PSIwLjEwIi8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iMzAwIiByPSIxNTAiIGZpbGw9IiMwMDU5MzkiLz48dGV4dCB4PSI1MCUiIHk9IjU0JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjExOCIgZmlsbD0iI2ZmZmZmZiI+QUFDPC90ZXh0Pjwvc3ZnPg==" decoding="async" height="600" id="founderPhoto" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback;this.classList.add('fallback-avatar');" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIHJ4PSI1MiIgZmlsbD0iI2ZmZmZmZiIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjMwMCIgcj0iMjIwIiBmaWxsPSIjMDA1OTM5IiBvcGFjaXR5PSIwLjEwIi8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iMzAwIiByPSIxNTAiIGZpbGw9IiMwMDU5MzkiLz48dGV4dCB4PSI1MCUiIHk9IjU0JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjExOCIgZmlsbD0iI2ZmZmZmZiI+QUFDPC90ZXh0Pjwvc3ZnPg==" width="600"/></div><div><div class="founder-role">Founder &amp; CEO</div><h3 class="founder-name">Amarneni Amogh Chowdary</h3><p class="founder-bio"><strong>Founder &amp; CEO of SARKSH GROW.</strong> A founder-builder from Hyderabad, working to build a FinTech company for first-time investors, beginner traders, retail investors and working professionals who want to understand the market before participating in it.</p><p class="founder-bio">The founder-led culture is simple: explain first, document clearly, use data seriously, respect risk, and never promise a market outcome.</p><div class="founder-tags"><span>Founder-led FinTech</span><span>Hyderabad</span><span>Education first</span><span>Data-led approach</span></div></div></div>
+<div class="founder-card reveal"><div class="founder-photo"><img alt="Amarneni Amogh Chowdary" data-fallback="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIHJ4PSI1MiIgZmlsbD0iI2ZmZmZmZiIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjMwMCIgcj0iMjIwIiBmaWxsPSIjMDA1OTM5IiBvcGFjaXR5PSIwLjEwIi8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iMzAwIiByPSIxNTAiIGZpbGw9IiMwMDU5MzkiLz48dGV4dCB4PSI1MCUiIHk9IjU0JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjExOCIgZmlsbD0iI2ZmZmZmZiI+QUFDPC90ZXh0Pjwvc3ZnPg==" decoding="async" height="600" id="founderPhoto" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback;this.classList.add('fallback-avatar');" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIHJ4PSI1MiIgZmlsbD0iI2ZmZmZmZiIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjMwMCIgcj0iMjIwIiBmaWxsPSIjMDA1OTM5IiBvcGFjaXR5PSIwLjEwIi8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iMzAwIiByPSIxNTAiIGZpbGw9IiMwMDU5MzkiLz48dGV4dCB4PSI1MCUiIHk9IjU0JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjExOCIgZmlsbD0iI2ZmZmZmZiI+QUFDPC90ZXh0Pjwvc3ZnPg==" width="600"/></div><div><div class="founder-role">Founder &amp; CEO</div><h3 class="founder-name">Amarneni Amogh Chowdary</h3><p class="founder-bio"><strong>Founder &amp; CEO of SARKSH GROW.</strong> A founder-builder from Hyderabad, working to build a FinTech company for Indian families, first-time investors, beginner traders and working professionals who want to understand the market before participating in it.</p><p class="founder-bio">The founder-led culture is simple: explain first, document clearly, use data seriously, respect risk, and never promise a market outcome.</p><div class="founder-tags"><span>Founder-led FinTech</span><span>Hyderabad</span><span>Education first</span><span>Data-led approach</span></div></div></div>
 <div class="dept-heading reveal"><span>Core team functions</span></div>
 <div class="team-grid" id="teamGrid">
 <article class="team-card reveal">
@@ -1717,29 +1678,34 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 </section>
 <section class="faq-section" id="faq">
 <div class="section-head reveal"><div class="section-num">08 · FAQ</div><div><h2 class="section-title">Clear answers before the first conversation.</h2><p class="section-blurb">The goal is not to create pressure. The goal is to reduce confusion.</p></div></div>
-<div class="faq-list reveal"><article class="faq-item"><h3>What is SARKSH GROW?</h3><p>SARKSH GROW is a FinTech company and finance-first institution in build phase, focused on market education today and planned broking, trading, portfolio and data-led product pathways for people entering the Indian market.</p></article><article class="faq-item"><h3>What is the current regulatory status?</h3><p>Current public activity is free awareness and education. SARKSH GROW’s broking, advisory and portfolio-related services will move forward only after applicable approvals, registrations, licenses and compliance readiness.</p></article><article class="faq-item"><h3>Does SARKSH GROW guarantee returns?</h3><p>No. SARKSH GROW does not guarantee returns, profit, performance or market outcomes. Investments and securities-market activity are subject to risk.</p></article><article class="faq-item"><h3>Why is the free webinar first?</h3><p>Because a customer should understand the market, the product, the cost, the risk and the exit process before discussing onboarding.</p></article><article class="faq-item"><h3>What is SARKSH Expertise Sale?</h3><p>It is the largest planned project of SARKSH GROW, currently under patenting and regulatory work. Public disclosure is intentionally limited until protections and approvals are ready.</p></article><article class="faq-item"><h3>Where do booking details go?</h3><p>Booking details are submitted to the SARKSH GROW backend through Google Apps Script so the team can confirm the session by phone or email.</p></article></div>
+<div class="faq-list reveal"><article class="faq-item"><h3>What is SARKSH GROW?</h3><p>SARKSH GROW is a FinTech company and financial institution in build phase, focused on market education and planned product pathways for people new to the Indian market.</p></article><article class="faq-item"><h3>What is the current regulatory status?</h3><p>Current public activity is free awareness and education. Broking, advisory and portfolio-related services will move forward only after applicable approvals, licenses and compliance readiness.</p></article><article class="faq-item"><h3>Does SARKSH GROW guarantee returns?</h3><p>No. SARKSH GROW does not guarantee returns, profit, performance or market outcomes. Investments and securities-market activity are subject to risk.</p></article><article class="faq-item"><h3>Why is the free webinar first?</h3><p>Because a customer should understand the market, the product, the cost, the risk and the exit process before discussing onboarding.</p></article><article class="faq-item"><h3>What is SARKSH Expertise Sale?</h3><p>It is the largest planned project of SARKSH GROW, currently under patenting and regulatory work. Public disclosure is intentionally limited until protections and approvals are ready.</p></article><article class="faq-item"><h3>Where do booking details go?</h3><p>Booking details are submitted to the SARKSH GROW backend through Google Apps Script so the team can confirm the session by phone or email.</p></article></div>
+</section>
+<section class="portal-access-section" id="client-login">
+<div class="portal-card reveal">
+<div class="portal-copy"><div class="portal-kicker">09 · Client Portal</div><h2 class="portal-title">Existing clients can access GRATH.</h2><p class="portal-text">GRATH is the client-side SARKSH GROW portal for account access, learning follow-up, support requests and product communication. New visitors should book the free webinar first; existing users can continue through the portal.</p></div>
+<div class="portal-actions"><a class="btn btn-primary" href="/grath/">Open GRATH Portal</a><a class="btn btn-ghost" href="/login.html?mode=register">Create Login</a></div>
+</div>
 </section>
 <section class="contact-section" id="contact">
-<div class="reveal"><div class="contact-eyebrow">09 · Contact</div><h2 class="contact-headline">Ask. Learn. <em>Then decide.</em></h2><p class="contact-blurb">Use this form for webinar booking, product questions, demat awareness, trading education, office visits or general support. A real person from SARKSH GROW will reply.</p><form autocomplete="on" class="contact-form" id="contactForm" novalidate=""><div class="form-row"><div class="form-field"><label for="cName">Name</label><input id="cName" name="name" placeholder="Full name" required="" type="text"/></div><div class="form-field"><label for="cPhone">Phone</label><input id="cPhone" name="phone" placeholder="+91 98XXX XXXXX" required="" type="tel"/></div></div><div class="form-row"><div class="form-field"><label for="cEmail">Email</label><input id="cEmail" name="email" placeholder="you@example.com" required="" type="email"/></div><div class="form-field"><label for="cInterest">Interest</label><select id="cInterest" name="interest" required=""><option value="">Choose one</option><option value="webinar">Book free webinar</option><option value="trade">SARKSH Trade</option><option value="pms">SARKSH PMS</option><option value="expert">SARKSH Expertise Sale</option><option value="visit">Visit our office</option><option value="other">Other</option></select></div></div><div class="form-field" style="margin-top:6px;"><label for="cMessage">Message</label><textarea id="cMessage" name="message" placeholder="What do you want to know?" rows="3"></textarea></div><button class="form-submit" id="contactSubmit" type="submit">Send Message</button><div class="form-status" id="contactStatus"></div></form></div>
+<div class="reveal"><div class="contact-eyebrow">10 · Contact</div><h2 class="contact-headline">Ask. Learn. <em>Then decide.</em></h2><p class="contact-blurb">Use this form for webinar booking, product questions, demat awareness, trading education, office visits or general support. A real person from SARKSH GROW will reply.</p><form autocomplete="on" class="contact-form" id="contactForm" novalidate=""><div class="form-row"><div class="form-field"><label for="cName">Name</label><input id="cName" name="name" placeholder="Full name" required="" type="text"/></div><div class="form-field"><label for="cPhone">Phone</label><input id="cPhone" name="phone" placeholder="+91 98XXX XXXXX" required="" type="tel"/></div></div><div class="form-row"><div class="form-field"><label for="cEmail">Email</label><input id="cEmail" name="email" placeholder="you@example.com" required="" type="email"/></div><div class="form-field"><label for="cInterest">Interest</label><select id="cInterest" name="interest" required=""><option value="">Choose one</option><option value="webinar">Book free webinar</option><option value="trade">SARKSH Trade</option><option value="pms">SARKSH PMS</option><option value="expert">SARKSH Expertise Sale</option><option value="visit">Visit our office</option><option value="other">Other</option></select></div></div><div class="form-field" style="margin-top:6px;"><label for="cMessage">Message</label><textarea id="cMessage" name="message" placeholder="What do you want to know?" rows="3"></textarea></div><button class="form-submit" id="contactSubmit" type="submit">Send Message</button><div class="form-status" id="contactStatus"></div></form></div>
 </section>
 </main>
 <footer>
-<div class="footer-top"><div><div class="footer-brand-row"><span class="footer-brand-mark"><img alt="SARKSH GROW logo" decoding="async" height="256" loading="eager" src="/sarksh-logo.webp" srcset="/sarksh-logo-128.webp 128w, /sarksh-logo.webp 256w" sizes="(max-width: 720px) 128px, 256px" width="256"/></span><div><div class="footer-brand">SARKSH GROW</div><div class="footer-tag">The Change · Since 2025</div></div></div><p class="footer-desc">Finance-first FinTech from Hyderabad: market education, demat awareness, planned broking access, trading learning, portfolio pathways, and responsible finance conversations for Indian retail investors.</p></div><div class="footer-col"><h4>Sitemap</h4><a href="#about">About Us</a><a href="#products">Products</a><a href="#webinar">Free Webinar</a><a href="#learning">Learning</a><a href="#team">Team</a><a href="#location">Location</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div class="footer-col"><h4>Reach Us</h4><a href="tel:+918341889762">+91 83418 89762</a><a href="mailto:sarkshgrowmore@gmail.com">sarkshgrowmore@gmail.com</a><a href="login.html">Login</a><a href="login.html?mode=register">Register</a></div><div class="footer-col"><h4>Office</h4><p>Plot 76, Road 9</p><p>Sumashaila Township, Isnapur</p><p>Patancheru, Hyderabad</p><p>Telangana 502307</p></div></div><div class="footer-bottom"><div class="footer-legal">© 2026 SARKSH GROUP OF COMPANIES PVT LTD (OPC)</div><div class="footer-legal">Hyderabad · India</div></div><div class="compliance-note"><strong>Investment risk disclosure.</strong> Investments in shares, securities, securities-market products and managed-account programmes are subject to market risk. Past performance does not guarantee future returns. SARKSH GROW is currently in build phase. Products mentioned on this website will become available only subject to applicable regulatory approvals, licenses and compliance readiness in India. Free webinars and website content are for education and general awareness only; they do not constitute personalised investment advice, stock tips, legal advice, tax advice or a recommendation to buy or sell any security.</div>
+<div class="footer-top"><div><div class="footer-brand-row"><span class="footer-brand-mark"><img alt="SARKSH GROW logo" decoding="async" height="256" loading="eager" src="/sarksh-logo.webp" width="256"/></span><div><div class="footer-brand">SARKSH GROW</div><div class="footer-tag">The Change · Since 2025</div></div></div><p class="footer-desc">FinTech for Indian market learners: market education, demat awareness, trading learning, product pathways, and responsible finance conversations from Hyderabad.</p></div><div class="footer-col"><h4>Sitemap</h4><a href="#about">About Us</a><a href="#products">Products</a><a href="#webinar">Free Webinar</a><a href="#learning">Learning</a><a href="#team">Team</a><a href="#location">Location</a><a href="#faq">FAQ</a><a href="#client-login">Client Login</a><a href="#contact">Contact</a></div><div class="footer-col"><h4>Reach Us</h4><a href="tel:+918341889762">+91 83418 89762</a><a href="mailto:sarkshgrowmore@gmail.com">sarkshgrowmore@gmail.com</a><a href="/grath/">Client Login / GRATH</a><a href="/login.html">Account Login</a><a href="/login.html?mode=register">Register</a></div><div class="footer-col"><h4>Office</h4><p>Plot 76, Road 9</p><p>Sumashaila Township, Isnapur</p><p>Patancheru, Hyderabad</p><p>Telangana 502307</p></div></div><div class="footer-bottom"><div class="footer-legal">© 2026 SARKSH GROUP OF COMPANIES PVT LTD (OPC)</div><div class="footer-legal">Hyderabad · India</div></div><div class="compliance-note"><strong>Investment risk disclosure.</strong> Investments in shares, securities, securities-market products and managed-account programmes are subject to market risk. Past performance does not guarantee future returns. SARKSH GROW is currently in build phase. Products mentioned on this website will become available only subject to applicable regulatory approvals, licenses and compliance readiness in India. Free webinars and website content are for education and general awareness only; they do not constitute personalised investment advice, stock tips, legal advice, tax advice or a recommendation to buy or sell any security.</div>
 </footer>
 <a class="sticky-book" href="#webinar">Book Webinar</a>
 <script>
 (function(){
   var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwgN-10CS3Me0EUNWsANT4ivQEL-nDhRRS1LxOD1al_bWT-MoKgjv4K0BKxGTIWjvi-/exec";
   var ticker = document.getElementById('tickerTrack');
-  if (ticker && !window.matchMedia('(max-width: 720px)').matches) {
-    var items = ['Finance-first institution', 'Future broking vision', 'No guaranteed returns', 'SARKSH Trade pathway', 'PMS awareness', 'Expertise Sale under patenting', 'Made for Indian retail investors', 'Data-led market learning'];
+  if (ticker) {
+    var items = ['Education first', 'No guaranteed returns', 'SARKSH Trade pathway', 'PMS awareness', 'Expertise Sale under patenting', 'Made for Indian families', 'Data-led market learning'];
     ticker.innerHTML = items.concat(items).map(function(t){ return '<span class="ticker-item">' + t + '</span>'; }).join('');
   }
   var navToggle = document.getElementById('navToggle'), navLinks = document.getElementById('navLinks');
   if (navToggle && navLinks) navToggle.addEventListener('click', function(){ navLinks.classList.toggle('open'); navToggle.classList.toggle('open'); });
   document.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click', function(){ if(navLinks) navLinks.classList.remove('open'); if(navToggle) navToggle.classList.remove('open'); }); });
-  var isMobileFast = window.matchMedia('(max-width: 720px)').matches;
-  var io = (!isMobileFast && 'IntersectionObserver' in window) ? new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.08, rootMargin:'120px 0px'}) : null;
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.08}) : null;
   document.querySelectorAll('.reveal').forEach(function(el){ if(io) io.observe(el); else el.classList.add('in'); });
   function setStatus(el, kind, msg){ if(!el) return; el.className = 'form-status show ' + kind; el.textContent = msg; }
   function postLead(payload){
@@ -1768,7 +1734,7 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
   function loadTeamPhotos(){
     fetch(APPS_SCRIPT_URL, {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams({action:'getTeam', payload:'{}'})}).then(function(r){return r.json();}).then(function(res){
       if(!res || !res.ok || !Array.isArray(res.team)) return;
-      var publicTeam = res.team.filter(function(m){ return cleanName(m.name) && String(m.photo || '').trim().length > 8; });
+      var publicTeam = res.team.filter(function(m){ return cleanName(m.name) && (m.photo || m.role); });
       if(publicTeam.length < 2) return;
       // Future-ready: keep default cards unless Partal contains real public names; then render public list.
       var grid = document.getElementById('teamGrid'); if(!grid) return;
@@ -1776,8 +1742,7 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
       if(res.founderPhoto){ var fp=document.getElementById('founderPhoto'); if(fp) fp.src=res.founderPhoto; }
     }).catch(function(){});
   }
-  function scheduleTeamPhotos(){ if('requestIdleCallback' in window) requestIdleCallback(loadTeamPhotos, {timeout:9000}); else setTimeout(loadTeamPhotos, 6500); }
-  if(document.readyState==='complete') scheduleTeamPhotos(); else window.addEventListener('load', scheduleTeamPhotos, {once:true});
+  if('requestIdleCallback' in window) requestIdleCallback(loadTeamPhotos, {timeout:4500}); else setTimeout(loadTeamPhotos, 2200);
 })();
 </script>
 </body>
