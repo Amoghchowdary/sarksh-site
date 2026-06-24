@@ -1,0 +1,27 @@
+SARKSH GROW v17 — GRATH/Login, Logo and Official Profile Fix
+==============================================================
+
+Changes made:
+- Fixed /grath/ clean URL by adding grath/index.html.
+- Added /client-login/ alias that redirects to /grath/.
+- Changed the main top-right CTA from Book Webinar to Client Login.
+- Changed the floating sticky CTA from Book Webinar to Client Login.
+- Replaced the display logo assets with the supplied original SARKSH logo.
+- Kept favicon files intact for browser/search favicon behavior.
+- Added official public profile links in the footer:
+  LinkedIn, Instagram, Google Business Profile.
+- Added sameAs entity references in structured data for official profiles.
+- Apps Script backend URL preserved.
+- GA4/Google gtag ID preserved.
+
+Deployment:
+Upload the contents inside sarksh-site-main to GitHub repository root.
+Confirm these exist after upload:
+- grath/index.html
+- client-login/index.html
+- sarksh-logo.webp
+- sarksh-logo-original.png
+
+Test:
+https://www.sarksh.in/?v=17
+https://www.sarksh.in/grath/?v=17
