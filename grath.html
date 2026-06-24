@@ -914,7 +914,7 @@ img, svg, iframe{ max-width: 100%; height: auto; }
 <div class="cursor-ring" aria-hidden="true"></div>
 
 <div class="demo-banner" id="demoBanner" style="display:none">
-  Demo session · Backend not wired · <a href="login.html">Log in</a>
+  Secure client session · <a href="/login.html?next=grath">Log in</a>
 </div>
 
 <header class="app-header">
@@ -1212,8 +1212,7 @@ function getSession(){
 }
 const session = getSession();
 if (!session.token && !session.email){
-  document.getElementById('demoBanner').style.display = 'block';
-  session.name = 'Demo User'; session.email = 'demo@example.com'; session.userId = 'Demo-AAA111';
+  location.replace('/login.html?next=grath');
 }
 const firstName = (session.name || session.email.split('@')[0] || 'there').split(' ')[0];
 const initial = (firstName || 'U').charAt(0).toUpperCase();
@@ -1272,7 +1271,7 @@ document.getElementById('signOutBtn').addEventListener('click', () => {
   try {
     ['sarksh_session','sarksh_user_name','sarksh_user_email','sarksh_user_id'].forEach(k => sessionStorage.removeItem(k));
   } catch(_){}
-  location.href = 'index.html';
+  location.href = '/login.html?next=grath';
 });
 
 // FAQ

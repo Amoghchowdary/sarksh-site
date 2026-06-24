@@ -1,0 +1,1 @@
+V19: Client Login buttons now open login.html first. After successful OTP verification, login redirects to grath.html. /grath/ and /client-login/ are safe aliases to login.html?next=grath. Direct grath.html access without session redirects to login. Apps Script URL and GA4 ID preserved.

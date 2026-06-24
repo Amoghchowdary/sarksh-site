@@ -468,6 +468,12 @@ function showView(name){
   document.getElementById('view-' + name).classList.add('active');
 }
 const params = new URLSearchParams(location.search);
+const nextTarget = (params.get('next') || 'grath').toLowerCase();
+function getSafeRedirect(){
+  // Only allow known internal destinations. This avoids open redirects.
+  if (nextTarget === 'home' || nextTarget === 'index') return '/';
+  return '/grath.html';
+}
 showView(params.get('mode') === 'register' ? 'register' : 'login');
 document.getElementById('goRegister').addEventListener('click', e => { e.preventDefault(); showView('register'); });
 document.getElementById('goLogin').addEventListener('click', e => { e.preventDefault(); showView('login'); });
@@ -635,7 +641,7 @@ document.getElementById('otpForm').addEventListener('submit', async (e) => {
     const friendly = (userIdInput.split('-')[0] || pendingLoginEmail.split('@')[0]);
     if (friendly) sessionStorage.setItem('sarksh_user_name', friendly);
   } catch(_){}
-  setTimeout(() => { location.href = 'grath.html'; }, 1100);
+  setTimeout(() => { location.href = getSafeRedirect(); }, 800);
 });
 
 document.getElementById('resendBtn').addEventListener('click', async () => {
