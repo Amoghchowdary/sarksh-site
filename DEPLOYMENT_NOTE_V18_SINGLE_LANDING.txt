@@ -1,0 +1,14 @@
+SARKSH GROW v18 — Single Landing Page Lock
+
+This build keeps the approved one-page design constant. Public navigation uses same-page anchors only. GRATH remains as a separate portal file at /grath.html because it is not public marketing content.
+
+Fixed:
+- Main public website remains a single landing page: index.html.
+- Client Login points to /grath.html.
+- /grath/ and /client-login/ are redirect aliases to prevent 404 errors.
+- Original uploaded logo is used for public site display.
+- Favicon files remain separate.
+- LinkedIn, Instagram and Google Business Profile links added to footer and schema sameAs.
+- Old multi-page public URLs redirect to homepage anchors and are noindex.
+
+Upload the CONTENTS inside sarksh-site-main to the GitHub repo root after deleting old files.
