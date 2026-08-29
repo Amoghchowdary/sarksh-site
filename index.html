@@ -3,6 +3,12 @@
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
+<!-- HTTP_TO_HTTPS_V20: client-side safety redirect; enable Enforce HTTPS in GitHub Pages for server-level fix. -->
+<script>(function(){
+  if (location.protocol === 'http:' && /(^|\.)sarksh\.in$/i.test(location.hostname)) {
+    location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+  }
+})();</script>
 <!-- Google Analytics 4 — Measurement ID G-7YPG40KX6L -->
 <script>(function(){
   var id = 'G-7YPG40KX6L';
@@ -19,8 +25,8 @@
   if ('requestIdleCallback' in window) requestIdleCallback(loadGA, { timeout: 2500 });
   else window.addEventListener('load', function(){ setTimeout(loadGA, 1200); });
 })();</script><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SARKSH GROW | FinTech for Indian Market Learners</title>
-<meta content="SARKSH GROW is a Hyderabad-based FinTech company and financial institution in build phase, helping Indian families and first-time market participants understand trading, investing, demat accounts, product pathways, risk and data-led market learning." name="description"/>
+<title>SARKSH GROW | FinTech, Market Learning & Broker Vision</title>
+<meta content="SARKSH GROW is a Hyderabad-based finance and technology company helping Indian families learn markets, demat basics, trading risk and future broker pathways." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <meta content="index, follow, max-image-preview:large" name="googlebot"/>
 <meta content="SARKSH GROW, fintech company Hyderabad, financial institution India, stock market learning India, market awareness webinar, how to invest in the market, demat account creation in India, best demat accounts, trading platform for beginners, CNC trading, MIS trading, portfolio management services India, PMS awareness, data led stock expertise, Indian families finance learning" name="keywords"/>
@@ -29,9 +35,19 @@
 <meta content="English" name="language"/>
 <meta content="#005939" name="theme-color"/>
 <!-- SARKSH favicon package: public, crawlable, stable URLs for Google Search -->
-<link href="/favicon.ico" rel="icon" sizes="any"/>
 <link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
 <link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon.ico" rel="shortcut icon" sizes="any"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<!-- SARKSH favicon package: public, crawlable, stable URLs for Google Search -->
+<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon.ico" rel="shortcut icon" sizes="any"/>
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="/site.webmanifest" rel="manifest"/>
 <meta content="#005939" name="msapplication-TileColor"/>
@@ -39,24 +55,33 @@
 <link href="https://www.sarksh.in/llms.txt" rel="alternate" title="SARKSH GROW AI-readable summary" type="text/plain"/>
 <meta content="SARKSH GROUP OF COMPANIES PVT LTD (OPC)" name="author"/>
 <meta content="website" property="og:type"/>
-<meta content="SARKSH GROW — FinTech for Indian Market Learners" property="og:title"/>
-<meta content="Education-first FinTech from Hyderabad for Indian families entering the market: free webinars, demat awareness, trading learning, SARKSH Trade, PMS and Expertise Sale direction." property="og:description"/>
+<meta content="SARKSH GROW | FinTech, Market Learning & Broker Vision" property="og:title"/>
+<meta content="Hyderabad-based finance and technology company for market learning, demat awareness, trading risk clarity and future broker-led product pathways." property="og:description"/>
 <meta content="https://www.sarksh.in/" property="og:url"/>
 <meta content="en_IN" property="og:locale"/>
 <meta content="SARKSH GROW" property="og:site_name"/>
 <meta content="https://www.sarksh.in/sarksh-favicon.png" property="og:image"/>
 <meta content="SARKSH GROW brand logo" property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="SARKSH GROW | FinTech for Indian Market Learners" name="twitter:title"/>
-<meta content="Learn market basics, demat account awareness, trading pathways and risk before choosing a financial product." name="twitter:description"/>
+<meta content="SARKSH GROW | FinTech, Market Learning & Broker Vision" name="twitter:title"/>
+<meta content="Market learning, demat awareness, trading risk clarity and future broker-led pathways from SARKSH GROW." name="twitter:description"/>
 <meta content="https://www.sarksh.in/sarksh-favicon.png" name="twitter:image"/>
 
-<script type="text/javascript">
+<script>
+(function(){
+  var clarityId = 'y0lhj9j3x6';
+  function loadClarity(){
+    if (window.__sarkshClarityLoaded) return;
+    window.__sarkshClarityLoaded = true;
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "y0lhj9j3x6");
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r); t.async=1; t.src='https://www.clarity.ms/tag/'+i;
+      y=l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t,y);
+    })(window, document, 'clarity', 'script', clarityId);
+  }
+  if ('requestIdleCallback' in window) requestIdleCallback(loadClarity, { timeout: 5000 });
+  else window.addEventListener('load', function(){ setTimeout(loadClarity, 2500); });
+})();
 </script>
 
 <script>
@@ -78,7 +103,7 @@
       "url": "https://www.sarksh.in/",
       "logo": "https://www.sarksh.in/sarksh-logo-original.png",
       "image": "https://www.sarksh.in/sarksh-logo-original.png",
-      "description": "SARKSH GROW is a Hyderabad-based FinTech company and financial institution in build phase, focused on market education, demat account awareness, trading learning, PMS awareness and data-led stock expertise pathways for Indian families and people new to the market.",
+      "description": "SARKSH GROW is a Hyderabad-based finance and technology company focused on market learning, demat awareness, risk clarity, data-led education and future broker-led product pathways, subject to approvals and compliance readiness.",
       "founder": {
         "@type": "Person",
         "name": "Amarneni Amogh Chowdary",
@@ -1601,6 +1626,38 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 
 .sticky-book{ position:fixed; right:22px; bottom:22px; z-index:40; background:#005939; color:#fff; border-radius:999px; padding:13px 18px; text-decoration:none; font-weight:700; box-shadow:0 20px 50px rgba(0,89,57,.25); }
 @media(max-width:640px){ .sticky-book{ left:16px; right:16px; text-align:center; bottom:14px; } }
+
+
+/* ===== V20 SEO TOOL + MOBILE LCP PATCH =====
+   Keeps the desktop design intact while reducing mobile paint cost. */
+@media (max-width: 720px){
+  html{ scroll-behavior:auto; }
+  body::before{ display:none !important; }
+  body{ background:#ffffff !important; }
+  .ticker{ display:none !important; }
+  .nav{ backdrop-filter:none !important; -webkit-backdrop-filter:none !important; box-shadow:0 10px 28px rgba(0,89,57,.08) !important; }
+  .hero{ min-height:auto !important; padding-top:28px !important; padding-bottom:34px !important; gap:22px !important; }
+  .headline{ font-size:clamp(38px, 12vw, 56px) !important; line-height:.94 !important; letter-spacing:-.055em !important; }
+  .lede{ font-size:16px !important; line-height:1.58 !important; }
+  .hero-actions{ gap:10px !important; }
+  .btn-primary, .btn-secondary{ min-height:42px !important; padding:11px 14px !important; }
+  .hero-visual{ height:190px !important; margin-top:4px !important; }
+  .hero-orb{ max-width:190px !important; }
+  .hero-orb-rings{ animation:none !important; }
+  .hero-orb-bg{ filter:none !important; box-shadow:0 18px 42px rgba(0,89,57,.14) !important; }
+  .reveal{ opacity:1 !important; transform:none !important; transition:none !important; }
+  section:not(:first-of-type){ content-visibility:auto; contain-intrinsic-size: 760px; }
+  .product-card, .webinar-card, .faq-item, .why-cell, .guide-card, .contact-form, .location-info, .founder-card, .team-card{
+    box-shadow:0 12px 30px rgba(0,89,57,.06) !important;
+  }
+  .location-map iframe{ min-height:280px; }
+}
+@media (max-width: 420px){
+  .headline{ font-size:clamp(35px, 11.2vw, 48px) !important; }
+  .hero-visual{ height:160px !important; }
+  .hero-orb{ max-width:160px !important; }
+}
+
 </style>
 </head>
 <body>
@@ -1628,7 +1685,7 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
 <div><div class="kpi-num">0</div><div class="kpi-label">guaranteed-return promises</div></div>
 </div>
 </div>
-<div aria-hidden="true" class="hero-visual reveal in d2"><div class="hero-orb"><div class="hero-orb-rings r3"></div><div class="hero-orb-rings r2"></div><div class="hero-orb-rings"></div><div class="hero-orb-bg"></div><img alt="SARKSH GROW bull logo" class="hero-orb-bull" decoding="async" fetchpriority="high" height="256" src="/sarksh-logo.webp" width="256"/></div></div>
+<div aria-hidden="true" class="hero-visual reveal in d2"><div class="hero-orb"><div class="hero-orb-rings r3"></div><div class="hero-orb-rings r2"></div><div class="hero-orb-rings"></div><div class="hero-orb-bg"></div><img alt="SARKSH GROW bull logo" class="hero-orb-bull" decoding="async" fetchpriority="low" height="256" src="/sarksh-logo.webp" width="256" loading="lazy"/></div></div>
 </header>
 <section class="about-section" id="about">
 <div class="section-head reveal"><div class="section-num">01 · About Us</div><div><h2 class="section-title">A finance company built for people entering the market.</h2><p class="section-blurb">The customer should understand the market language before hearing a product pitch. That is the operating culture of SARKSH GROW.</p></div></div>
@@ -1757,5 +1814,6 @@ body{ background:#ffffff !important; color:#0d1712 !important; }
   if('requestIdleCallback' in window) requestIdleCallback(loadTeamPhotos, {timeout:4500}); else setTimeout(loadTeamPhotos, 2200);
 })();
 </script>
+<script defer src="/assets/js/sarksh-performance.js"></script>
 </body>
 </html>

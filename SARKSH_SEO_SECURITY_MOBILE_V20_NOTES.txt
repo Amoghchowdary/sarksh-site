@@ -1,0 +1,17 @@
+SARKSH GROW V20 — SEO tool issue patch
+
+Fixed in files:
+1. Meta title is now 54 characters: SARKSH GROW | FinTech, Market Learning & Broker Vision
+2. Meta description is now 157 characters, within the usual 140–160 range.
+3. Canonical remains the correct production URL: https://www.sarksh.in/
+4. Added a client-side HTTP-to-HTTPS redirect for sarksh.in domains.
+5. Rebuilt favicon.ico with 16x16, 32x32, 48x48 and 96x96 sizes.
+6. Put 48x48 and 96x96 favicon PNG links before ICO fallback.
+7. Delayed Microsoft Clarity loading to reduce mobile LCP/main-thread pressure.
+8. Added mobile CSS overrides to reduce expensive blur, animation, fixed gradients and below-fold rendering.
+9. Created missing assets/js/sarksh-performance.js and scripts/seo-audit.js so npm run check works.
+
+Important hosting action:
+The SEO audit screenshot used http://www.sarksh.in/. The HTTPS/security warning cannot be fully fixed by HTML files alone. In GitHub Pages, open repository Settings > Pages and enable Enforce HTTPS for www.sarksh.in. Then re-run the audit using https://www.sarksh.in/.
+
+Apps Script URL was kept intact.
