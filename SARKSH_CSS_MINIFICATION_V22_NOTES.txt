@@ -1,0 +1,19 @@
+SARKSH GROW V22 — CSS Minification & Speed Audit Patch
+
+Purpose:
+- Fix third-party performance audit failure: Minified CSS.
+- Preserve existing desktop/mobile design, SEO positioning, favicon package, llms.txt, sitemap, and Apps Script backend URL.
+
+Changes made:
+- Minified inline CSS blocks in index.html, login.html, grath.html, partal.html, and 404.html.
+- Removed CSS comments and excessive whitespace from large style blocks.
+- Removed duplicated favicon link block in index.html while preserving favicon-48x48.png, favicon-96x96.png, favicon-32x32.png, favicon-16x16.png, favicon.ico, apple-touch-icon, and site.webmanifest.
+- Updated scripts/seo-audit.js to validate CSS minification without depending on comments.
+
+Validation:
+- npm run check passes.
+- Result: SEO/security/mobile/agentic/CSS-minification audit passed for 21 HTML files.
+
+Deployment:
+- Upload the contents of sarksh-site-main to the GitHub repository root.
+- Re-test the live HTTPS URL after GitHub Pages finishes deployment.

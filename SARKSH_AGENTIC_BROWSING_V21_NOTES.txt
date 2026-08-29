@@ -1,0 +1,16 @@
+SARKSH GROW V21 - Agentic Browsing / llms.txt Fix
+
+Issue fixed:
+- PageSpeed Agentic Browsing reported: "llms.txt does not follow recommendations" and "File does not appear to contain any links."
+
+Changes made:
+- Rewrote llms.txt as clean Markdown.
+- Kept one H1 heading at the top.
+- Added Markdown-formatted links using [label](URL), because some audits do not count plain-text URLs as links.
+- Added official website, Learning Center, Future Broker Vision, SARKSH Trade, Risk Disclosure, Privacy Policy, Sitemap, LinkedIn, Instagram, and Google Business Profile links.
+- Preserved compliance-safe wording: no stock tips, no guaranteed returns, no personalized advice, and regulated products only after approvals.
+
+Deployment:
+- Upload the full contents of sarksh-site-main to the GitHub Pages repository root.
+- After deployment, open https://www.sarksh.in/llms.txt and confirm the Markdown links are visible.
+- Re-run PageSpeed Insights. Agentic Browsing should move from 2/3 to 3/3 if this was the only failing audit.

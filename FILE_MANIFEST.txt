@@ -63,3 +63,8 @@ sitemap.xml
 stock-market-mistakes-beginners-india.html
 stock-market-risk-management-beginners.html
 trading-vs-investing-india.html
+
+V21 Agentic Browsing Update:
+- llms.txt rewritten with Markdown links for PageSpeed Agentic Browsing compatibility.
+- Added SARKSH_AGENTIC_BROWSING_V21_NOTES.txt.
+SARKSH_CSS_MINIFICATION_V22_NOTES.txt - CSS minification and performance audit patch notes.
