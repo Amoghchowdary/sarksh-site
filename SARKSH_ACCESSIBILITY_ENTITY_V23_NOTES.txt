@@ -1,0 +1,11 @@
+SARKSH GROW V23 Accessibility, Best Practices and Entity Image Fix
+
+- Preserved PageSpeed 100 desktop/mobile performance optimizations from V22.
+- Fixed Lighthouse link-purpose warning for repeated Client Login links.
+- Fixed skipped footer heading level by changing footer column headings from H4 to H2.
+- Increased footer/legal text contrast to target accessibility score improvements.
+- Added visible focus outlines for keyboard users.
+- Added a large official SARKSH GROW search/social card image.
+- Updated Open Graph, Twitter, WebPage primaryImageOfPage and Organization logo/image structured data to prioritize the official SARKSH GROW logo/search card.
+- Added a dedicated Founder Person node for Amarneni Amogh Chowdary in JSON-LD without forcing any unverified external photo.
+- Kept compliance-safe finance positioning: education-first and regulated products subject to approvals.
