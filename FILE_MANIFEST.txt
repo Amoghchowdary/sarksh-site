@@ -1,30 +1,13 @@
 404.html
 CNAME
-DEPLOYMENT_NOTE_V14.txt
-DEPLOYMENT_NOTE_V15.txt
-DEPLOYMENT_NOTE_V16.txt
-DEPLOYMENT_NOTE_V17.txt
-DEPLOYMENT_NOTE_V18_SINGLE_LANDING.txt
-DEPLOYMENT_NOTE_V19_LOGIN_FLOW.txt
 FILE_MANIFEST.txt
 GITHUB_DEPLOYMENT_README.txt
 README.md
-SARKSH_10X_REDESIGN_NOTES.md
-SARKSH_CONTENT_WEBINAR_UPDATE_NOTES.md
-SARKSH_FAVICON_FIX_NOTES.md
-SARKSH_FAVICON_FIX_V18_NOTES.txt
-SARKSH_MOBILE_PERFORMANCE_V19_NOTES.txt
-SARKSH_SEO_AND_BOOKING_NOTES.md
-SARKSH_SEO_FINANCE_INSTITUTION_V17_NOTES.md
-SARKSH_SEO_MARKETING_UPDATE_V4_NOTES.md
-SARKSH_SEO_PERFORMANCE_V16_NOTES.md
-SARKSH_SEO_PERFORMANCE_V5_NOTES.md
-SARKSH_SEO_SECURITY_MOBILE_V20_NOTES.txt
-V12_FIX_NOTES.txt
 about-us.html
 android-chrome-192x192.png
 android-chrome-512x512.png
 apple-touch-icon.png
+assets/css/product-seo.min.css
 assets/js/sarksh-performance.js
 best-demat-accounts-india.html
 biggest-broker-india-right-broker.html
@@ -36,13 +19,10 @@ favicon-48x48.png
 favicon-96x96.png
 favicon.ico
 favicon_validation.json
-free-stock-market-webinar.html
 future-stock-broker-india.html
 grath.html
-how-to-invest-in-the-market-india.html
 humans.txt
 index.html
-learning-center.html
 llms.txt
 login.html
 package.json
@@ -51,6 +31,7 @@ privacy.html
 risk-disclosure.html
 robots.txt
 sarksh-favicon.png
+sarksh-grow-search-card.png
 sarksh-logo-128.webp
 sarksh-logo-256.webp
 sarksh-logo-original.png
@@ -60,11 +41,6 @@ sarksh-trade.html
 scripts/seo-audit.js
 site.webmanifest
 sitemap.xml
-stock-market-mistakes-beginners-india.html
-stock-market-risk-management-beginners.html
-trading-vs-investing-india.html
-
-V21 Agentic Browsing Update:
-- llms.txt rewritten with Markdown links for PageSpeed Agentic Browsing compatibility.
-- Added SARKSH_AGENTIC_BROWSING_V21_NOTES.txt.
-SARKSH_CSS_MINIFICATION_V22_NOTES.txt - CSS minification and performance audit patch notes.
+stock-broker-approval-status-india.html
+stock-broker-charges-india.html
+stock-broker-for-beginners-india.html

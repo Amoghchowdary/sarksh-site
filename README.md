@@ -1,6 +1,5 @@
-SARKSH GROW Website v15 — one-page white premium build. Public finance copy, product pathways, team section, webinar booking, SEO metadata, Apps Script backend URL and GA4 are preserved.
+# SARKSH GROW Website v25
 
-## V21 Agentic Browsing Fix
+Finance-first FinTech institution build. This package removes public product enquiry/classroom positioning and keeps product-first SEO around SARKSH Trade, SARKSH PMS, Expertise Sale, demat readiness, charge transparency, broker approval status and future broker-led platform vision.
 
-The `llms.txt` file has been rewritten as Markdown with official links so PageSpeed's Agentic Browsing audit can detect crawlable AI-agent references. Use `https://www.sarksh.in/llms.txt` after deployment to verify the file directly.
-
+Deploy the contents of this folder to the GitHub Pages repository root. Do not merge with old files; replace the repository contents so retired public pages are deleted.
