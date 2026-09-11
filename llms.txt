@@ -10,7 +10,6 @@ SARKSH GROW is a Hyderabad-based finance-first FinTech institution in build phas
 - [SARKSH PMS](https://www.sarksh.in/sarksh-pms.html)
 - [Expertise Sale](https://www.sarksh.in/expertise-sale.html)
 - [Future Broker Vision](https://www.sarksh.in/future-stock-broker-india.html)
-- [Stock Broker Approval Status](https://www.sarksh.in/stock-broker-approval-status-india.html)
 - [Stock Broker Charges](https://www.sarksh.in/stock-broker-charges-india.html)
 - [Demat Account Readiness](https://www.sarksh.in/demat-account-creation-india.html)
 - [Risk Disclosure](https://www.sarksh.in/risk-disclosure.html)

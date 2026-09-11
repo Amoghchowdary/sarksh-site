@@ -41,6 +41,5 @@ sarksh-trade.html
 scripts/seo-audit.js
 site.webmanifest
 sitemap.xml
-stock-broker-approval-status-india.html
 stock-broker-charges-india.html
 stock-broker-for-beginners-india.html
