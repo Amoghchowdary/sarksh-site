@@ -43,3 +43,9 @@ site.webmanifest
 sitemap.xml
 stock-broker-charges-india.html
 stock-broker-for-beginners-india.html
+
+
+## v27 polish
+- Fixed homepage footer design after removing learning/webinar, approval, and team sections.
+- Restored premium footer grid, spacing, responsive behavior, contrast, and readable link separation.
+- Kept the embedded Google Map visible in the Location section.
