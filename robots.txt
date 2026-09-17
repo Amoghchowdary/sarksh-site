@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /login.html
-Disallow: /partal.html
-Disallow: /grath.html
-Disallow: /grath/
-Disallow: /client-login/
+Allow: /login.html
+Allow: /partal.html
+Allow: /grath.html
+Allow: /grath/
+Allow: /client-login/
 Sitemap: https://www.sarksh.in/sitemap.xml
