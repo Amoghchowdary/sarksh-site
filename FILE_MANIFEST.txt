@@ -2,12 +2,15 @@
 CNAME
 FILE_MANIFEST.txt
 GITHUB_DEPLOYMENT_README.txt
+GOOGLE_SIGNIN_SETUP.md
 README.md
 about-us.html
 android-chrome-192x192.png
 android-chrome-512x512.png
 apple-touch-icon.png
 assets/css/product-seo.min.css
+assets/js/google-auth-config.js
+assets/js/google-auth.js
 assets/js/sarksh-performance.js
 best-demat-accounts-india.html
 biggest-broker-india-right-broker.html
