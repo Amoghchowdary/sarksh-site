@@ -1,3 +1,7 @@
+# SARKSH GROW Website — V33
+
+Current public product architecture: SARKSH Trade, SARKSH Stream, SARKSH Velocity. Customer access supports SARKSH credentials + OTP and Google account registration/linking.
+
 # SARKSH GROW Website — V32
 
 Production website package for `www.sarksh.in`.

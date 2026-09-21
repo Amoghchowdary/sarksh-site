@@ -1,0 +1,26 @@
+SARKSH GROW V33 — Customer Account & Google Registration Flow
+
+What changed
+- Rebuilt login page to match the light SARKSH GROW website theme.
+- Removed all customer-facing OAuth Testing / Test Users messages.
+- Google selection now checks whether the Google account is linked.
+- New Google users are moved to the SARKSH registration view.
+- Registration creates the SARKSH User ID, phone/password profile and then links Google.
+- Existing SARKSH credential + OTP login remains intact.
+- Raw backend messages such as unknown_action are no longer shown directly to customers.
+- Legal entity remains SARKSH GROW FIN-TECH PRIVATE LIMITED.
+
+Required Apps Script backend change
+1. Open backend/GOOGLE_AUTH_V33.gs.
+2. Add that file to the Apps Script project.
+3. Add the googleLogin and googleLink routes shown at the bottom of that file to the existing doPost router.
+4. Deploy -> Manage deployments -> Edit -> New version -> Deploy.
+5. Keep the existing Apps Script Web App URL. The frontend URL in login.html is unchanged.
+
+Google OAuth
+- Web Client ID is already configured in login.html.
+- Client secret is not present in the website.
+- While Google Auth Platform is still in Testing, Google itself restricts sign-in to configured test users. The website does not advertise that internal state.
+
+Deployment
+Replace the website files with this V33 folder as one clean deployment. Do not mix old login.html or old backend patch files into the deployment.
