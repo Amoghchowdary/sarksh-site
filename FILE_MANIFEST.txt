@@ -12,7 +12,6 @@ assets/js/sarksh-performance.js
 best-demat-accounts-india.html
 biggest-broker-india-right-broker.html
 demat-account-creation-india.html
-expertise-sale.html
 favicon-16x16.png
 favicon-32x32.png
 favicon-48x48.png
@@ -36,16 +35,11 @@ sarksh-logo-128.webp
 sarksh-logo-256.webp
 sarksh-logo-original.png
 sarksh-logo.webp
-sarksh-pms.html
+sarksh-stream.html
 sarksh-trade.html
+sarksh-velocity.html
 scripts/seo-audit.js
 site.webmanifest
 sitemap.xml
 stock-broker-charges-india.html
 stock-broker-for-beginners-india.html
-
-
-## v27 polish
-- Fixed homepage footer design after removing learning/webinar, approval, and team sections.
-- Restored premium footer grid, spacing, responsive behavior, contrast, and readable link separation.
-- Kept the embedded Google Map visible in the Location section.
