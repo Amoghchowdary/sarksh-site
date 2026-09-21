@@ -1,7 +1,6 @@
 SARKSH GROW
 Website: https://www.sarksh.in/
-Company: SARKSH GROUP OF COMPANIES PVT LTD (OPC)
-Location: Patancheru, Hyderabad, Telangana, India
+Company: SARKSH GROW FIN-TECH PRIVATE LIMITED
+Location: Plot No. 76, Road No. 9, Sumashaila Township, Isnapur, Patancheru, Hyderabad, Telangana 502307, India
 Contact: sarkshgrowmore@gmail.com
-Purpose: Finance compliance, demat awareness, product-pathway clarity and free market product enquirys for Indian families.
-Last updated: 2026-06-14
+Products: SARKSH Trade, SARKSH Stream, SARKSH Velocity

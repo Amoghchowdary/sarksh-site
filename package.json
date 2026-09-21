@@ -1,9 +1,8 @@
 {
+  "name": "sarksh-grow-site",
+  "version": "32.0.0",
+  "private": true,
   "scripts": {
-    "start": "npx http-server . -p 8080 -c-1",
-    "check": "node --check assets/js/sarksh-performance.js && node --check assets/js/google-auth.js && node --check assets/js/google-auth-config.js && node scripts/seo-audit.js"
-  },
-  "devDependencies": {
-    "http-server": "latest"
+    "check": "node --check assets/js/sarksh-performance.js && node scripts/seo-audit.js"
   }
 }

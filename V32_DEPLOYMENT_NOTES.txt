@@ -1,0 +1,12 @@
+SARKSH GROW V32
+
+1. Replace the previous GitHub Pages contents with this package.
+2. Confirm https://www.sarksh.in/sarksh-velocity.html displays styled content. V32 embeds critical CSS in every public product page and also ships assets/css/product-seo.min.css?v=32.
+3. Confirm https://www.sarksh.in/login.html shows the official Google Identity Services button.
+4. OAuth Web Client ID is configured as: 687485921080-fefl8hd7h5ka2dj9t39q2g717t8b602u.apps.googleusercontent.com
+5. Google Auth Platform is currently in Testing. Add your testing account under Audience -> Test users.
+6. Google may show generic/unverified project identity until OAuth brand verification is complete.
+7. The Google button can select an account now, but the Apps Script backend must implement the googleLogin action. See backend/GOOGLE_LOGIN_PATCH.gs.
+8. Legal company name used throughout public pages: SARKSH GROW FIN-TECH PRIVATE LIMITED.
+9. Sitemap: https://www.sarksh.in/sitemap.xml
+10. Submit/request indexing for the homepage and three product pages after deployment.

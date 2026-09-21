@@ -1,0 +1,177 @@
+SARKSH GROW V32 — FULL WEBSITE AUDIT
+Date: 2026-09-21
+
+[404.html]
+  Title: Page Not Found | SARKSH GROW
+  Description length: 140
+  Canonical: https://www.sarksh.in/404.html
+  H1 count: 1
+  Internal links checked: 16
+  Broken internal links: 0
+
+[about-us.html]
+  Title: About SARKSH GROW | Finance-First FinTech Institution
+  Description length: 145
+  Canonical: https://www.sarksh.in/about-us.html
+  H1 count: 1
+  Internal links checked: 26
+  Broken internal links: 0
+
+[best-demat-accounts-india.html]
+  Title: Demat Account Comparison India | SARKSH GROW
+  Description length: 149
+  Canonical: https://www.sarksh.in/best-demat-accounts-india.html
+  H1 count: 1
+  Internal links checked: 26
+  Broken internal links: 0
+
+[biggest-broker-india-right-broker.html]
+  Title: Convenient Broker-Led Platform India | SARKSH GROW
+  Description length: 147
+  Canonical: https://www.sarksh.in/biggest-broker-india-right-broker.html
+  H1 count: 1
+  Internal links checked: 26
+  Broken internal links: 0
+
+[demat-account-creation-india.html]
+  Title: Demat Account Readiness India | SARKSH GROW
+  Description length: 151
+  Canonical: https://www.sarksh.in/demat-account-creation-india.html
+  H1 count: 1
+  Internal links checked: 26
+  Broken internal links: 0
+
+[expertise-sale.html]
+  Title: SARKSH GROW Product Portfolio Updated
+  Description length: 0
+  Canonical: https://www.sarksh.in/sarksh-velocity.html
+  H1 count: 0
+  Internal links checked: 1
+  Broken internal links: 0
+
+[future-stock-broker-india.html]
+  Title: Future Stock Broker India | SARKSH GROW Vision
+  Description length: 141
+  Canonical: https://www.sarksh.in/future-stock-broker-india.html
+  H1 count: 1
+  Internal links checked: 26
+  Broken internal links: 0
+
+[grath.html]
+  Title: Grath · SARKSH GROW
+  Description length: 0
+  Canonical: https://www.sarksh.in/grath.html
+  H1 count: 5
+  Internal links checked: 2
+  Broken internal links: 0
+
+[index.html]
+  Title: SARKSH GROW | Trade, Velocity & FinTech Market Access India
+  Description length: 145
+  Canonical: https://www.sarksh.in/
+  H1 count: 1
+  Internal links checked: 21
+  Broken internal links: 0
+
+[login.html]
+  Title: Sign In | SARKSH GROW Customer Account
+  Description length: 123
+  Canonical: https://www.sarksh.in/login.html
+  H1 count: 1
+  Internal links checked: 4
+  Broken internal links: 0
+
+[partal.html]
+  Title: Partal · SARKSH GROW Admin
+  Description length: 0
+  Canonical: (not applicable/private)
+  H1 count: 7
+  Internal links checked: 0
+  Broken internal links: 0
+
+[privacy.html]
+  Title: Privacy Policy | SARKSH GROW
+  Description length: 139
+  Canonical: https://www.sarksh.in/privacy.html
+  H1 count: 1
+  Internal links checked: 26
+  Broken internal links: 0
+
+[risk-disclosure.html]
+  Title: Risk Disclosure | SARKSH GROW
+  Description length: 147
+  Canonical: https://www.sarksh.in/risk-disclosure.html
+  H1 count: 1
+  Internal links checked: 26
+  Broken internal links: 0
+
+[sarksh-pms.html]
+  Title: SARKSH GROW Product Portfolio Updated
+  Description length: 0
+  Canonical: https://www.sarksh.in/sarksh-stream.html
+  H1 count: 0
+  Internal links checked: 1
+  Broken internal links: 0
+
+[sarksh-stream.html]
+  Title: SARKSH Stream | FinTech Product Development India
+  Description length: 144
+  Canonical: https://www.sarksh.in/sarksh-stream.html
+  H1 count: 1
+  Internal links checked: 25
+  Broken internal links: 0
+
+[sarksh-trade.html]
+  Title: SARKSH Trade | Trading Platform Pathway India
+  Description length: 148
+  Canonical: https://www.sarksh.in/sarksh-trade.html
+  H1 count: 1
+  Internal links checked: 25
+  Broken internal links: 0
+
+[sarksh-velocity.html]
+  Title: SARKSH Velocity | Historical Market Intelligence India
+  Description length: 151
+  Canonical: https://www.sarksh.in/sarksh-velocity.html
+  H1 count: 1
+  Internal links checked: 25
+  Broken internal links: 0
+
+[stock-broker-charges-india.html]
+  Title: Stock Broker Charges India | SARKSH GROW
+  Description length: 155
+  Canonical: https://www.sarksh.in/stock-broker-charges-india.html
+  H1 count: 1
+  Internal links checked: 26
+  Broken internal links: 0
+
+[stock-broker-for-beginners-india.html]
+  Title: Stock Broker for New Investors India | SARKSH GROW
+  Description length: 153
+  Canonical: https://www.sarksh.in/stock-broker-for-beginners-india.html
+  H1 count: 1
+  Internal links checked: 26
+  Broken internal links: 0
+
+[terms.html]
+  Title: Terms of Service | SARKSH GROW
+  Description length: 129
+  Canonical: https://www.sarksh.in/terms.html
+  H1 count: 1
+  Internal links checked: 25
+  Broken internal links: 0
+
+GLOBAL CHECKS
+  - Legal name: SARKSH GROW FIN-TECH PRIVATE LIMITED
+  - Current products: SARKSH Trade / SARKSH Stream / SARKSH Velocity
+  - Retired PMS and Expertise URLs excluded from sitemap and preserved only as noindex redirect stubs for old backlinks.
+  - Homepage and product pages use consistent internal backlinks.
+  - Product pages contain inline critical CSS plus external CSS fallback.
+  - Homepage layout rewritten with bounded 1180px content grid and responsive breakpoints.
+  - Product numerals 01/02/03 use high-contrast SARKSH green.
+  - Location embed uses SARKSH GROW business name plus complete office address.
+  - Login legal entity updated; fixed legal footer positioning.
+  - Official Google Identity Services button configured with OAuth Web Client ID.
+  - Apps Script googleLogin patch included separately.
+  - Sitemap, robots.txt and llms.txt refreshed.
+  - npm run check passes.

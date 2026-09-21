@@ -1,22 +1,21 @@
-# SARKSH GROW Website v29
+# SARKSH GROW Website — V32
 
-Product-first SARKSH GROW website with SARKSH Trade, SARKSH Stream and SARKSH Velocity.
+Production website package for `www.sarksh.in`.
 
-## v29 changes — 2026-09-21
-- Fixed SARKSH Velocity and all shared product/SEO pages so CSS, favicons, logos and internal navigation use relative paths. Pages now render correctly when opened locally and when deployed at `https://www.sarksh.in/`.
-- Preserved canonical URLs and absolute schema/OG URLs for SEO.
-- Added Google Identity Services front-end integration to `login.html`.
-- Added `assets/js/google-auth-config.js` and `assets/js/google-auth.js`.
-- Existing password + email OTP authentication and the current Apps Script endpoint remain intact.
-- Google Sign-In activates after adding the account-specific OAuth Web Client ID and a production `googleLogin` verifier to the Apps Script/backend. See `GOOGLE_SIGNIN_SETUP.md`.
+## Current public product family
+- SARKSH Trade
+- SARKSH Stream
+- SARKSH Velocity (SARKSH Data / historical market intelligence)
 
-## Local preview
-Run `npm start` and open `http://localhost:8080/sarksh-velocity.html`.
+## V32 focus
+- Rebuilt public layout alignment and responsive grids.
+- Rebuilt product page CSS with inline critical CSS fallback.
+- Correct legal entity: SARKSH GROW FIN-TECH PRIVATE LIMITED.
+- Stronger internal linking and canonical SEO structure.
+- Updated exact-address Google Maps query and Business Profile link.
+- Official Google Identity Services button on the login page.
+- OAuth Web Client ID configured; no client secret is stored in frontend files.
+- Apps Script Google-login integration patch included under `backend/`.
+- Legacy product URLs are noindex redirect stubs only, to protect old backlinks while removing them from the active product portfolio.
 
-## Deploy
-Deploy the contents of this folder to the GitHub Pages repository root.
-
-
-## V31 Google OAuth
-
-The website includes the configured Google OAuth Web Client ID for `sarksh.in`, a public `terms.html`, and Privacy/Terms links needed for the Google Auth branding configuration. The client secret is intentionally excluded. See `GOOGLE_SIGNIN_SETUP.md`.
+Run `npm run check` before deployment.

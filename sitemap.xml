@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.sarksh.in/</loc><lastmod>2026-09-21</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.sarksh.in/about-us.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/sarksh-trade.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://www.sarksh.in/sarksh-stream.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://www.sarksh.in/sarksh-velocity.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://www.sarksh.in/future-stock-broker-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/stock-broker-for-beginners-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/stock-broker-charges-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/demat-account-creation-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/best-demat-accounts-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/biggest-broker-india-right-broker.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/risk-disclosure.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/privacy.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/login.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.sarksh.in/terms.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.60</priority></url>
+  <url><loc>https://www.sarksh.in/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.sarksh.in/about-us.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sarksh.in/sarksh-trade.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sarksh.in/sarksh-stream.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sarksh.in/sarksh-velocity.html</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sarksh.in/future-stock-broker-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sarksh.in/stock-broker-charges-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sarksh.in/stock-broker-for-beginners-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sarksh.in/demat-account-creation-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sarksh.in/best-demat-accounts-india.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sarksh.in/privacy.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sarksh.in/terms.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.sarksh.in/risk-disclosure.html</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

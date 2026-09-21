@@ -1,4 +1,4 @@
-SARKSH GROW V31 FILE MANIFEST
+SARKSH GROW V32 FILE MANIFEST
 
 404.html
 CNAME
@@ -7,17 +7,20 @@ GITHUB_DEPLOYMENT_README.txt
 GOOGLE_SIGNIN_SETUP.md
 README.md
 V31_DEPLOYMENT_NOTES.txt
+V32_AUDIT_REPORT.txt
+V32_DEPLOYMENT_NOTES.txt
+VERSION.txt
 about-us.html
 android-chrome-192x192.png
 android-chrome-512x512.png
 apple-touch-icon.png
 assets/css/product-seo.min.css
-assets/js/google-auth-config.js
-assets/js/google-auth.js
 assets/js/sarksh-performance.js
+backend/GOOGLE_LOGIN_PATCH.gs
 best-demat-accounts-india.html
 biggest-broker-india-right-broker.html
 demat-account-creation-india.html
+expertise-sale.html
 favicon-16x16.png
 favicon-32x32.png
 favicon-48x48.png
@@ -41,6 +44,7 @@ sarksh-logo-128.webp
 sarksh-logo-256.webp
 sarksh-logo-original.png
 sarksh-logo.webp
+sarksh-pms.html
 sarksh-stream.html
 sarksh-trade.html
 sarksh-velocity.html
