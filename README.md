@@ -15,3 +15,8 @@ Run `npm start` and open `http://localhost:8080/sarksh-velocity.html`.
 
 ## Deploy
 Deploy the contents of this folder to the GitHub Pages repository root.
+
+
+## V31 Google OAuth
+
+The website includes the configured Google OAuth Web Client ID for `sarksh.in`, a public `terms.html`, and Privacy/Terms links needed for the Google Auth branding configuration. The client secret is intentionally excluded. See `GOOGLE_SIGNIN_SETUP.md`.

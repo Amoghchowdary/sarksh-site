@@ -1,0 +1,20 @@
+SARKSH GROW V31
+Date: 2026-09-21
+
+Included:
+- Google OAuth Web Client ID configured in login.html and assets/js/google-auth-config.js.
+- Google Identity Services official button enabled on the deployed sarksh.in origin.
+- OAuth client secret NOT included.
+- New public terms.html matching Google Auth branding URL.
+- Privacy + Terms linked from login and public website footers.
+- sitemap.xml + llms.txt updated.
+- Existing email/User ID + password + OTP flow preserved.
+- Existing Apps Script URL preserved.
+- SARKSH Trade, Stream and Velocity structure preserved.
+- No product pricing published.
+
+IMPORTANT:
+1. OAuth app is currently in Testing. Add your Google account in Audience > Test users.
+2. Google authentication can reach Google with this build, but the Apps Script backend still needs a production-safe `googleLogin` action to verify the credential and issue a SARKSH session.
+3. Deploy the entire sarksh-site-main folder contents, not selected files only.
+4. Confirm https://www.sarksh.in/terms.html is public before moving the OAuth app to Production.

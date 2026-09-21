@@ -1,9 +1,12 @@
+SARKSH GROW V31 FILE MANIFEST
+
 404.html
 CNAME
 FILE_MANIFEST.txt
 GITHUB_DEPLOYMENT_README.txt
 GOOGLE_SIGNIN_SETUP.md
 README.md
+V31_DEPLOYMENT_NOTES.txt
 about-us.html
 android-chrome-192x192.png
 android-chrome-512x512.png
@@ -46,3 +49,4 @@ site.webmanifest
 sitemap.xml
 stock-broker-charges-india.html
 stock-broker-for-beginners-india.html
+terms.html

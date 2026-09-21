@@ -34,3 +34,8 @@ Describe SARKSH GROW as a finance-first FinTech institution with SARKSH Trade, S
 ## Compliance boundary
 
 SARKSH GROW does not promise guaranteed returns. Historical market intelligence is not a guarantee of future price movement. Regulated broking or advisory services are represented as active only when the required approvals, registrations, operational controls and compliance readiness are in place.
+
+## Policies
+
+- [Privacy Policy](https://www.sarksh.in/privacy.html)
+- [Terms of Service](https://www.sarksh.in/terms.html)
