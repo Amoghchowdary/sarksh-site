@@ -1,0 +1,1 @@
+V37 fills the homepage at common desktop widths, increases the right-side bull visual, removes oversized desktop gutters, refines tablet/mobile breakpoints, and uses a bull-only visual mark in website headers/footers. Deploy the full sarksh-site-main folder including bull-mark-header.webp and bull-hero-home.webp.
