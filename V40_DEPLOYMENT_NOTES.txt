@@ -1,0 +1,4 @@
+SARKSH GROW V40 deployment notes
+- Removed the overlay content box from the bull visual on the homepage hero section.
+- Generated as a fresh build based on V39.
+- All other site files and backend connections remain unchanged.
