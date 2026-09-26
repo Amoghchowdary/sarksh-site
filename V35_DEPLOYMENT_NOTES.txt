@@ -1,0 +1,1 @@
+V35 updates the homepage hero to use the approved bull visual and improves mobile responsiveness. Deploy the full site contents, including bull-hero-home.webp.
