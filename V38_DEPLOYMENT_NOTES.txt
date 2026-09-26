@@ -1,0 +1,9 @@
+SARKSH GROW V38 — production alignment baseline
+
+- Uses the exact supplied SARKSH company logo as the official schema/identity logo.
+- Uses a bull-only mark in navigation to avoid name clutter.
+- Rebuilds homepage hero so no text/cards overlap the bull visual.
+- Uses a responsive desktop/tablet/mobile grid rather than fixed central boxes.
+- Rewrites customer-facing homepage copy to remove internal design commentary.
+- Standardizes public product/legal pages on a 1320px responsive production layout.
+- Preserves existing SEO, Google Sign-In, Apps Script URLs and product structure.
