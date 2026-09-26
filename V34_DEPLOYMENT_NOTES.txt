@@ -1,0 +1,12 @@
+SARKSH GROW V34
+
+Homepage visual redesign inspired by premium finance editorial layouts.
+- Dark green market-led hero
+- Decorative candlestick/market charts (explicitly illustrative, not live market data)
+- Trade / Stream / Velocity product cards with visual sparklines
+- Velocity historical-intelligence visual section
+- Existing Google login / customer registration backend files preserved from V33
+- Existing Apps Script contact endpoint preserved
+- Existing legal name, map, SEO structured data, sitemap and other public pages preserved
+
+Deploy by replacing the existing GitHub Pages files with the full sarksh-site-main folder contents.
