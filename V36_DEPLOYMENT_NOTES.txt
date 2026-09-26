@@ -1,0 +1,6 @@
+V36 focuses on homepage layout and responsiveness.
+- Reduced unused empty space on wide desktop screens by widening the main content container.
+- Improved tablet and mobile responsiveness with new breakpoints.
+- Simplified homepage header branding so the homepage logo shows only the bull mark visually.
+- Kept the premium bull-led hero concept and refined section spacing.
+Deploy the full sarksh-site-main folder.
