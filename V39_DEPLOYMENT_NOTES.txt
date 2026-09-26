@@ -1,0 +1,11 @@
+SARKSH GROW V39 DEPLOYMENT NOTES
+
+Production-focused fixes included in V39:
+1. Homepage rebuilt for cleaner desktop / tablet / mobile responsiveness.
+2. Hero image cleaned: removed the faded right-side composition by using a cropped bull hero asset.
+3. Empty desktop side-space issue corrected with a balanced two-column hero layout.
+4. Exact uploaded company logo applied consistently to website identity assets and favicon package.
+5. Favicon / apple-touch / android icons regenerated from the official logo.
+6. Existing Apps Script contact endpoint preserved.
+7. Sign-in and product pages retained; brand-logo references normalized.
+8. Package is Git-ready and uses relative file paths.
