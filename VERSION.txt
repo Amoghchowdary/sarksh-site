@@ -1,2 +1,2 @@
-V41 FINAL
-Production build with user-finalized bull artwork integrated into the homepage hero.
+V42
+Performance optimization build based on V41 final production.

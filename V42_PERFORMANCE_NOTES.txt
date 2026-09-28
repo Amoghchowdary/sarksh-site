@@ -1,0 +1,12 @@
+SARKSH GROW V42 performance changes
+
+- Preserves V41 design, SEO, product pages, Apps Script endpoint and Google sign-in files.
+- Replaces the 1 MB visible company-logo PNG with compact WebP assets.
+- Adds responsive AVIF/WebP hero sources at 480/768/1122 widths.
+- Adds high-priority responsive preload for the LCP hero image.
+- Uses a progressive JPEG fallback instead of the 2 MB PNG hero fallback.
+- Removes costly backdrop-filter effects from above-the-fold navigation/hero badge.
+- Adds content-visibility to below-the-fold homepage chapters.
+- Adds reduced-motion handling for the ticker and button transitions.
+
+Expected result: materially lower image transfer and decode cost. PageSpeed lab scores can vary between runs; verify on the deployed HTTPS URL after CDN/GitHub cache refresh.
