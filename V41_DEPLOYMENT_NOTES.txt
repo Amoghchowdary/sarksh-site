@@ -1,0 +1,9 @@
+SARKSH GROW V41 FINAL
+
+Production changes:
+- Integrated the user-finalized metallic bull artwork into the homepage hero.
+- Added optimized WebP + PNG fallback for performance and compatibility.
+- Removed forced hero-image cropping so the complete bull and stock-chart background remain visible.
+- Preserved the V40 no-overlay hero structure.
+- Preserved existing Apps Script endpoints, Google sign-in/customer registration files, SEO metadata, favicon set, sitemap, privacy/terms and product pages.
+- Package is ready for Git deployment.

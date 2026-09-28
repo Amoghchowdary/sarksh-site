@@ -1,1 +1,2 @@
-V38
+V41 FINAL
+Production build with user-finalized bull artwork integrated into the homepage hero.
