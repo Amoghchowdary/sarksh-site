@@ -1,2 +1,2 @@
-V42
-Performance optimization build based on V41 final production.
+V44
+GA4 refreshed sitewide; SecurePrivacy retained; deployment TXT artifacts removed.
