@@ -1,2 +1,4 @@
-V47 — Unified Luxury FinTech UI/UX
-White / black / restrained gold design system; unified Home, Velocity, Stream, Trade and Institution pages.
+V48
+Refined luxury fintech UI adjustments
+- Product cards aligned: flagship fixed dark, others white with dark hover
+- Added brand green (#005d3b) into accent system
