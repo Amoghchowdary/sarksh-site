@@ -1,11 +1,11 @@
 # SARKSH GROW
 
-SARKSH GROW is operated by SARKSH GROW FIN-TECH PRIVATE LIMITED, a Hyderabad-based FinTech company building product-first financial technology.
+SARKSH GROW is operated by SARKSH GROW FIN-TECH PRIVATE LIMITED, a Hyderabad-based financial-technology company with three distinct product lines.
 
-## Current product pages
-- [SARKSH Trade](https://www.sarksh.in/sarksh-trade.html) — trading and market-access product pathway.
-- [SARKSH Stream](https://www.sarksh.in/sarksh-stream.html) — product in development; detailed scope will be published when finalized.
-- [SARKSH Velocity](https://www.sarksh.in/sarksh-velocity.html) — SARKSH Data historical market-intelligence product.
+## Product ecosystem
+- [SARKSH Velocity](https://www.sarksh.in/sarksh-velocity.html) — financial data and market-intelligence product combining company information, exchange disclosures, financial statements, charts, news, preserved historical analysis and configurable research workflows.
+- [SARKSH Stream](https://www.sarksh.in/sarksh-stream.html) — developed, customer-ready ERP, accounting and automated bookkeeping software for business-finance operations.
+- [SARKSH Trade](https://www.sarksh.in/sarksh-trade.html) — long-term brokerage and trading-services platform direction; regulated execution is represented as active only when the applicable legal, exchange and operational prerequisites are satisfied.
 
 ## Company and customer pages
 - [Official homepage](https://www.sarksh.in/)
@@ -16,5 +16,5 @@ SARKSH GROW is operated by SARKSH GROW FIN-TECH PRIVATE LIMITED, a Hyderabad-bas
 - [Risk Disclosure](https://www.sarksh.in/risk-disclosure.html)
 - [Sitemap](https://www.sarksh.in/sitemap.xml)
 
-## Product boundary
-SARKSH GROW does not promise guaranteed returns or personalized stock recommendations. Public claims about regulated broking or other regulated services are made only when the relevant approval and compliance layer is ready.
+## Product boundaries
+Velocity is a research and intelligence product; historical or AI-assisted analysis does not guarantee future performance. Stream is business accounting software. Trade is the prospective transaction layer and must not be interpreted as an active licensed brokerage service unless the required approvals and operating controls are in place.

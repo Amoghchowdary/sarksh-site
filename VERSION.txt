@@ -1,2 +1,9 @@
-V44
-GA4 refreshed sitewide; SecurePrivacy retained; deployment TXT artifacts removed.
+V46 PRODUCT ECOSYSTEM PUBLIC RELEASE
+2026-10-20
+
+Public product architecture:
+- SARKSH Velocity — financial data and market intelligence
+- SARKSH Stream — ERP, accounting and automated bookkeeping
+- SARKSH Trade — long-term brokerage and trading-services platform direction
+
+GA4 and SecurePrivacy tags preserved across all HTML pages.

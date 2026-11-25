@@ -1,8 +1,0 @@
-{
-  "name": "sarksh-grow-site",
-  "version": "38.0.0",
-  "private": true,
-  "scripts": {
-    "check": "node --check assets/js/sarksh-performance.js && node scripts/seo-audit.js"
-  }
-}

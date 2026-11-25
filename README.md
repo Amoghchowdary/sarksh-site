@@ -1,25 +1,15 @@
-# SARKSH GROW Website — V33
-
-Current public product architecture: SARKSH Trade, SARKSH Stream, SARKSH Velocity. Customer access supports SARKSH credentials + OTP and Google account registration/linking.
-
-# SARKSH GROW Website — V32
+# SARKSH GROW Website — V46
 
 Production website package for `www.sarksh.in`.
 
-## Current public product family
-- SARKSH Trade
-- SARKSH Stream
-- SARKSH Velocity (SARKSH Data / historical market intelligence)
+## Public product ecosystem
+- **SARKSH Velocity** — financial data and market intelligence with company information, exchange disclosures, financial statements, charts, news, preserved historical analysis and configurable research workflows.
+- **SARKSH Stream** — developed, customer-ready ERP, accounting and automated bookkeeping software for business-finance operations.
+- **SARKSH Trade** — long-term brokerage and trading-services platform direction, with regulated execution represented as active only when the applicable approvals and operating prerequisites are satisfied.
 
-## V32 focus
-- Rebuilt public layout alignment and responsive grids.
-- Rebuilt product page CSS with inline critical CSS fallback.
-- Correct legal entity: SARKSH GROW FIN-TECH PRIVATE LIMITED.
-- Stronger internal linking and canonical SEO structure.
-- Updated exact-address Google Maps query and Business Profile link.
-- Official Google Identity Services button on the login page.
-- OAuth Web Client ID configured; no client secret is stored in frontend files.
-- Apps Script Google-login integration patch included under `backend/`.
-- Legacy product URLs are noindex redirect stubs only, to protect old backlinks while removing them from the active product portfolio.
-
-Run `npm run check` before deployment.
+## V46 scope
+- Updated homepage product architecture and customer-facing explanations.
+- Rebuilt the public Velocity, Stream and Trade product pages around the current product descriptions.
+- Updated About, Terms, llms.txt and sitemap product language.
+- Preserved the V45 bull-free design, Google Analytics 4 and SecurePrivacy integration.
+- Removed legacy internal notes/audit artifacts from the production package.
